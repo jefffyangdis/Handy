@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Handy Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="HandyMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -16,20 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnB-9e-Bsh">
-                                <rect key="frame" x="202" y="190" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnB-9e-Bsh">
+                                <rect key="frame" x="0.0" y="100" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="打开相册">
+                                    <color key="titleColor" red="0.026594065656565635" green="0.026594065656565635" blue="0.026594065656565635" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="onTestBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fv6-Fn-UII"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZk-eH-ZEb" userLabel="打开相机">
+                                <rect key="frame" x="0.0" y="269" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="打开相机">
+                                    <color key="titleColor" red="0.026594065659999999" green="0.026594065659999999" blue="0.026594065659999999" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCameraBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Feo-Ww-3kS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7l-IJ-2Mf" userLabel="打开图片库">
+                                <rect key="frame" x="0.0" y="187" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="打开图片库">
+                                    <color key="titleColor" red="0.026594065659999999" green="0.026594065659999999" blue="0.026594065659999999" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onPhotoLibaryBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SO7-1T-srO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="f7l-IJ-2Mf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0T8-JE-33A"/>
+                            <constraint firstAttribute="trailing" secondItem="XZk-eH-ZEb" secondAttribute="trailing" id="XQQ-YV-7g8"/>
+                            <constraint firstAttribute="trailing" secondItem="f7l-IJ-2Mf" secondAttribute="trailing" id="jvz-wh-dGm"/>
+                            <constraint firstItem="NnB-9e-Bsh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="khI-g7-oUf"/>
+                            <constraint firstItem="XZk-eH-ZEb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="o6Z-HU-5gq"/>
+                            <constraint firstAttribute="trailing" secondItem="NnB-9e-Bsh" secondAttribute="trailing" id="o7z-f1-TqX"/>
+                            <constraint firstItem="NnB-9e-Bsh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="yNp-8c-SfO"/>
+                        </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="btnOpenAlbum" destination="NnB-9e-Bsh" id="4mF-Dl-NZ5"/>
+                        <outlet property="btnOpenCamera" destination="XZk-eH-ZEb" id="Pu9-Hh-Lf3"/>
+                        <outlet property="btnOpenPhotoLibary" destination="f7l-IJ-2Mf" id="f4f-iE-Sdv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

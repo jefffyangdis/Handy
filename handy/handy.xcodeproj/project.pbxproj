@@ -10,11 +10,12 @@
 		C075E07F1ACC11E400F171D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C075E07E1ACC11E400F171D0 /* main.m */; };
 		C075E0821ACC11E400F171D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C075E0811ACC11E400F171D0 /* AppDelegate.m */; };
 		C075E0851ACC11E400F171D0 /* handy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C075E0831ACC11E400F171D0 /* handy.xcdatamodeld */; };
-		C075E0881ACC11E400F171D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C075E0871ACC11E400F171D0 /* ViewController.m */; };
+		C075E0881ACC11E400F171D0 /* HandyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C075E0871ACC11E400F171D0 /* HandyMainViewController.m */; };
 		C075E08B1ACC11E400F171D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C075E0891ACC11E400F171D0 /* Main.storyboard */; };
 		C075E08D1ACC11E400F171D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C075E08C1ACC11E400F171D0 /* Images.xcassets */; };
 		C075E0901ACC11E400F171D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C075E08E1ACC11E400F171D0 /* LaunchScreen.xib */; };
 		C075E09C1ACC11E400F171D0 /* handyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C075E09B1ACC11E400F171D0 /* handyTests.m */; };
+		C0AE13C71AE26D260086F142 /* cameraview.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AE13C61AE26D260086F142 /* cameraview.xib */; };
 		E7DDA8A1E92744EBB84A6351 /* libPods-handy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9441E212B3063FA98EBDD3 /* libPods-handy.a */; };
 /* End PBXBuildFile section */
 
@@ -38,14 +39,15 @@
 		C075E0801ACC11E400F171D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C075E0811ACC11E400F171D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C075E0841ACC11E400F171D0 /* handy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = handy.xcdatamodel; sourceTree = "<group>"; };
-		C075E0861ACC11E400F171D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C075E0871ACC11E400F171D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C075E0861ACC11E400F171D0 /* HandyMainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HandyMainViewController.h; sourceTree = "<group>"; };
+		C075E0871ACC11E400F171D0 /* HandyMainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HandyMainViewController.m; sourceTree = "<group>"; };
 		C075E08A1ACC11E400F171D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C075E08C1ACC11E400F171D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		C075E08F1ACC11E400F171D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		C075E0951ACC11E400F171D0 /* handyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = handyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C075E09A1ACC11E400F171D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C075E09B1ACC11E400F171D0 /* handyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = handyTests.m; sourceTree = "<group>"; };
+		C0AE13C61AE26D260086F142 /* cameraview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cameraview.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				C075E0801ACC11E400F171D0 /* AppDelegate.h */,
 				C075E0811ACC11E400F171D0 /* AppDelegate.m */,
-				C075E0861ACC11E400F171D0 /* ViewController.h */,
-				C075E0871ACC11E400F171D0 /* ViewController.m */,
+				C075E0861ACC11E400F171D0 /* HandyMainViewController.h */,
+				C075E0871ACC11E400F171D0 /* HandyMainViewController.m */,
 				C075E0891ACC11E400F171D0 /* Main.storyboard */,
 				C075E08C1ACC11E400F171D0 /* Images.xcassets */,
 				C075E08E1ACC11E400F171D0 /* LaunchScreen.xib */,
+				C0AE13C61AE26D260086F142 /* cameraview.xib */,
 				C075E0831ACC11E400F171D0 /* handy.xcdatamodeld */,
 				C075E07C1ACC11E400F171D0 /* Supporting Files */,
 			);
@@ -231,6 +234,7 @@
 				C075E08B1ACC11E400F171D0 /* Main.storyboard in Resources */,
 				C075E0901ACC11E400F171D0 /* LaunchScreen.xib in Resources */,
 				C075E08D1ACC11E400F171D0 /* Images.xcassets in Resources */,
+				C0AE13C71AE26D260086F142 /* cameraview.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +287,7 @@
 			files = (
 				C075E0821ACC11E400F171D0 /* AppDelegate.m in Sources */,
 				C075E0851ACC11E400F171D0 /* handy.xcdatamodeld in Sources */,
-				C075E0881ACC11E400F171D0 /* ViewController.m in Sources */,
+				C075E0881ACC11E400F171D0 /* HandyMainViewController.m in Sources */,
 				C075E07F1ACC11E400F171D0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
