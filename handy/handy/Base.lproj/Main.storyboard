@@ -16,19 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnB-9e-Bsh">
-                                <rect key="frame" x="0.0" y="100" width="320" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZk-eH-ZEb" userLabel="打开相机">
+                                <rect key="frame" x="0.0" y="389" width="320" height="30"/>
                                 <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="打开相册">
-                                    <color key="titleColor" red="0.026594065656565635" green="0.026594065656565635" blue="0.026594065656565635" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="onTestBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fv6-Fn-UII"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XZk-eH-ZEb" userLabel="打开相机">
-                                <rect key="frame" x="0.0" y="269" width="320" height="30"/>
-                                <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="0ld-Wp-bvd"/>
+                                </constraints>
                                 <state key="normal" title="打开相机">
                                     <color key="titleColor" red="0.026594065659999999" green="0.026594065659999999" blue="0.026594065659999999" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
@@ -36,9 +29,12 @@
                                     <action selector="onCameraBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Feo-Ww-3kS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7l-IJ-2Mf" userLabel="打开图片库">
-                                <rect key="frame" x="0.0" y="187" width="320" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7l-IJ-2Mf" userLabel="打开图片库">
+                                <rect key="frame" x="0.0" y="351" width="320" height="30"/>
                                 <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NVi-bV-tbo"/>
+                                </constraints>
                                 <state key="normal" title="打开图片库">
                                     <color key="titleColor" red="0.026594065659999999" green="0.026594065659999999" blue="0.026594065659999999" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
                                 </state>
@@ -46,17 +42,51 @@
                                     <action selector="onPhotoLibaryBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="SO7-1T-srO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NnB-9e-Bsh">
+                                <rect key="frame" x="0.0" y="313" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4dO-bw-GOd"/>
+                                </constraints>
+                                <state key="normal" title="打开相册">
+                                    <color key="titleColor" red="0.026594065656565635" green="0.026594065656565635" blue="0.026594065656565635" alpha="0.28999999999999998" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onTestBtnTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fv6-Fn-UII"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BGl-rI-h8b">
+                                <rect key="frame" x="0.0" y="20" width="320" height="284"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="284" id="B04-FE-5Sk"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="f7l-IJ-2Mf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="0T8-JE-33A"/>
+                            <constraint firstItem="XZk-eH-ZEb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="75h-OL-8Sq"/>
+                            <constraint firstAttribute="trailing" secondItem="f7l-IJ-2Mf" secondAttribute="trailing" id="AI0-ps-9Uf"/>
+                            <constraint firstAttribute="trailing" secondItem="XZk-eH-ZEb" secondAttribute="trailing" id="Op4-u0-PF5"/>
+                            <constraint firstItem="BGl-rI-h8b" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="QZV-49-MXU"/>
+                            <constraint firstItem="NnB-9e-Bsh" firstAttribute="top" secondItem="BGl-rI-h8b" secondAttribute="bottom" constant="9" id="Rq5-uX-l1a"/>
+                            <constraint firstAttribute="trailing" secondItem="BGl-rI-h8b" secondAttribute="trailing" id="Tmn-93-pCr"/>
                             <constraint firstAttribute="trailing" secondItem="XZk-eH-ZEb" secondAttribute="trailing" id="XQQ-YV-7g8"/>
+                            <constraint firstItem="f7l-IJ-2Mf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="eTq-yB-kvc"/>
+                            <constraint firstItem="BGl-rI-h8b" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="gWt-E4-HBB"/>
+                            <constraint firstItem="f7l-IJ-2Mf" firstAttribute="top" secondItem="NnB-9e-Bsh" secondAttribute="bottom" constant="8" id="jIa-6G-jHk"/>
                             <constraint firstAttribute="trailing" secondItem="f7l-IJ-2Mf" secondAttribute="trailing" id="jvz-wh-dGm"/>
                             <constraint firstItem="NnB-9e-Bsh" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="80" id="khI-g7-oUf"/>
+                            <constraint firstItem="XZk-eH-ZEb" firstAttribute="top" secondItem="f7l-IJ-2Mf" secondAttribute="bottom" constant="8" id="lx3-00-zzP"/>
                             <constraint firstItem="XZk-eH-ZEb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="o6Z-HU-5gq"/>
                             <constraint firstAttribute="trailing" secondItem="NnB-9e-Bsh" secondAttribute="trailing" id="o7z-f1-TqX"/>
                             <constraint firstItem="NnB-9e-Bsh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="yNp-8c-SfO"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="khI-g7-oUf"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
@@ -64,6 +94,7 @@
                         <outlet property="btnOpenAlbum" destination="NnB-9e-Bsh" id="4mF-Dl-NZ5"/>
                         <outlet property="btnOpenCamera" destination="XZk-eH-ZEb" id="Pu9-Hh-Lf3"/>
                         <outlet property="btnOpenPhotoLibary" destination="f7l-IJ-2Mf" id="f4f-iE-Sdv"/>
+                        <outlet property="imgViewChosen" destination="BGl-rI-h8b" id="RVZ-Nf-KFn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
