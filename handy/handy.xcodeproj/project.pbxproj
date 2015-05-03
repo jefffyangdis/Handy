@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		95A0EF5A7AF231E09F0C3671 /* libPods-handyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F4A8DE33C85B515AF500627 /* libPods-handyTests.a */; };
+		C0707E811AEFB5D400F338ED /* MyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0707E7E1AEFB5D400F338ED /* MyPageViewController.m */; };
+		C0707E821AEFB5D400F338ED /* PageViewControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C0707E801AEFB5D400F338ED /* PageViewControllerData.m */; };
+		C0707E851AEFB70900F338ED /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0707E841AEFB70900F338ED /* ImageScrollView.m */; };
+		C0707E881AEFBF3100F338ED /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0707E871AEFBF3100F338ED /* PhotoViewController.m */; };
 		C075E07F1ACC11E400F171D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C075E07E1ACC11E400F171D0 /* main.m */; };
 		C075E0821ACC11E400F171D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C075E0811ACC11E400F171D0 /* AppDelegate.m */; };
 		C075E0851ACC11E400F171D0 /* handy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C075E0831ACC11E400F171D0 /* handy.xcdatamodeld */; };
@@ -15,7 +20,10 @@
 		C075E08D1ACC11E400F171D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C075E08C1ACC11E400F171D0 /* Images.xcassets */; };
 		C075E0901ACC11E400F171D0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C075E08E1ACC11E400F171D0 /* LaunchScreen.xib */; };
 		C075E09C1ACC11E400F171D0 /* handyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C075E09B1ACC11E400F171D0 /* handyTests.m */; };
+		C09A4ADA1AE6872500881CAC /* HandyRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C09A4AD91AE6872500881CAC /* HandyRootViewController.m */; };
 		C0AE13C71AE26D260086F142 /* cameraview.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AE13C61AE26D260086F142 /* cameraview.xib */; };
+		C0AE9E461AE90A9300861DA3 /* AlbumContentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE9E451AE90A9300861DA3 /* AlbumContentsCollectionViewController.m */; };
+		C0AEE38D1AE7D98F001E277C /* AssetsDataIsInaccessibleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEE38C1AE7D98F001E277C /* AssetsDataIsInaccessibleViewController.m */; };
 		E7DDA8A1E92744EBB84A6351 /* libPods-handy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9441E212B3063FA98EBDD3 /* libPods-handy.a */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +39,19 @@
 
 /* Begin PBXFileReference section */
 		00BB486FD8EBD51B61423B19 /* Pods-handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-handy/Pods-handy.debug.xcconfig"; sourceTree = "<group>"; };
+		0F4A8DE33C85B515AF500627 /* libPods-handyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-handyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D09E837C6B35D5D12F68705 /* Pods-handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.release.xcconfig"; path = "Pods/Target Support Files/Pods-handy/Pods-handy.release.xcconfig"; sourceTree = "<group>"; };
+		5A474646FCD2CCCE02EAB1FA /* Pods-handyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-handyTests/Pods-handyTests.release.xcconfig"; sourceTree = "<group>"; };
 		7D9441E212B3063FA98EBDD3 /* libPods-handy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-handy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E8103CED2DE0D2A2C232D0 /* Pods-handyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-handyTests/Pods-handyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0707E7D1AEFB5D400F338ED /* MyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageViewController.h; sourceTree = "<group>"; };
+		C0707E7E1AEFB5D400F338ED /* MyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageViewController.m; sourceTree = "<group>"; };
+		C0707E7F1AEFB5D400F338ED /* PageViewControllerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewControllerData.h; sourceTree = "<group>"; };
+		C0707E801AEFB5D400F338ED /* PageViewControllerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewControllerData.m; sourceTree = "<group>"; };
+		C0707E831AEFB70900F338ED /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
+		C0707E841AEFB70900F338ED /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
+		C0707E861AEFBF3100F338ED /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		C0707E871AEFBF3100F338ED /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		C075E0791ACC11E400F171D0 /* handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C075E07D1ACC11E400F171D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C075E07E1ACC11E400F171D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -47,7 +66,13 @@
 		C075E0951ACC11E400F171D0 /* handyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = handyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C075E09A1ACC11E400F171D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C075E09B1ACC11E400F171D0 /* handyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = handyTests.m; sourceTree = "<group>"; };
+		C09A4AD81AE6872500881CAC /* HandyRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandyRootViewController.h; sourceTree = "<group>"; };
+		C09A4AD91AE6872500881CAC /* HandyRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandyRootViewController.m; sourceTree = "<group>"; };
 		C0AE13C61AE26D260086F142 /* cameraview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cameraview.xib; sourceTree = "<group>"; };
+		C0AE9E441AE90A9300861DA3 /* AlbumContentsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumContentsCollectionViewController.h; sourceTree = "<group>"; };
+		C0AE9E451AE90A9300861DA3 /* AlbumContentsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumContentsCollectionViewController.m; sourceTree = "<group>"; };
+		C0AEE38B1AE7D98F001E277C /* AssetsDataIsInaccessibleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsDataIsInaccessibleViewController.h; sourceTree = "<group>"; };
+		C0AEE38C1AE7D98F001E277C /* AssetsDataIsInaccessibleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsDataIsInaccessibleViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95A0EF5A7AF231E09F0C3671 /* libPods-handyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +100,8 @@
 			children = (
 				00BB486FD8EBD51B61423B19 /* Pods-handy.debug.xcconfig */,
 				2D09E837C6B35D5D12F68705 /* Pods-handy.release.xcconfig */,
+				87E8103CED2DE0D2A2C232D0 /* Pods-handyTests.debug.xcconfig */,
+				5A474646FCD2CCCE02EAB1FA /* Pods-handyTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,16 +129,30 @@
 		C075E07B1ACC11E400F171D0 /* handy */ = {
 			isa = PBXGroup;
 			children = (
+				C0707E7D1AEFB5D400F338ED /* MyPageViewController.h */,
+				C0707E7E1AEFB5D400F338ED /* MyPageViewController.m */,
+				C0707E7F1AEFB5D400F338ED /* PageViewControllerData.h */,
+				C0707E801AEFB5D400F338ED /* PageViewControllerData.m */,
 				C075E0801ACC11E400F171D0 /* AppDelegate.h */,
 				C075E0811ACC11E400F171D0 /* AppDelegate.m */,
 				C075E0861ACC11E400F171D0 /* HandyMainViewController.h */,
 				C075E0871ACC11E400F171D0 /* HandyMainViewController.m */,
+				C0AEE38B1AE7D98F001E277C /* AssetsDataIsInaccessibleViewController.h */,
+				C0AE9E441AE90A9300861DA3 /* AlbumContentsCollectionViewController.h */,
+				C0AE9E451AE90A9300861DA3 /* AlbumContentsCollectionViewController.m */,
+				C0AEE38C1AE7D98F001E277C /* AssetsDataIsInaccessibleViewController.m */,
+				C09A4AD81AE6872500881CAC /* HandyRootViewController.h */,
+				C09A4AD91AE6872500881CAC /* HandyRootViewController.m */,
 				C075E0891ACC11E400F171D0 /* Main.storyboard */,
 				C075E08C1ACC11E400F171D0 /* Images.xcassets */,
 				C075E08E1ACC11E400F171D0 /* LaunchScreen.xib */,
 				C0AE13C61AE26D260086F142 /* cameraview.xib */,
 				C075E0831ACC11E400F171D0 /* handy.xcdatamodeld */,
 				C075E07C1ACC11E400F171D0 /* Supporting Files */,
+				C0707E831AEFB70900F338ED /* ImageScrollView.h */,
+				C0707E841AEFB70900F338ED /* ImageScrollView.m */,
+				C0707E861AEFBF3100F338ED /* PhotoViewController.h */,
+				C0707E871AEFBF3100F338ED /* PhotoViewController.m */,
 			);
 			path = handy;
 			sourceTree = "<group>";
@@ -145,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				7D9441E212B3063FA98EBDD3 /* libPods-handy.a */,
+				0F4A8DE33C85B515AF500627 /* libPods-handyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -175,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C075E0A21ACC11E400F171D0 /* Build configuration list for PBXNativeTarget "handyTests" */;
 			buildPhases = (
+				F6645F1AF262AE4B5C84CA33 /* Check Pods Manifest.lock */,
 				C075E0911ACC11E400F171D0 /* Sources */,
 				C075E0921ACC11E400F171D0 /* Frameworks */,
 				C075E0931ACC11E400F171D0 /* Resources */,
+				D586B360EF113B65894B242B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -260,10 +305,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-handy/Pods-handy-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/../../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		76CD55E41A1EBDF0A73C67FE /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D586B360EF113B65894B242B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-handyTests/Pods-handyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F6645F1AF262AE4B5C84CA33 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,7 +363,14 @@
 				C075E0821ACC11E400F171D0 /* AppDelegate.m in Sources */,
 				C075E0851ACC11E400F171D0 /* handy.xcdatamodeld in Sources */,
 				C075E0881ACC11E400F171D0 /* HandyMainViewController.m in Sources */,
+				C0707E821AEFB5D400F338ED /* PageViewControllerData.m in Sources */,
+				C0707E811AEFB5D400F338ED /* MyPageViewController.m in Sources */,
 				C075E07F1ACC11E400F171D0 /* main.m in Sources */,
+				C0AEE38D1AE7D98F001E277C /* AssetsDataIsInaccessibleViewController.m in Sources */,
+				C0AE9E461AE90A9300861DA3 /* AlbumContentsCollectionViewController.m in Sources */,
+				C09A4ADA1AE6872500881CAC /* HandyRootViewController.m in Sources */,
+				C0707E881AEFBF3100F338ED /* PhotoViewController.m in Sources */,
+				C0707E851AEFB70900F338ED /* ImageScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,9 +446,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -399,8 +481,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -430,6 +513,7 @@
 		};
 		C075E0A31ACC11E400F171D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87E8103CED2DE0D2A2C232D0 /* Pods-handyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -449,6 +533,7 @@
 		};
 		C075E0A41ACC11E400F171D0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A474646FCD2CCCE02EAB1FA /* Pods-handyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

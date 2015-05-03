@@ -1,3 +1,3 @@
 # Handy
 
-an photo app
+an developping photo app
