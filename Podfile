@@ -1,7 +1,7 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, '7.0'
 
-xcodeproj '/Users/fangyang/Github/Handy/handy/handy.xcodeproj'
+xcodeproj '/Users/fangyang/Github/Handy/handy.xcodeproj'
 
 target 'handy' do
 

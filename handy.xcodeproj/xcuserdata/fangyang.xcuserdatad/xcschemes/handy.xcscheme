@@ -14,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C075E0781ACC11E400F171D0"
+               BlueprintIdentifier = "C072C6DE1AF75E87006490FA"
                BuildableName = "handy.app"
                BlueprintName = "handy"
+               ReferencedContainer = "container:handy.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C072C6FA1AF75E88006490FA"
+               BuildableName = "handyTests.xctest"
+               BlueprintName = "handyTests"
                ReferencedContainer = "container:handy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,11 +42,21 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C072C6FA1AF75E88006490FA"
+               BuildableName = "handyTests.xctest"
+               BlueprintName = "handyTests"
+               ReferencedContainer = "container:handy.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C075E0781ACC11E400F171D0"
+            BlueprintIdentifier = "C072C6DE1AF75E87006490FA"
             BuildableName = "handy.app"
             BlueprintName = "handy"
             ReferencedContainer = "container:handy.xcodeproj">
@@ -52,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C075E0781ACC11E400F171D0"
+            BlueprintIdentifier = "C072C6DE1AF75E87006490FA"
             BuildableName = "handy.app"
             BlueprintName = "handy"
             ReferencedContainer = "container:handy.xcodeproj">
@@ -71,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C075E0781ACC11E400F171D0"
+            BlueprintIdentifier = "C072C6DE1AF75E87006490FA"
             BuildableName = "handy.app"
             BlueprintName = "handy"
             ReferencedContainer = "container:handy.xcodeproj">

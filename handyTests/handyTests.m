@@ -2,7 +2,7 @@
 //  handyTests.m
 //  handyTests
 //
-//  Created by 方阳 on 15/4/1.
+//  Created by 方阳 on 15/5/4.
 //  Copyright (c) 2015年 dw_fangyang. All rights reserved.
 //
 
@@ -28,7 +28,6 @@
 - (void)testExample {
     // This is an example of a functional test case.
     XCTAssert(YES, @"Pass");
-    //XCTFail( @"No implementation for \"%s\"",@"iiew");
 }
 
 - (void)testPerformanceExample {

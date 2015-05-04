@@ -1,0 +1,511 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C072C6E51AF75E87006490FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E41AF75E87006490FA /* main.m */; };
+		C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E91AF75E87006490FA /* handy.xcdatamodeld */; };
+		C072C6F31AF75E87006490FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C072C6F21AF75E87006490FA /* Images.xcassets */; };
+		C072C6F61AF75E87006490FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C072C6F41AF75E87006490FA /* LaunchScreen.xib */; };
+		C072C7021AF75E88006490FA /* handyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C7011AF75E88006490FA /* handyTests.m */; };
+		C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.m */; };
+		C072C7211AF75F20006490FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C70E1AF75F20006490FA /* AppDelegate.m */; };
+		C072C7221AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C7101AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m */; };
+		C072C7231AF75F20006490FA /* cameraview.xib in Resources */ = {isa = PBXBuildFile; fileRef = C072C7111AF75F20006490FA /* cameraview.xib */; };
+		C072C7241AF75F20006490FA /* handy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C072C7121AF75F20006490FA /* handy.xcdatamodeld */; };
+		C072C7251AF75F20006490FA /* HandyMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C7151AF75F20006490FA /* HandyMainViewController.m */; };
+		C072C7261AF75F20006490FA /* HandyRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C7171AF75F20006490FA /* HandyRootViewController.m */; };
+		C072C7271AF75F20006490FA /* ImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C7191AF75F20006490FA /* ImageScrollView.m */; };
+		C072C7281AF75F20006490FA /* MyPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71B1AF75F20006490FA /* MyPageViewController.m */; };
+		C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71D1AF75F20006490FA /* PageViewControllerData.m */; };
+		C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71F1AF75F20006490FA /* PhotoViewController.m */; };
+		C0838BE41AF76025004F636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0838BE21AF76025004F636C /* Main.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C072C6FC1AF75E88006490FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C072C6D71AF75E87006490FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C072C6DE1AF75E87006490FA;
+			remoteInfo = handy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C072C6DF1AF75E87006490FA /* handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C072C6E31AF75E87006490FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C072C6E41AF75E87006490FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C072C6EA1AF75E87006490FA /* handy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = handy.xcdatamodel; sourceTree = "<group>"; };
+		C072C6F21AF75E87006490FA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C072C6F51AF75E87006490FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		C072C6FB1AF75E88006490FA /* handyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = handyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C072C7001AF75E88006490FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C072C7011AF75E88006490FA /* handyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = handyTests.m; sourceTree = "<group>"; };
+		C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumContentsCollectionViewController.h; sourceTree = "<group>"; };
+		C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumContentsCollectionViewController.m; sourceTree = "<group>"; };
+		C072C70D1AF75F20006490FA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C072C70E1AF75F20006490FA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C072C70F1AF75F20006490FA /* AssetsDataIsInaccessibleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AssetsDataIsInaccessibleViewController.h; sourceTree = "<group>"; };
+		C072C7101AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AssetsDataIsInaccessibleViewController.m; sourceTree = "<group>"; };
+		C072C7111AF75F20006490FA /* cameraview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cameraview.xib; sourceTree = "<group>"; };
+		C072C7131AF75F20006490FA /* handy.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = handy.xcdatamodel; sourceTree = "<group>"; };
+		C072C7141AF75F20006490FA /* HandyMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandyMainViewController.h; sourceTree = "<group>"; };
+		C072C7151AF75F20006490FA /* HandyMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandyMainViewController.m; sourceTree = "<group>"; };
+		C072C7161AF75F20006490FA /* HandyRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandyRootViewController.h; sourceTree = "<group>"; };
+		C072C7171AF75F20006490FA /* HandyRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandyRootViewController.m; sourceTree = "<group>"; };
+		C072C7181AF75F20006490FA /* ImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollView.h; sourceTree = "<group>"; };
+		C072C7191AF75F20006490FA /* ImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollView.m; sourceTree = "<group>"; };
+		C072C71A1AF75F20006490FA /* MyPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPageViewController.h; sourceTree = "<group>"; };
+		C072C71B1AF75F20006490FA /* MyPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPageViewController.m; sourceTree = "<group>"; };
+		C072C71C1AF75F20006490FA /* PageViewControllerData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewControllerData.h; sourceTree = "<group>"; };
+		C072C71D1AF75F20006490FA /* PageViewControllerData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewControllerData.m; sourceTree = "<group>"; };
+		C072C71E1AF75F20006490FA /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		C072C71F1AF75F20006490FA /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		C0838BE31AF76025004F636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C072C6DC1AF75E87006490FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C072C6F81AF75E88006490FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C072C6D61AF75E87006490FA = {
+			isa = PBXGroup;
+			children = (
+				C072C6E11AF75E87006490FA /* handy */,
+				C072C6FE1AF75E88006490FA /* handyTests */,
+				C072C6E01AF75E87006490FA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C072C6E01AF75E87006490FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C072C6DF1AF75E87006490FA /* handy.app */,
+				C072C6FB1AF75E88006490FA /* handyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C072C6E11AF75E87006490FA /* handy */ = {
+			isa = PBXGroup;
+			children = (
+				C0838BE21AF76025004F636C /* Main.storyboard */,
+				C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.h */,
+				C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.m */,
+				C072C70D1AF75F20006490FA /* AppDelegate.h */,
+				C072C70E1AF75F20006490FA /* AppDelegate.m */,
+				C072C70F1AF75F20006490FA /* AssetsDataIsInaccessibleViewController.h */,
+				C072C7101AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m */,
+				C072C7111AF75F20006490FA /* cameraview.xib */,
+				C072C7121AF75F20006490FA /* handy.xcdatamodeld */,
+				C072C7141AF75F20006490FA /* HandyMainViewController.h */,
+				C072C7151AF75F20006490FA /* HandyMainViewController.m */,
+				C072C7161AF75F20006490FA /* HandyRootViewController.h */,
+				C072C7171AF75F20006490FA /* HandyRootViewController.m */,
+				C072C7181AF75F20006490FA /* ImageScrollView.h */,
+				C072C7191AF75F20006490FA /* ImageScrollView.m */,
+				C072C71A1AF75F20006490FA /* MyPageViewController.h */,
+				C072C71B1AF75F20006490FA /* MyPageViewController.m */,
+				C072C71C1AF75F20006490FA /* PageViewControllerData.h */,
+				C072C71D1AF75F20006490FA /* PageViewControllerData.m */,
+				C072C71E1AF75F20006490FA /* PhotoViewController.h */,
+				C072C71F1AF75F20006490FA /* PhotoViewController.m */,
+				C072C6F21AF75E87006490FA /* Images.xcassets */,
+				C072C6F41AF75E87006490FA /* LaunchScreen.xib */,
+				C072C6E91AF75E87006490FA /* handy.xcdatamodeld */,
+				C072C6E21AF75E87006490FA /* Supporting Files */,
+			);
+			path = handy;
+			sourceTree = "<group>";
+		};
+		C072C6E21AF75E87006490FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C072C6E31AF75E87006490FA /* Info.plist */,
+				C072C6E41AF75E87006490FA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C072C6FE1AF75E88006490FA /* handyTests */ = {
+			isa = PBXGroup;
+			children = (
+				C072C7011AF75E88006490FA /* handyTests.m */,
+				C072C6FF1AF75E88006490FA /* Supporting Files */,
+			);
+			path = handyTests;
+			sourceTree = "<group>";
+		};
+		C072C6FF1AF75E88006490FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C072C7001AF75E88006490FA /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C072C6DE1AF75E87006490FA /* handy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C072C7051AF75E88006490FA /* Build configuration list for PBXNativeTarget "handy" */;
+			buildPhases = (
+				C072C6DB1AF75E87006490FA /* Sources */,
+				C072C6DC1AF75E87006490FA /* Frameworks */,
+				C072C6DD1AF75E87006490FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = handy;
+			productName = handy;
+			productReference = C072C6DF1AF75E87006490FA /* handy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C072C6FA1AF75E88006490FA /* handyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C072C7081AF75E88006490FA /* Build configuration list for PBXNativeTarget "handyTests" */;
+			buildPhases = (
+				C072C6F71AF75E88006490FA /* Sources */,
+				C072C6F81AF75E88006490FA /* Frameworks */,
+				C072C6F91AF75E88006490FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C072C6FD1AF75E88006490FA /* PBXTargetDependency */,
+			);
+			name = handyTests;
+			productName = handyTests;
+			productReference = C072C6FB1AF75E88006490FA /* handyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C072C6D71AF75E87006490FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = dw_fangyang;
+				TargetAttributes = {
+					C072C6DE1AF75E87006490FA = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					C072C6FA1AF75E88006490FA = {
+						CreatedOnToolsVersion = 6.3;
+						TestTargetID = C072C6DE1AF75E87006490FA;
+					};
+				};
+			};
+			buildConfigurationList = C072C6DA1AF75E87006490FA /* Build configuration list for PBXProject "handy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C072C6D61AF75E87006490FA;
+			productRefGroup = C072C6E01AF75E87006490FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C072C6DE1AF75E87006490FA /* handy */,
+				C072C6FA1AF75E88006490FA /* handyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C072C6DD1AF75E87006490FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C072C6F61AF75E87006490FA /* LaunchScreen.xib in Resources */,
+				C072C6F31AF75E87006490FA /* Images.xcassets in Resources */,
+				C072C7231AF75F20006490FA /* cameraview.xib in Resources */,
+				C0838BE41AF76025004F636C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C072C6F91AF75E88006490FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C072C6DB1AF75E87006490FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */,
+				C072C7211AF75F20006490FA /* AppDelegate.m in Sources */,
+				C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */,
+				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.m in Sources */,
+				C072C7271AF75F20006490FA /* ImageScrollView.m in Sources */,
+				C072C7261AF75F20006490FA /* HandyRootViewController.m in Sources */,
+				C072C7281AF75F20006490FA /* MyPageViewController.m in Sources */,
+				C072C7251AF75F20006490FA /* HandyMainViewController.m in Sources */,
+				C072C7221AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m in Sources */,
+				C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */,
+				C072C7241AF75F20006490FA /* handy.xcdatamodeld in Sources */,
+				C072C6E51AF75E87006490FA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C072C6F71AF75E88006490FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C072C7021AF75E88006490FA /* handyTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C072C6FD1AF75E88006490FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C072C6DE1AF75E87006490FA /* handy */;
+			targetProxy = C072C6FC1AF75E88006490FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C072C6F41AF75E87006490FA /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C072C6F51AF75E87006490FA /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		C0838BE21AF76025004F636C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0838BE31AF76025004F636C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C072C7031AF75E88006490FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C072C7041AF75E88006490FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C072C7061AF75E88006490FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = handy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C072C7071AF75E88006490FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = handy/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C072C7091AF75E88006490FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = handyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/handy.app/handy";
+			};
+			name = Debug;
+		};
+		C072C70A1AF75E88006490FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = handyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/handy.app/handy";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C072C6DA1AF75E87006490FA /* Build configuration list for PBXProject "handy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C072C7031AF75E88006490FA /* Debug */,
+				C072C7041AF75E88006490FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C072C7051AF75E88006490FA /* Build configuration list for PBXNativeTarget "handy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C072C7061AF75E88006490FA /* Debug */,
+				C072C7071AF75E88006490FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C072C7081AF75E88006490FA /* Build configuration list for PBXNativeTarget "handyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C072C7091AF75E88006490FA /* Debug */,
+				C072C70A1AF75E88006490FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C072C6E91AF75E87006490FA /* handy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C072C6EA1AF75E87006490FA /* handy.xcdatamodel */,
+			);
+			currentVersion = C072C6EA1AF75E87006490FA /* handy.xcdatamodel */;
+			path = handy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C072C7121AF75F20006490FA /* handy.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C072C7131AF75F20006490FA /* handy.xcdatamodel */,
+			);
+			currentVersion = C072C7131AF75F20006490FA /* handy.xcdatamodel */;
+			path = handy.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C072C6D71AF75E87006490FA /* Project object */;
+}
