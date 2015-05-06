@@ -10,6 +10,7 @@
 		8F4A471042F44748C4F46293 /* libPods-handy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C1FAF7705652DBD5928A6 /* libPods-handy.a */; };
 		C00815881AF9CBAE0037A7DF /* AvgLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00815871AF9CBAE0037A7DF /* AvgLoadView.m */; };
 		C008158C1AF9CC490037A7DF /* AvgLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C008158B1AF9CC490037A7DF /* AvgLoadView.xib */; };
+		C00815921AF9EE2B0037A7DF /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00815911AF9EE2B0037A7DF /* test.storyboard */; };
 		C072C6E51AF75E87006490FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E41AF75E87006490FA /* main.m */; };
 		C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E91AF75E87006490FA /* handy.xcdatamodeld */; };
 		C072C6F31AF75E87006490FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C072C6F21AF75E87006490FA /* Images.xcassets */; };
@@ -42,9 +43,10 @@
 /* Begin PBXFileReference section */
 		2A9C1FAF7705652DBD5928A6 /* libPods-handy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-handy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D739F8693CF891612B03575 /* Pods-handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.release.xcconfig"; path = "../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.release.xcconfig"; sourceTree = "<group>"; };
-		C00815801AF9CB290037A7DF /* AvgLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvgLoadView.h; path = /Users/fangyang/GitHub/Handy/handy/AvgLoadView.h; sourceTree = "<absolute>"; };
-		C00815871AF9CBAE0037A7DF /* AvgLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvgLoadView.m; path = /Users/fangyang/GitHub/Handy/handy/AvgLoadView.m; sourceTree = "<absolute>"; };
-		C008158B1AF9CC490037A7DF /* AvgLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvgLoadView.xib; path = /Users/fangyang/GitHub/Handy/handy/AvgLoadView.xib; sourceTree = "<absolute>"; };
+		C00815801AF9CB290037A7DF /* AvgLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvgLoadView.h; path = ../../GitHub/Handy/handy/AvgLoad/AvgLoadView.h; sourceTree = SOURCE_ROOT; };
+		C00815871AF9CBAE0037A7DF /* AvgLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvgLoadView.m; path = ../../GitHub/Handy/handy/AvgLoad/AvgLoadView.m; sourceTree = SOURCE_ROOT; };
+		C008158B1AF9CC490037A7DF /* AvgLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvgLoadView.xib; path = ../../GitHub/Handy/handy/AvgLoad/AvgLoadView.xib; sourceTree = SOURCE_ROOT; };
+		C00815911AF9EE2B0037A7DF /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		C072C6DF1AF75E87006490FA /* handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C072C6E31AF75E87006490FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C072C6E41AF75E87006490FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -139,6 +141,15 @@
 			path = ../../../GitHub/Handy/handy/album;
 			sourceTree = "<group>";
 		};
+		C00815901AF9EE150037A7DF /* testTraits */ = {
+			isa = PBXGroup;
+			children = (
+				C00815911AF9EE2B0037A7DF /* test.storyboard */,
+			);
+			name = testTraits;
+			path = ../../../GitHub/Handy/handy/testTraits;
+			sourceTree = "<group>";
+		};
 		C072C6D61AF75E87006490FA = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +173,7 @@
 		C072C6E11AF75E87006490FA /* handy */ = {
 			isa = PBXGroup;
 			children = (
+				C00815901AF9EE150037A7DF /* testTraits */,
 				C008158E1AF9E92E0037A7DF /* album */,
 				C008158D1AF9CC980037A7DF /* AvgLoad */,
 				C0838BE21AF76025004F636C /* Main.storyboard */,
@@ -299,6 +311,7 @@
 				C072C6F31AF75E87006490FA /* Images.xcassets in Resources */,
 				C008158C1AF9CC490037A7DF /* AvgLoadView.xib in Resources */,
 				C072C7231AF75F20006490FA /* cameraview.xib in Resources */,
+				C00815921AF9EE2B0037A7DF /* test.storyboard in Resources */,
 				C0838BE41AF76025004F636C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
