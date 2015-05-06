@@ -41,6 +41,7 @@
 {
     [super viewDidAppear:animated];
     [self.collectionView reloadData];
+    [self.navigationController setNavigationBarHidden:NO];
 }
 
 - (void)viewDidLoad {

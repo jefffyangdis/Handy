@@ -10,4 +10,6 @@
 
 @interface HandyRootViewController : UITableViewController
 
+- (void)enableAvgLoadView;
+
 @end

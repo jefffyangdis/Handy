@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "HandyMainViewController.h"
+#import "HandyRootViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,11 +18,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    HandyMainViewController* controller = mainStoryboard.instantiateInitialViewController;
+    HandyRootViewController* controller = mainStoryboard.instantiateInitialViewController;
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
-    self.window.rootViewController = controller;
+    UINavigationController* vcNav = [[UINavigationController alloc] init];
+    vcNav.viewControllers = @[controller];
+    self.window.rootViewController = vcNav;
     [self.window makeKeyAndVisible];
+    
+    [controller enableAvgLoadView];
+    
     return YES;
 }
 

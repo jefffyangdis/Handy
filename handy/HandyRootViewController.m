@@ -9,6 +9,7 @@
 #import "HandyRootViewController.h"
 #import "AssetsDataIsInaccessibleViewController.h"
 #import "AlbumContentsCollectionViewController.h"
+#import "AvgLoadView.h"
 
 @interface HandyRootViewController ()
 
@@ -66,6 +67,8 @@
             [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
         }
     };
+    
+    [self initUI];
     //enumerate only photos
     NSUInteger grouptypes = ALAssetsGroupAlbum|ALAssetsGroupEvent|ALAssetsGroupFaces|ALAssetsGroupSavedPhotos;
     [self.assetsLibrary enumerateGroupsWithTypes:grouptypes usingBlock:listGroupBlock failureBlock:failureBlock];
@@ -80,6 +83,24 @@
     [_btn addTarget:self action:@selector(cancelevent) forControlEvents:UIControlEventTouchCancel];
     [_btn addTarget:self action:@selector(valuechangeevent) forControlEvents:UIControlEventValueChanged];
     [_btn addTarget:self action:@selector(allevent) forControlEvents:UIControlEventAllTouchEvents];
+}
+
+- (void)initUI
+{
+    [self.tableView setContentInset:UIEdgeInsetsMake(20, 0, 0, 0)];
+}
+
+- (void)enableAvgLoadView
+{
+    [AvgLoadView class];
+    AvgLoadView* loadavgView = [[[NSBundle mainBundle] loadNibNamed:@"AvgLoadView"
+                                                              owner:self
+                                                            options:nil] lastObject];
+    UIWindow* keywin = [[UIApplication sharedApplication] keyWindow];
+    loadavgView.frame = CGRectMake(0, 80, 100, 50);
+    
+    [keywin addSubview:loadavgView];
+    [loadavgView updateCpuLoad:0.2332];
 }
 
 - (void)downevent

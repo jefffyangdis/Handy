@@ -38,6 +38,10 @@
     scrollView.index = _pageIndex;
     
     self.view = scrollView;
+    
+    UITapGestureRecognizer* recgnizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(actionDoubleTapped)];
+    recgnizer.numberOfTapsRequired = 2;
+    [self.view addGestureRecognizer:recgnizer];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -51,4 +55,9 @@
     [NSString stringWithFormat:@"%@ of %@", [@(self.pageIndex+1) stringValue], [@([[PageViewControllerData sharedInstance] photoCount]) stringValue]];
 }
 
+#pragma marks tap action
+- (void)actionDoubleTapped
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
