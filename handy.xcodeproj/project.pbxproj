@@ -28,6 +28,12 @@
 		C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71D1AF75F20006490FA /* PageViewControllerData.m */; };
 		C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71F1AF75F20006490FA /* PhotoViewController.m */; };
 		C0838BE41AF76025004F636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0838BE21AF76025004F636C /* Main.storyboard */; };
+		C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFAA411AFB185100C65EC4 /* JTabbedView.m */; };
+		C0AFD2C91AF9EF2600CF3405 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2C81AF9EF2600CF3405 /* TestViewController.m */; };
+		C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */; };
+		C0AFD2D21AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */; };
+		C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */; };
+		C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +83,18 @@
 		C072C71E1AF75F20006490FA /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = ../../../../Github/Handy/handy/PhotoViewController.h; sourceTree = "<group>"; };
 		C072C71F1AF75F20006490FA /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = ../../../../Github/Handy/handy/PhotoViewController.m; sourceTree = "<group>"; };
 		C0838BE31AF76025004F636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0AFAA401AFB185100C65EC4 /* JTabbedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTabbedView.h; sourceTree = "<group>"; };
+		C0AFAA411AFB185100C65EC4 /* JTabbedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTabbedView.m; sourceTree = "<group>"; };
+		C0AFD2C71AF9EF2600CF3405 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		C0AFD2C81AF9EF2600CF3405 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		C0AFD2CA1AF9F18700CF3405 /* TestViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewControllerFactory.h; sourceTree = "<group>"; };
+		C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewControllerFactory.m; sourceTree = "<group>"; };
+		C0AFD2D01AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JStoryboardViewControllerFactory.h; sourceTree = "<group>"; };
+		C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JStoryboardViewControllerFactory.m; sourceTree = "<group>"; };
+		C0AFD2D71AFA506200CF3405 /* AlbumViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewControllerFactory.h; sourceTree = "<group>"; };
+		C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewControllerFactory.m; sourceTree = "<group>"; };
+		C0AFFA7F1B049D5C00615291 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
+		C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
 		D0C25702A7A3E1E85871DD5A /* Pods-handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.debug.xcconfig"; path = "../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +154,8 @@
 				C072C71D1AF75F20006490FA /* PageViewControllerData.m */,
 				C072C71E1AF75F20006490FA /* PhotoViewController.h */,
 				C072C71F1AF75F20006490FA /* PhotoViewController.m */,
+				C0AFD2D71AFA506200CF3405 /* AlbumViewControllerFactory.h */,
+				C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */,
 			);
 			name = album;
 			path = ../../../GitHub/Handy/handy/album;
@@ -145,6 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				C00815911AF9EE2B0037A7DF /* test.storyboard */,
+				C0AFD2C71AF9EF2600CF3405 /* TestViewController.h */,
+				C0AFD2C81AF9EF2600CF3405 /* TestViewController.m */,
+				C0AFD2CA1AF9F18700CF3405 /* TestViewControllerFactory.h */,
+				C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */,
 			);
 			name = testTraits;
 			path = ../../../GitHub/Handy/handy/testTraits;
@@ -173,6 +197,7 @@
 		C072C6E11AF75E87006490FA /* handy */ = {
 			isa = PBXGroup;
 			children = (
+				C0AFD2CF1AF9F8B200CF3405 /* jFoundation */,
 				C00815901AF9EE150037A7DF /* testTraits */,
 				C008158E1AF9E92E0037A7DF /* album */,
 				C008158D1AF9CC980037A7DF /* AvgLoad */,
@@ -214,6 +239,20 @@
 				C072C7001AF75E88006490FA /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C0AFD2CF1AF9F8B200CF3405 /* jFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				C0AFD2D01AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.h */,
+				C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */,
+				C0AFAA401AFB185100C65EC4 /* JTabbedView.h */,
+				C0AFAA411AFB185100C65EC4 /* JTabbedView.m */,
+				C0AFFA7F1B049D5C00615291 /* UIViewController+Utils.h */,
+				C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */,
+			);
+			name = jFoundation;
+			path = ../../../GitHub/Handy/handy/jFoundation;
 			sourceTree = "<group>";
 		};
 		E15B0C3617434347489662B9 /* Pods */ = {
@@ -365,12 +404,18 @@
 			files = (
 				C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */,
 				C00815881AF9CBAE0037A7DF /* AvgLoadView.m in Sources */,
+				C0AFD2C91AF9EF2600CF3405 /* TestViewController.m in Sources */,
+				C0AFD2D21AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m in Sources */,
+				C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */,
 				C072C7211AF75F20006490FA /* AppDelegate.m in Sources */,
 				C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */,
+				C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */,
 				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.m in Sources */,
 				C072C7271AF75F20006490FA /* ImageScrollView.m in Sources */,
+				C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */,
 				C072C7261AF75F20006490FA /* HandyRootViewController.m in Sources */,
 				C072C7281AF75F20006490FA /* MyPageViewController.m in Sources */,
+				C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */,
 				C072C7251AF75F20006490FA /* HandyMainViewController.m in Sources */,
 				C072C7221AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m in Sources */,
 				C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */,

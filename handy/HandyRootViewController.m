@@ -9,13 +9,13 @@
 #import "HandyRootViewController.h"
 #import "AssetsDataIsInaccessibleViewController.h"
 #import "AlbumContentsCollectionViewController.h"
+#import "AlbumViewControllerFactory.h"
 #import "AvgLoadView.h"
 
 @interface HandyRootViewController ()
 
 @property (nonatomic,strong) ALAssetsLibrary* assetsLibrary;
 @property (nonatomic,strong) NSMutableArray* groups;
-@property (nonatomic,weak) IBOutlet UIButton* btn;
 
 @end
 
@@ -72,22 +72,23 @@
     //enumerate only photos
     NSUInteger grouptypes = ALAssetsGroupAlbum|ALAssetsGroupEvent|ALAssetsGroupFaces|ALAssetsGroupSavedPhotos;
     [self.assetsLibrary enumerateGroupsWithTypes:grouptypes usingBlock:listGroupBlock failureBlock:failureBlock];
-    [_btn addTarget:self action:@selector(downevent) forControlEvents:UIControlEventTouchDown];
-    [_btn addTarget:self action:@selector(repeatevent) forControlEvents:UIControlEventTouchDownRepeat];
-    [_btn addTarget:self action:@selector(draginsideevent) forControlEvents:UIControlEventTouchDragInside];
-    [_btn addTarget:self action:@selector(dragoutsideevent) forControlEvents:UIControlEventTouchDragOutside];
-    [_btn addTarget:self action:@selector(dragenterevent) forControlEvents:UIControlEventTouchDragEnter];
-    [_btn addTarget:self action:@selector(dragexitevent) forControlEvents:UIControlEventTouchDragExit];
-    [_btn addTarget:self action:@selector(upinsideevent) forControlEvents:UIControlEventTouchUpInside];
-    [_btn addTarget:self action:@selector(upoutsideevent) forControlEvents:UIControlEventTouchUpOutside];
-    [_btn addTarget:self action:@selector(cancelevent) forControlEvents:UIControlEventTouchCancel];
-    [_btn addTarget:self action:@selector(valuechangeevent) forControlEvents:UIControlEventValueChanged];
-    [_btn addTarget:self action:@selector(allevent) forControlEvents:UIControlEventAllTouchEvents];
 }
 
 - (void)initUI
 {
-    [self.tableView setContentInset:UIEdgeInsetsMake(20, 0, 0, 0)];
+//    [self.tableView setContentInset:UIEdgeInsetsMake(0, 0, 0, 0)];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES];
+    [super viewWillAppear:animated];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO];
+    [super viewDidDisappear:animated];
 }
 
 - (void)enableAvgLoadView
@@ -97,55 +98,10 @@
                                                               owner:self
                                                             options:nil] lastObject];
     UIWindow* keywin = [[UIApplication sharedApplication] keyWindow];
-    loadavgView.frame = CGRectMake(0, 80, 100, 50);
+    loadavgView.frame = CGRectMake(0, 280, 100, 50);
     
     [keywin addSubview:loadavgView];
     [loadavgView updateCpuLoad:0.2332];
-}
-
-- (void)downevent
-{
-    NSLog(@"touch down");
-}
-- (void)repeatevent
-{
-    NSLog(@"touch down repeat");
-}
-- (void)dragenterevent
-{
-    NSLog(@"touch drag enter");
-}
-- (void)draginsideevent
-{
-    NSLog(@"touch drag inside");
-}
-- (void)dragoutsideevent
-{
-    NSLog(@"touch drag outside");
-}
-- (void)dragexitevent
-{
-    NSLog(@"touch drag exit");
-}
-- (void)upinsideevent
-{
-    NSLog(@"touch up inside");
-}
-- (void)upoutsideevent
-{
-    NSLog(@"touch up outside");
-}
-- (void)cancelevent
-{
-    NSLog(@"touch cancel");
-}
-- (void)valuechangeevent
-{
-    NSLog(@"touch value change");
-}
-- (void)allevent
-{
-    NSLog(@"touch all");
 }
 
 - (void)didReceiveMemoryWarning {
@@ -164,6 +120,15 @@
 */
 
 #pragma mark uitableviewdatasource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.5;
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -181,6 +146,13 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%@(%@)",[groupForCell valueForProperty:ALAssetsGroupPropertyName],[@(groupForCell.numberOfAssets) stringValue] ];
     cell.detailTextLabel.text = [@(groupForCell.numberOfAssets) stringValue];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    AlbumContentsCollectionViewController* vcAlbum = (AlbumContentsCollectionViewController*)[[AlbumViewControllerFactory sharedFactory] instantiateAlbumViewController];
+    vcAlbum.assetsGroup = self.groups[indexPath.row];
+    [self.navigationController pushViewController:vcAlbum animated:YES];
 }
 
 #pragma mark segue

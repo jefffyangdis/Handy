@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Test View Controller-->
+        <scene sceneID="Cls-aF-sOk">
+            <objects>
+                <viewController storyboardIdentifier="test" id="Lmd-Kx-c5Y" customClass="TestViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iLH-9b-Seb"/>
+                        <viewControllerLayoutGuide type="bottom" id="BpA-zP-dfw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4b6-PP-wXi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r5h-oZ-OjE">
+                                <rect key="frame" x="0.0" y="60" width="320" height="30"/>
+                                <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r5h-oZ-OjE" firstAttribute="top" secondItem="iLH-9b-Seb" secondAttribute="bottom" constant="40" id="Nhl-A4-qVe"/>
+                            <constraint firstItem="r5h-oZ-OjE" firstAttribute="leading" secondItem="4b6-PP-wXi" secondAttribute="leading" id="P5B-Id-GJy"/>
+                            <constraint firstAttribute="trailing" secondItem="r5h-oZ-OjE" secondAttribute="trailing" id="jaP-Qi-z4i"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="568"/>
+                    <connections>
+                        <outlet property="btn" destination="r5h-oZ-OjE" id="pMk-vS-Pgx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ltw-CO-ASV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="129"/>
+        </scene>
+    </scenes>
 </document>

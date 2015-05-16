@@ -54,6 +54,9 @@
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
+    UISwipeGestureRecognizer* swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownRecognized)];
+    [self.view addGestureRecognizer:swipeRecognizer];
+    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,6 +73,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma marks swipe action
+- (void)swipeDownRecognized
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 #pragma mark <UICollectionViewDataSource>
 
@@ -83,7 +91,8 @@
     return self.assets.count;
 }
 
-#define kImageviewTag 1 //the image view inside the collection view cell prototype is tagged with "1"
+#define kImageviewTag 1111 
+//image view inside the collection view cell prototype is tagged with kImageviewTag
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"photoCell";
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];

@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "HandyRootViewController.h"
+#import "TestViewControllerFactory.h"
 
 @interface AppDelegate ()
 
