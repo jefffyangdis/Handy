@@ -110,6 +110,12 @@
 }
 
 #pragma mark <UICollectionViewDelegate>
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+//    UIView* view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    [self.navigationController.view addSubview:view];
+//    view.backgroundColor = [UIColor blackColor];
+}
 
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
@@ -140,7 +146,15 @@
 }
 */
 
-#pragma mark prepareforsegue
+#pragma mark segue
+- (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
+{
+    if ( [identifier isEqualToString:@"showPhoto"] ) {
+        return NO;
+    }
+    return YES;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ( [segue.identifier isEqualToString:@"showPhoto"] ) {

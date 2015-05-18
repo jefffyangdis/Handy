@@ -28,11 +28,15 @@
 		C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71D1AF75F20006490FA /* PageViewControllerData.m */; };
 		C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71F1AF75F20006490FA /* PhotoViewController.m */; };
 		C0838BE41AF76025004F636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0838BE21AF76025004F636C /* Main.storyboard */; };
+		C0AE03C31B072DF900886FA8 /* JRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE03C21B072DF900886FA8 /* JRuntime.m */; };
+		C0AE03C61B072F3A00886FA8 /* JRuntime+System.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */; };
 		C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFAA411AFB185100C65EC4 /* JTabbedView.m */; };
 		C0AFD2C91AF9EF2600CF3405 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2C81AF9EF2600CF3405 /* TestViewController.m */; };
 		C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */; };
 		C0AFD2D21AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */; };
 		C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */; };
+		C0AFF4B41B083462004D8BED /* JAlbumView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFF4B31B083462004D8BED /* JAlbumView.m */; };
+		C0AFF4B61B0834AA004D8BED /* JAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */; };
 		C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +87,9 @@
 		C072C71E1AF75F20006490FA /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = ../../../../Github/Handy/handy/PhotoViewController.h; sourceTree = "<group>"; };
 		C072C71F1AF75F20006490FA /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = ../../../../Github/Handy/handy/PhotoViewController.m; sourceTree = "<group>"; };
 		C0838BE31AF76025004F636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C0AE03C11B072DF900886FA8 /* JRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRuntime.h; sourceTree = "<group>"; };
+		C0AE03C21B072DF900886FA8 /* JRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRuntime.m; sourceTree = "<group>"; };
+		C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JRuntime+System.m"; sourceTree = "<group>"; };
 		C0AFAA401AFB185100C65EC4 /* JTabbedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTabbedView.h; sourceTree = "<group>"; };
 		C0AFAA411AFB185100C65EC4 /* JTabbedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTabbedView.m; sourceTree = "<group>"; };
 		C0AFD2C71AF9EF2600CF3405 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -93,6 +100,9 @@
 		C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JStoryboardViewControllerFactory.m; sourceTree = "<group>"; };
 		C0AFD2D71AFA506200CF3405 /* AlbumViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewControllerFactory.h; sourceTree = "<group>"; };
 		C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewControllerFactory.m; sourceTree = "<group>"; };
+		C0AFF4B21B083462004D8BED /* JAlbumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumView.h; sourceTree = "<group>"; };
+		C0AFF4B31B083462004D8BED /* JAlbumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumView.m; sourceTree = "<group>"; };
+		C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAlbumView.xib; sourceTree = "<group>"; };
 		C0AFFA7F1B049D5C00615291 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
 		D0C25702A7A3E1E85871DD5A /* Pods-handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.debug.xcconfig"; path = "../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -244,12 +254,18 @@
 		C0AFD2CF1AF9F8B200CF3405 /* jFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				C0AE03C11B072DF900886FA8 /* JRuntime.h */,
+				C0AE03C21B072DF900886FA8 /* JRuntime.m */,
 				C0AFD2D01AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.h */,
 				C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */,
 				C0AFAA401AFB185100C65EC4 /* JTabbedView.h */,
 				C0AFAA411AFB185100C65EC4 /* JTabbedView.m */,
 				C0AFFA7F1B049D5C00615291 /* UIViewController+Utils.h */,
 				C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */,
+				C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */,
+				C0AFF4B21B083462004D8BED /* JAlbumView.h */,
+				C0AFF4B31B083462004D8BED /* JAlbumView.m */,
+				C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */,
 			);
 			name = jFoundation;
 			path = ../../../GitHub/Handy/handy/jFoundation;
@@ -349,6 +365,7 @@
 				C072C6F61AF75E87006490FA /* LaunchScreen.xib in Resources */,
 				C072C6F31AF75E87006490FA /* Images.xcassets in Resources */,
 				C008158C1AF9CC490037A7DF /* AvgLoadView.xib in Resources */,
+				C0AFF4B61B0834AA004D8BED /* JAlbumView.xib in Resources */,
 				C072C7231AF75F20006490FA /* cameraview.xib in Resources */,
 				C00815921AF9EE2B0037A7DF /* test.storyboard in Resources */,
 				C0838BE41AF76025004F636C /* Main.storyboard in Resources */,
@@ -403,6 +420,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */,
+				C0AFF4B41B083462004D8BED /* JAlbumView.m in Sources */,
 				C00815881AF9CBAE0037A7DF /* AvgLoadView.m in Sources */,
 				C0AFD2C91AF9EF2600CF3405 /* TestViewController.m in Sources */,
 				C0AFD2D21AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m in Sources */,
@@ -411,11 +429,13 @@
 				C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */,
 				C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */,
 				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.m in Sources */,
+				C0AE03C61B072F3A00886FA8 /* JRuntime+System.m in Sources */,
 				C072C7271AF75F20006490FA /* ImageScrollView.m in Sources */,
 				C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */,
 				C072C7261AF75F20006490FA /* HandyRootViewController.m in Sources */,
 				C072C7281AF75F20006490FA /* MyPageViewController.m in Sources */,
 				C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */,
+				C0AE03C31B072DF900886FA8 /* JRuntime.m in Sources */,
 				C072C7251AF75F20006490FA /* HandyMainViewController.m in Sources */,
 				C072C7221AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m in Sources */,
 				C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */,

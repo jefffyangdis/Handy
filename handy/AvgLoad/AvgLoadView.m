@@ -7,6 +7,7 @@
 //
 
 #import "AvgLoadView.h"
+#import "JRuntime.h"
 
 @interface AvgLoadView()
 
