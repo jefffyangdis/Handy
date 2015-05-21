@@ -30,6 +30,8 @@
 		C0838BE41AF76025004F636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0838BE21AF76025004F636C /* Main.storyboard */; };
 		C0AE03C31B072DF900886FA8 /* JRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE03C21B072DF900886FA8 /* JRuntime.m */; };
 		C0AE03C61B072F3A00886FA8 /* JRuntime+System.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */; };
+		C0AEF3EC1B0DFCF800389F17 /* JAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */; };
+		C0AEF3ED1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */; };
 		C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFAA411AFB185100C65EC4 /* JTabbedView.m */; };
 		C0AFD2C91AF9EF2600CF3405 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2C81AF9EF2600CF3405 /* TestViewController.m */; };
 		C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */; };
@@ -90,6 +92,9 @@
 		C0AE03C11B072DF900886FA8 /* JRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRuntime.h; sourceTree = "<group>"; };
 		C0AE03C21B072DF900886FA8 /* JRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRuntime.m; sourceTree = "<group>"; };
 		C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JRuntime+System.m"; sourceTree = "<group>"; };
+		C0AEF3E91B0DFCF800389F17 /* JAlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumCollectionViewCell.h; sourceTree = "<group>"; };
+		C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumCollectionViewCell.m; sourceTree = "<group>"; };
+		C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAlbumCollectionViewCell.xib; sourceTree = "<group>"; };
 		C0AFAA401AFB185100C65EC4 /* JTabbedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTabbedView.h; sourceTree = "<group>"; };
 		C0AFAA411AFB185100C65EC4 /* JTabbedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTabbedView.m; sourceTree = "<group>"; };
 		C0AFD2C71AF9EF2600CF3405 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
@@ -266,6 +271,9 @@
 				C0AFF4B21B083462004D8BED /* JAlbumView.h */,
 				C0AFF4B31B083462004D8BED /* JAlbumView.m */,
 				C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */,
+				C0AEF3E91B0DFCF800389F17 /* JAlbumCollectionViewCell.h */,
+				C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */,
+				C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */,
 			);
 			name = jFoundation;
 			path = ../../../GitHub/Handy/handy/jFoundation;
@@ -364,6 +372,7 @@
 			files = (
 				C072C6F61AF75E87006490FA /* LaunchScreen.xib in Resources */,
 				C072C6F31AF75E87006490FA /* Images.xcassets in Resources */,
+				C0AEF3ED1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib in Resources */,
 				C008158C1AF9CC490037A7DF /* AvgLoadView.xib in Resources */,
 				C0AFF4B61B0834AA004D8BED /* JAlbumView.xib in Resources */,
 				C072C7231AF75F20006490FA /* cameraview.xib in Resources */,
@@ -426,6 +435,7 @@
 				C0AFD2D21AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m in Sources */,
 				C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */,
 				C072C7211AF75F20006490FA /* AppDelegate.m in Sources */,
+				C0AEF3EC1B0DFCF800389F17 /* JAlbumCollectionViewCell.m in Sources */,
 				C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */,
 				C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */,
 				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.m in Sources */,

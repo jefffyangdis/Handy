@@ -9,6 +9,13 @@
 #import "AlbumContentsCollectionViewController.h"
 #import "PageViewControllerData.h"
 #import "MyPageViewController.h"
+#import "JAlbumView.h"
+
+@interface AlbumContentsCollectionViewController()
+
+@property (nonatomic,strong) JAlbumView* viewAlbumPopout;
+
+@end
 
 @implementation AlbumContentsCollectionViewController
 
@@ -112,6 +119,14 @@
 #pragma mark <UICollectionViewDelegate>
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ( !_viewAlbumPopout ) {
+        _viewAlbumPopout = [[[NSBundle mainBundle] loadNibNamed:@"JAlbumView" owner:self options:nil ] lastObject];
+    }
+    _viewAlbumPopout.frame = [UIScreen mainScreen].bounds;
+    _viewAlbumPopout.img = [(UIImageView*)[[self collectionView:collectionView cellForItemAtIndexPath:indexPath] viewWithTag:kImageviewTag] image];
+    [self.navigationController.view addSubview:_viewAlbumPopout];
+    UITapGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewAlbumPopoutDoubleTapped)];
+    [_viewAlbumPopout addGestureRecognizer:recognizer];
 //    UIView* view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    [self.navigationController.view addSubview:view];
 //    view.backgroundColor = [UIColor blackColor];
@@ -164,6 +179,12 @@
         NSIndexPath* path = [self.collectionView indexPathsForSelectedItems][0];
         vcPage.iIndexStarting = path.row;
     }
+}
+
+#pragma mark private
+- (void)viewAlbumPopoutDoubleTapped
+{
+    [_viewAlbumPopout removeFromSuperview];
 }
 
 @end

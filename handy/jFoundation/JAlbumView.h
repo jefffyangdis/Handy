@@ -10,4 +10,6 @@
 
 @interface JAlbumView : UIView
 
+@property (nonatomic) UIImage* img;
+
 @end

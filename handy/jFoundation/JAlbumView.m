@@ -7,10 +7,12 @@
 //
 
 #import "JAlbumView.h"
+#import "JAlbumCollectionViewCell.h"
 
-@interface JAlbumView()
+@interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *viewNavigationBalls;
+@property (weak, nonatomic) IBOutlet UICollectionView *viewImageCollection;
 
 @end
 
@@ -23,5 +25,30 @@
     // Drawing code
 }
 */
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    
+    [_viewImageCollection registerClass:[JAlbumCollectionViewCell class] forCellWithReuseIdentifier:@"JAlbumCell"];
+    UINib* nib = [UINib nibWithNibName:@"JAlbumCollectionViewCell" bundle:nil];
+    [_viewImageCollection registerNib:nib forCellWithReuseIdentifier:@"JAlbumCell"];
+}
+
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    JAlbumCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JAlbumCell" forIndexPath:indexPath];
+    cell.viewImg.image = _img;
+    return cell;
+}
 
 @end
