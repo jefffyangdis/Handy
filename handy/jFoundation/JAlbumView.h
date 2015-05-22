@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
 
 @interface JAlbumView : UIView
 
-@property (nonatomic) UIImage* img;
+@property (nonatomic,strong) NSMutableArray* assets;
+
+- (void)reloadAlbum;
 
 @end

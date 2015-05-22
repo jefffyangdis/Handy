@@ -123,8 +123,9 @@
         _viewAlbumPopout = [[[NSBundle mainBundle] loadNibNamed:@"JAlbumView" owner:self options:nil ] lastObject];
     }
     _viewAlbumPopout.frame = [UIScreen mainScreen].bounds;
-    _viewAlbumPopout.img = [(UIImageView*)[[self collectionView:collectionView cellForItemAtIndexPath:indexPath] viewWithTag:kImageviewTag] image];
+    _viewAlbumPopout.assets = _assets;
     [self.navigationController.view addSubview:_viewAlbumPopout];
+    [_viewAlbumPopout reloadAlbum];
     UITapGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewAlbumPopoutDoubleTapped)];
     [_viewAlbumPopout addGestureRecognizer:recognizer];
 //    UIView* view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];

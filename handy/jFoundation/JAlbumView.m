@@ -9,7 +9,7 @@
 #import "JAlbumView.h"
 #import "JAlbumCollectionViewCell.h"
 
-@interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
 @property (weak, nonatomic) IBOutlet UIView *viewNavigationBalls;
 @property (weak, nonatomic) IBOutlet UICollectionView *viewImageCollection;
@@ -41,14 +41,28 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    return 2;
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     JAlbumCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JAlbumCell" forIndexPath:indexPath];
-    cell.viewImg.image = _img;
+    ALAsset *asset = self.assets[indexPath.row];
+    CGImageRef imgref = [asset aspectRatioThumbnail];
+    cell.viewImg.image = [UIImage imageWithCGImage:imgref];
     return cell;
+}
+
+#pragma mark - uicollectionviewDelegateFlowLayout
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return [UIScreen mainScreen].bounds.size;
+}
+
+#pragma mark - albumview interface
+- (void)reloadAlbum
+{
+    [_viewImageCollection reloadData];
 }
 
 @end
