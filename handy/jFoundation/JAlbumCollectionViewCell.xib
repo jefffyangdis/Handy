@@ -12,13 +12,19 @@
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JqM-oS-aYy" userLabel="image">
+                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JqM-oS-aYy" userLabel="image">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                     </imageView>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
-            <color key="backgroundColor" red="0.57501201369999999" green="0.986032197" blue="0.58843355779999995" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="JqM-oS-aYy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="CMx-Yc-iKs"/>
+                <constraint firstAttribute="trailing" secondItem="JqM-oS-aYy" secondAttribute="trailing" id="MWk-fS-TAH"/>
+                <constraint firstItem="JqM-oS-aYy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="cZU-FL-pEs"/>
+                <constraint firstAttribute="bottom" secondItem="JqM-oS-aYy" secondAttribute="bottom" id="ia2-8F-jG4"/>
+            </constraints>
             <size key="customSize" width="326" height="179"/>
             <connections>
                 <outlet property="viewImg" destination="JqM-oS-aYy" id="iPq-pq-sYc"/>

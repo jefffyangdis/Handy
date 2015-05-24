@@ -8,6 +8,7 @@
 
 #import "JAlbumView.h"
 #import "JAlbumCollectionViewCell.h"
+#import "JAlbumCollectionViewLayout.h"
 
 @interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -32,6 +33,11 @@
     [_viewImageCollection registerClass:[JAlbumCollectionViewCell class] forCellWithReuseIdentifier:@"JAlbumCell"];
     UINib* nib = [UINib nibWithNibName:@"JAlbumCollectionViewCell" bundle:nil];
     [_viewImageCollection registerNib:nib forCellWithReuseIdentifier:@"JAlbumCell"];
+    JAlbumCollectionViewLayout* layout = [[JAlbumCollectionViewLayout alloc] init];
+    layout.itemSize = [UIScreen mainScreen].bounds.size;
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    _viewImageCollection.collectionViewLayout = layout;
+    _viewImageCollection.decelerationRate = UIScrollViewDecelerationRateFast;
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -41,7 +47,7 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 2;
+    return [_assets count];
 }
 
 - (UICollectionViewCell*)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -66,3 +72,6 @@
 }
 
 @end
+
+
+

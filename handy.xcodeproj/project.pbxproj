@@ -30,6 +30,7 @@
 		C0838BE41AF76025004F636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0838BE21AF76025004F636C /* Main.storyboard */; };
 		C0AE03C31B072DF900886FA8 /* JRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE03C21B072DF900886FA8 /* JRuntime.m */; };
 		C0AE03C61B072F3A00886FA8 /* JRuntime+System.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */; };
+		C0AEE26D1B11CBC9004416DD /* JAlbumCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEE26C1B11CBC9004416DD /* JAlbumCollectionViewLayout.m */; };
 		C0AEF3EC1B0DFCF800389F17 /* JAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */; };
 		C0AEF3ED1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */; };
 		C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFAA411AFB185100C65EC4 /* JTabbedView.m */; };
@@ -92,6 +93,8 @@
 		C0AE03C11B072DF900886FA8 /* JRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRuntime.h; sourceTree = "<group>"; };
 		C0AE03C21B072DF900886FA8 /* JRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRuntime.m; sourceTree = "<group>"; };
 		C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JRuntime+System.m"; sourceTree = "<group>"; };
+		C0AEE26B1B11CBC9004416DD /* JAlbumCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumCollectionViewLayout.h; sourceTree = "<group>"; };
+		C0AEE26C1B11CBC9004416DD /* JAlbumCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumCollectionViewLayout.m; sourceTree = "<group>"; };
 		C0AEF3E91B0DFCF800389F17 /* JAlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumCollectionViewCell.h; sourceTree = "<group>"; };
 		C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumCollectionViewCell.m; sourceTree = "<group>"; };
 		C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAlbumCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -274,6 +277,8 @@
 				C0AEF3E91B0DFCF800389F17 /* JAlbumCollectionViewCell.h */,
 				C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */,
 				C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */,
+				C0AEE26B1B11CBC9004416DD /* JAlbumCollectionViewLayout.h */,
+				C0AEE26C1B11CBC9004416DD /* JAlbumCollectionViewLayout.m */,
 			);
 			name = jFoundation;
 			path = ../../../GitHub/Handy/handy/jFoundation;
@@ -435,6 +440,7 @@
 				C0AFD2D21AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m in Sources */,
 				C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */,
 				C072C7211AF75F20006490FA /* AppDelegate.m in Sources */,
+				C0AEE26D1B11CBC9004416DD /* JAlbumCollectionViewLayout.m in Sources */,
 				C0AEF3EC1B0DFCF800389F17 /* JAlbumCollectionViewCell.m in Sources */,
 				C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */,
 				C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */,
