@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JImageScrollView.h"
 
 @interface JAlbumCollectionViewCell : UICollectionViewCell
+
+@property (nonatomic,strong) JImageScrollView* scrollViewImg;
 
 @property (weak, nonatomic) IBOutlet UIImageView *viewImg;
 

@@ -71,6 +71,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc
+{
+    
+}
+
 /*
 #pragma mark - Navigation
 
@@ -121,18 +126,30 @@
 {
     if ( !_viewAlbumPopout ) {
         _viewAlbumPopout = [[[NSBundle mainBundle] loadNibNamed:@"JAlbumView" owner:self options:nil ] lastObject];
+        UITapGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewAlbumPopoutDoubleTapped)];
+        [_viewAlbumPopout addGestureRecognizer:recognizer];
+//        [PageViewControllerData sharedInstance].photosAssets = _assets;
     }
     _viewAlbumPopout.frame = [UIScreen mainScreen].bounds;
+    _viewAlbumPopout.iStartIndex = indexPath.row;
     _viewAlbumPopout.assets = _assets;
-    [self.navigationController.view addSubview:_viewAlbumPopout];
     [_viewAlbumPopout reloadAlbum];
-    UITapGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewAlbumPopoutDoubleTapped)];
-    [_viewAlbumPopout addGestureRecognizer:recognizer];
+    [self.navigationController.view addSubview:_viewAlbumPopout];
 //    UIView* view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    [self.navigationController.view addSubview:view];
 //    view.backgroundColor = [UIColor blackColor];
 }
 
+#pragma mark - 屏幕方向转变时做相应的调整,如下分别是在ios 8及ios 8以下的调用方法
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator
+{
+   [_viewAlbumPopout sizeWillChange];
+}
+
+- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    [_viewAlbumPopout sizeWillChange];
+}
 /*
 // Uncomment this method to specify if the specified item should be highlighted during tracking
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -186,6 +203,8 @@
 - (void)viewAlbumPopoutDoubleTapped
 {
     [_viewAlbumPopout removeFromSuperview];
+    _viewAlbumPopout = nil;
 }
 
 @end
+

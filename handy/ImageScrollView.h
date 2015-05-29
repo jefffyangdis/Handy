@@ -14,6 +14,6 @@
 @property (nonatomic,strong) ALAsset *asset;
 @property (nonatomic) NSUInteger index;
 
-- (NSUInteger)imageCount;
+//- (NSUInteger)imageCount;
 
 @end

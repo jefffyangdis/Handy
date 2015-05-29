@@ -26,7 +26,7 @@
                 </collectionView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P9d-5e-Fzo" userLabel="navigation balls">
                     <rect key="frame" x="0.0" y="500" width="320" height="40"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="rgM-YS-EbG"/>
                     </constraints>

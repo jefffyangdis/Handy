@@ -27,7 +27,7 @@
     self.window.rootViewController = vcNav;
     [self.window makeKeyAndVisible];
     
-    [controller enableAvgLoadView];
+//    [controller enableAvgLoadView];
     
     return YES;
 }

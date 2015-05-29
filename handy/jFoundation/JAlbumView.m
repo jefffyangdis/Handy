@@ -9,6 +9,7 @@
 #import "JAlbumView.h"
 #import "JAlbumCollectionViewCell.h"
 #import "JAlbumCollectionViewLayout.h"
+#import "JImageScrollView.h"
 
 @interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -30,6 +31,7 @@
 {
     [super awakeFromNib];
     
+    _viewImageCollection.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [_viewImageCollection registerClass:[JAlbumCollectionViewCell class] forCellWithReuseIdentifier:@"JAlbumCell"];
     UINib* nib = [UINib nibWithNibName:@"JAlbumCollectionViewCell" bundle:nil];
     [_viewImageCollection registerNib:nib forCellWithReuseIdentifier:@"JAlbumCell"];
@@ -38,8 +40,40 @@
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     _viewImageCollection.collectionViewLayout = layout;
     _viewImageCollection.decelerationRate = UIScrollViewDecelerationRateFast;
+    
+    //    [_viewImageCollection addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged) name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
+- (void)dealloc
+{
+    
+}
+
+- (void)orientationChanged
+{
+}
+
+- (void)sizeWillChange
+{
+    
+    [_viewImageCollection.collectionViewLayout invalidateLayout];
+    [_viewImageCollection reloadData];
+}
+
+#pragma mark - set method
+- (void)setIStartIndex:(NSUInteger)iStartIndex
+{
+    _iStartIndex = iStartIndex;
+//    CGPoint p = _viewImageCollection.contentOffset;
+//    UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout*)_viewImageCollection.collectionViewLayout;
+//    p.x = _iStartIndex* ([ self collectionView:_viewImageCollection layout:layout sizeForItemAtIndexPath:[NSIndexPath indexPathForItem:_iStartIndex inSection:0]].width + layout.minimumInteritemSpacing) ;
+//        [_viewImageCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_iStartIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
+//    [_viewImageCollection setContentOffset:p];
+}
+
+#pragma mark - collectionviewdelegate
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
     return 1;
@@ -54,15 +88,27 @@
 {
     JAlbumCollectionViewCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"JAlbumCell" forIndexPath:indexPath];
     ALAsset *asset = self.assets[indexPath.row];
-    CGImageRef imgref = [asset aspectRatioThumbnail];
-    cell.viewImg.image = [UIImage imageWithCGImage:imgref];
+    ALAssetRepresentation* representation = [asset defaultRepresentation];
+    CGFloat f = representation.scale;
+    UIImage* img = [UIImage imageWithCGImage:[representation fullScreenImage]
+                                             scale:f
+                                       orientation:UIImageOrientationUp];
+//    cell.viewImg.image = img;
+    [cell.scrollViewImg removeFromSuperview];
+    CGSize size = [self collectionView:collectionView layout:nil sizeForItemAtIndexPath:indexPath];
+    cell.scrollViewImg = [[JImageScrollView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
+    [cell.scrollViewImg setImage:img];
+    [cell.contentView addSubview:cell.scrollViewImg];
     return cell;
 }
 
 #pragma mark - uicollectionviewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [UIScreen mainScreen].bounds.size;
+    CGFloat width = [UIScreen mainScreen].bounds.size.width;
+    CGFloat height = _viewImageCollection.bounds.size.height - _viewImageCollection.contentInset.top - _viewImageCollection.contentInset.bottom;
+    
+    return CGSizeMake(width, height);
 }
 
 #pragma mark - albumview interface
