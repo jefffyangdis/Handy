@@ -9,9 +9,12 @@
 #import "AlbumContentsCollectionViewController.h"
 #import "PageViewControllerData.h"
 #import "MyPageViewController.h"
+#import "AlbumContentsDataSource.h"
 #import "JAlbumView.h"
 
 @interface AlbumContentsCollectionViewController()
+
+@property (nonatomic,strong) AlbumContentsDataSource* dataSource;
 
 @property (nonatomic,strong) JAlbumView* viewAlbumPopout;
 
@@ -25,6 +28,7 @@
     [super viewWillAppear:animated];
     
     self.title = [self.assetsGroup valueForProperty:ALAssetsGroupPropertyName];
+    NSMutableArray* assets = [[NSMutableArray alloc] init];
     if ( !self.assets ) {
         self.assets = [[NSMutableArray alloc] init];
     }
@@ -36,12 +40,15 @@
     ALAssetsGroupEnumerationResultsBlock assetsEnumerationBlock = ^(ALAsset* result,NSUInteger index,BOOL *stop)
     {
         if ( result ) {
+            [assets addObject:result];
             [self.assets addObject:result];
         }
     };
     ALAssetsFilter* onlyPhotosFilter = [ALAssetsFilter allPhotos];
     [self.assetsGroup setAssetsFilter:onlyPhotosFilter];
     [self.assetsGroup enumerateAssetsUsingBlock:assetsEnumerationBlock];
+    [self configureDataSource:assets];
+    self.collectionView.dataSource = self.dataSource;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -61,9 +68,11 @@
 //    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
-    UISwipeGestureRecognizer* swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownRecognized)];
-    [self.view addGestureRecognizer:swipeRecognizer];
-    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    
+    
+//    UISwipeGestureRecognizer* swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownRecognized)];
+//    [self.view addGestureRecognizer:swipeRecognizer];
+//    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -74,6 +83,20 @@
 - (void)dealloc
 {
     
+}
+
+#define kImageviewTag 1111
+- (void)configureDataSource:(NSArray*) assets
+{
+    void(^configureBlock)(UICollectionViewCell*,ALAsset*) =^(UICollectionViewCell* cell,ALAsset* asset){
+        CGImageRef thumbnailImageRef = [asset thumbnail];
+        UIImage* thumbnail = [UIImage imageWithCGImage:thumbnailImageRef];
+        
+        //apply the image to the cell
+        UIImageView* imageView = (UIImageView*)[cell viewWithTag:kImageviewTag];
+        imageView.image = thumbnail;
+    };
+    self.dataSource = [[AlbumContentsDataSource alloc] initWithItems:self.assets cellIdentifier:@"photoCell" configureCellBlock:configureBlock];
 }
 
 /*
@@ -89,36 +112,6 @@
 - (void)swipeDownRecognized
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-}
-
-#pragma mark <UICollectionViewDataSource>
-
-//- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-//#warning Incomplete method implementation -- Return the number of sections
-//    return 0;
-//}
-
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return self.assets.count;
-}
-
-#define kImageviewTag 1111 
-//image view inside the collection view cell prototype is tagged with kImageviewTag
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentifier = @"photoCell";
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    // Configure the cell, load the asset for this cell
-    ALAsset *asset = self.assets[indexPath.row];
-    CGImageRef thumbnailImageRef = [asset thumbnail];
-    UIImage* thumbnail = [UIImage imageWithCGImage:thumbnailImageRef];
-    
-    //apply the image to the cell
-    UIImageView* imageView = (UIImageView*)[cell viewWithTag:kImageviewTag];
-    imageView.image = thumbnail;
-    
-    return cell;
 }
 
 #pragma mark <UICollectionViewDelegate>

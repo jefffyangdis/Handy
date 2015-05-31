@@ -11,12 +11,13 @@
 		C00815881AF9CBAE0037A7DF /* AvgLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00815871AF9CBAE0037A7DF /* AvgLoadView.m */; };
 		C008158C1AF9CC490037A7DF /* AvgLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C008158B1AF9CC490037A7DF /* AvgLoadView.xib */; };
 		C00815921AF9EE2B0037A7DF /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00815911AF9EE2B0037A7DF /* test.storyboard */; };
+		C0081CFC1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C0081CFB1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m */; };
 		C072C6E51AF75E87006490FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E41AF75E87006490FA /* main.m */; };
 		C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E91AF75E87006490FA /* handy.xcdatamodeld */; };
 		C072C6F31AF75E87006490FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C072C6F21AF75E87006490FA /* Images.xcassets */; };
 		C072C6F61AF75E87006490FA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C072C6F41AF75E87006490FA /* LaunchScreen.xib */; };
 		C072C7021AF75E88006490FA /* handyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C7011AF75E88006490FA /* handyTests.m */; };
-		C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.m */; };
+		C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.h */; };
 		C072C7211AF75F20006490FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C70E1AF75F20006490FA /* AppDelegate.m */; };
 		C072C7221AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C7101AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m */; };
 		C072C7231AF75F20006490FA /* cameraview.xib in Resources */ = {isa = PBXBuildFile; fileRef = C072C7111AF75F20006490FA /* cameraview.xib */; };
@@ -42,6 +43,7 @@
 		C0AFF4B41B083462004D8BED /* JAlbumView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFF4B31B083462004D8BED /* JAlbumView.m */; };
 		C0AFF4B61B0834AA004D8BED /* JAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */; };
 		C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */; };
+		C0B2BC2D1B1A9AFF00CF5109 /* AlbumContentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		C00815871AF9CBAE0037A7DF /* AvgLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvgLoadView.m; path = ../../GitHub/Handy/handy/AvgLoad/AvgLoadView.m; sourceTree = SOURCE_ROOT; };
 		C008158B1AF9CC490037A7DF /* AvgLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvgLoadView.xib; path = ../../GitHub/Handy/handy/AvgLoad/AvgLoadView.xib; sourceTree = SOURCE_ROOT; };
 		C00815911AF9EE2B0037A7DF /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
+		C0081CFA1B1A0FB0009EB1A4 /* AlbumContentsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumContentsDataSource.h; sourceTree = "<group>"; };
+		C0081CFB1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumContentsDataSource.m; sourceTree = "<group>"; };
 		C072C6DF1AF75E87006490FA /* handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C072C6E31AF75E87006490FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C072C6E41AF75E87006490FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,8 +74,8 @@
 		C072C6FB1AF75E88006490FA /* handyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = handyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C072C7001AF75E88006490FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C072C7011AF75E88006490FA /* handyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = handyTests.m; sourceTree = "<group>"; };
-		C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlbumContentsCollectionViewController.h; path = ../../../../Github/Handy/handy/AlbumContentsCollectionViewController.h; sourceTree = "<group>"; };
-		C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlbumContentsCollectionViewController.m; path = ../../../../Github/Handy/handy/AlbumContentsCollectionViewController.m; sourceTree = "<group>"; };
+		C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlbumContentsCollectionViewController.m; path = /Users/fangyang/GitHub/Handy/handy/album/AlbumContentsCollectionViewController.m; sourceTree = "<absolute>"; };
+		C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlbumContentsCollectionViewController.h; path = /Users/fangyang/GitHub/Handy/handy/album/AlbumContentsCollectionViewController.h; sourceTree = "<absolute>"; };
 		C072C70D1AF75F20006490FA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C072C70E1AF75F20006490FA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		C072C70F1AF75F20006490FA /* AssetsDataIsInaccessibleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AssetsDataIsInaccessibleViewController.h; path = ../../../../Github/Handy/handy/AssetsDataIsInaccessibleViewController.h; sourceTree = "<group>"; };
@@ -160,8 +164,8 @@
 		C008158E1AF9E92E0037A7DF /* album */ = {
 			isa = PBXGroup;
 			children = (
-				C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.h */,
-				C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.m */,
+				C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.m */,
+				C072C70C1AF75F20006490FA /* AlbumContentsCollectionViewController.h */,
 				C072C70F1AF75F20006490FA /* AssetsDataIsInaccessibleViewController.h */,
 				C072C7101AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m */,
 				C072C7111AF75F20006490FA /* cameraview.xib */,
@@ -177,6 +181,8 @@
 				C072C71F1AF75F20006490FA /* PhotoViewController.m */,
 				C0AFD2D71AFA506200CF3405 /* AlbumViewControllerFactory.h */,
 				C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */,
+				C0081CFA1B1A0FB0009EB1A4 /* AlbumContentsDataSource.h */,
+				C0081CFB1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m */,
 			);
 			name = album;
 			path = ../../../GitHub/Handy/handy/album;
@@ -448,8 +454,10 @@
 				C0AEE26D1B11CBC9004416DD /* JAlbumCollectionViewLayout.m in Sources */,
 				C0AEF3EC1B0DFCF800389F17 /* JAlbumCollectionViewCell.m in Sources */,
 				C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */,
+				C0081CFC1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m in Sources */,
 				C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */,
-				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.m in Sources */,
+				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.h in Sources */,
+				C0B2BC2D1B1A9AFF00CF5109 /* AlbumContentsCollectionViewController.m in Sources */,
 				C0AE03C61B072F3A00886FA8 /* JRuntime+System.m in Sources */,
 				C072C7271AF75F20006490FA /* ImageScrollView.m in Sources */,
 				C0AEF2FD1B156B1D00D85AB4 /* JImageScrollView.m in Sources */,
@@ -541,7 +549,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "";
@@ -580,7 +588,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "";

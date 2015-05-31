@@ -10,6 +10,7 @@
 #import "JAlbumCollectionViewCell.h"
 #import "JAlbumCollectionViewLayout.h"
 #import "JImageScrollView.h"
+#import <ReactiveViewModel/RVMViewModel.h>
 
 @interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
 
@@ -48,7 +49,7 @@
 
 - (void)dealloc
 {
-    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIDeviceOrientationDidChangeNotification object:nil];
 }
 
 - (void)orientationChanged
@@ -57,7 +58,6 @@
 
 - (void)sizeWillChange
 {
-    
     [_viewImageCollection.collectionViewLayout invalidateLayout];
     [_viewImageCollection reloadData];
 }
