@@ -12,7 +12,7 @@
 @interface JAlbumView : UIView
 
 @property (nonatomic,strong) NSMutableArray* assets;
-@property (nonatomic,assign) NSUInteger iStartIndex;
+@property (nonatomic,assign) NSInteger iCurrentOffsetIndex;
 
 - (void)reloadAlbum;
 - (void)sizeWillChange;

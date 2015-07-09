@@ -70,9 +70,9 @@
     // Do any additional setup after loading the view.
     
     
-//    UISwipeGestureRecognizer* swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownRecognized)];
-//    [self.view addGestureRecognizer:swipeRecognizer];
-//    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    UISwipeGestureRecognizer* swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownRecognized)];
+    [self.view addGestureRecognizer:swipeRecognizer];
+    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -111,7 +111,7 @@
 #pragma marks swipe action
 - (void)swipeDownRecognized
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark <UICollectionViewDelegate>
@@ -124,10 +124,11 @@
 //        [PageViewControllerData sharedInstance].photosAssets = _assets;
     }
     _viewAlbumPopout.frame = [UIScreen mainScreen].bounds;
-    _viewAlbumPopout.iStartIndex = indexPath.row;
     _viewAlbumPopout.assets = _assets;
+    _viewAlbumPopout.iCurrentOffsetIndex = indexPath.row;
     [_viewAlbumPopout reloadAlbum];
     [self.navigationController.view addSubview:_viewAlbumPopout];
+    self.navigationController.navigationBarHidden = YES;
 //    UIView* view = [[UIView alloc] initWithFrame:[UIScreen mainScreen].bounds];
 //    [self.navigationController.view addSubview:view];
 //    view.backgroundColor = [UIColor blackColor];
@@ -195,9 +196,9 @@
 #pragma mark private
 - (void)viewAlbumPopoutDoubleTapped
 {
+    self.navigationController.navigationBarHidden = NO;
     [_viewAlbumPopout removeFromSuperview];
     _viewAlbumPopout = nil;
 }
-
 @end
 

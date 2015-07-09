@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JAlbumCollectionViewLayoutDelegate <NSObject>
+
+@optional
+- (NSInteger)iCurrentIndex;
+- (void)setICurrentIndex:(NSInteger)index;
+@end
+
 @interface JAlbumCollectionViewLayout : UICollectionViewFlowLayout
+
+@property (nonatomic,weak) id<JAlbumCollectionViewLayoutDelegate> layoutDelegate;
 
 @end

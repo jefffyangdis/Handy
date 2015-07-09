@@ -11,11 +11,13 @@
 #import "AlbumContentsCollectionViewController.h"
 #import "AlbumViewControllerFactory.h"
 #import "AvgLoadView.h"
+#import "Network.h"
 
 @interface HandyRootViewController ()
 
 @property (nonatomic,strong) ALAssetsLibrary* assetsLibrary;
 @property (nonatomic,strong) NSMutableArray* groups;
+@property (nonatomic,strong) Network* network;
 
 @end
 
@@ -25,6 +27,10 @@
 #pragma mark viewlifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _network = [[Network alloc] init];
+    [_network ok];
+    
     // Do any additional setup after loading the view.
     if ( self.assetsLibrary == nil )
     {

@@ -12,7 +12,7 @@
 #import "JImageScrollView.h"
 #import <ReactiveViewModel/RVMViewModel.h>
 
-@interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout>
+@interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,JAlbumCollectionViewLayoutDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *viewNavigationBalls;
 @property (weak, nonatomic) IBOutlet UICollectionView *viewImageCollection;
@@ -40,6 +40,7 @@
     layout.itemSize = [UIScreen mainScreen].bounds.size;
     layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
     _viewImageCollection.collectionViewLayout = layout;
+    layout.layoutDelegate = self;
     _viewImageCollection.decelerationRate = UIScrollViewDecelerationRateFast;
     
     //    [_viewImageCollection addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
@@ -60,17 +61,6 @@
 {
     [_viewImageCollection.collectionViewLayout invalidateLayout];
     [_viewImageCollection reloadData];
-}
-
-#pragma mark - set method
-- (void)setIStartIndex:(NSUInteger)iStartIndex
-{
-    _iStartIndex = iStartIndex;
-//    CGPoint p = _viewImageCollection.contentOffset;
-//    UICollectionViewFlowLayout* layout = (UICollectionViewFlowLayout*)_viewImageCollection.collectionViewLayout;
-//    p.x = _iStartIndex* ([ self collectionView:_viewImageCollection layout:layout sizeForItemAtIndexPath:[NSIndexPath indexPathForItem:_iStartIndex inSection:0]].width + layout.minimumInteritemSpacing) ;
-//        [_viewImageCollection scrollToItemAtIndexPath:[NSIndexPath indexPathForItem:_iStartIndex inSection:0] atScrollPosition:UICollectionViewScrollPositionCenteredHorizontally animated:NO];
-//    [_viewImageCollection setContentOffset:p];
 }
 
 #pragma mark - collectionviewdelegate
@@ -109,6 +99,17 @@
     CGFloat height = _viewImageCollection.bounds.size.height - _viewImageCollection.contentInset.top - _viewImageCollection.contentInset.bottom;
     
     return CGSizeMake(width, height);
+}
+
+#pragma mark - JAlbumCollectionViewLayoutDelegate
+- (NSInteger)iCurrentIndex
+{
+    return _iCurrentOffsetIndex;
+}
+
+- (void)setICurrentIndex:(NSInteger)index
+{
+    _iCurrentOffsetIndex = index;
 }
 
 #pragma mark - albumview interface

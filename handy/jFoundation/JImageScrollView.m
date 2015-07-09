@@ -98,7 +98,7 @@
 
 - (void)setMaxMinimumZoomScale
 {
-    CGFloat scale = [UIScreen mainScreen].scale;
+//    CGFloat scale = [UIScreen mainScreen].scale;
     CGSize boundsSize = self.bounds.size;
 //    boundsSize = CGSizeMake( boundsSize.width*scale, boundsSize.height*scale);
     

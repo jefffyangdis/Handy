@@ -29,8 +29,6 @@
 		C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71D1AF75F20006490FA /* PageViewControllerData.m */; };
 		C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71F1AF75F20006490FA /* PhotoViewController.m */; };
 		C0838BE41AF76025004F636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0838BE21AF76025004F636C /* Main.storyboard */; };
-		C0AE03C31B072DF900886FA8 /* JRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE03C21B072DF900886FA8 /* JRuntime.m */; };
-		C0AE03C61B072F3A00886FA8 /* JRuntime+System.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */; };
 		C0AEE26D1B11CBC9004416DD /* JAlbumCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEE26C1B11CBC9004416DD /* JAlbumCollectionViewLayout.m */; };
 		C0AEF2FD1B156B1D00D85AB4 /* JImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEF2FC1B156B1D00D85AB4 /* JImageScrollView.m */; };
 		C0AEF3EC1B0DFCF800389F17 /* JAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */; };
@@ -44,6 +42,13 @@
 		C0AFF4B61B0834AA004D8BED /* JAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */; };
 		C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */; };
 		C0B2BC2D1B1A9AFF00CF5109 /* AlbumContentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.m */; };
+		C0C6203D1B39519700FBC471 /* Network.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0C6203C1B39519700FBC471 /* Network.mm */; };
+		C0C705EF1B40DA1E007CE302 /* libJFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C705E31B40D145007CE302 /* libJFoundation.a */; };
+		C0CAEDF41B271187003DEEE0 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */; };
+		C0CAEDF61B271187003DEEE0 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CAEDF51B271187003DEEE0 /* Photos.framework */; };
+		C0CAEDFC1B271187003DEEE0 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CAEDFB1B271187003DEEE0 /* PhotoEditingViewController.m */; };
+		C0CAEDFE1B271187003DEEE0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0CAEDFD1B271187003DEEE0 /* MainInterface.storyboard */; };
+		C0CAEE011B271187003DEEE0 /* handyExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C0CAEDF21B271187003DEEE0 /* handyExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +59,49 @@
 			remoteGlobalIDString = C072C6DE1AF75E87006490FA;
 			remoteInfo = handy;
 		};
+		C0C705E21B40D145007CE302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0C705C31B40D144007CE302;
+			remoteInfo = JFoundation;
+		};
+		C0C705E41B40D145007CE302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0C705CE1B40D144007CE302;
+			remoteInfo = JFoundationTests;
+		};
+		C0C705EB1B40D5A7007CE302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = C0C705C21B40D144007CE302;
+			remoteInfo = JFoundation;
+		};
+		C0CAEDFF1B271187003DEEE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C072C6D71AF75E87006490FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0CAEDF11B271187003DEEE0;
+			remoteInfo = handyExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C0CAEE051B271187003DEEE0 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C0CAEE011B271187003DEEE0 /* handyExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2A9C1FAF7705652DBD5928A6 /* libPods-handy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-handy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,9 +142,6 @@
 		C072C71E1AF75F20006490FA /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = ../../../../Github/Handy/handy/PhotoViewController.h; sourceTree = "<group>"; };
 		C072C71F1AF75F20006490FA /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = ../../../../Github/Handy/handy/PhotoViewController.m; sourceTree = "<group>"; };
 		C0838BE31AF76025004F636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0AE03C11B072DF900886FA8 /* JRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRuntime.h; sourceTree = "<group>"; };
-		C0AE03C21B072DF900886FA8 /* JRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRuntime.m; sourceTree = "<group>"; };
-		C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JRuntime+System.m"; sourceTree = "<group>"; };
 		C0AEE26B1B11CBC9004416DD /* JAlbumCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumCollectionViewLayout.h; sourceTree = "<group>"; };
 		C0AEE26C1B11CBC9004416DD /* JAlbumCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumCollectionViewLayout.m; sourceTree = "<group>"; };
 		C0AEF2FB1B156B1D00D85AB4 /* JImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JImageScrollView.h; sourceTree = "<group>"; };
@@ -120,6 +164,16 @@
 		C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAlbumView.xib; sourceTree = "<group>"; };
 		C0AFFA7F1B049D5C00615291 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
+		C0C6203B1B39519700FBC471 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
+		C0C6203C1B39519700FBC471 /* Network.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Network.mm; sourceTree = "<group>"; };
+		C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JFoundation.xcodeproj; path = ../../GitHub/Handy/JFoundation/JFoundation.xcodeproj; sourceTree = "<group>"; };
+		C0CAEDF21B271187003DEEE0 /* handyExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = handyExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
+		C0CAEDF51B271187003DEEE0 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
+		C0CAEDF91B271187003DEEE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0CAEDFA1B271187003DEEE0 /* PhotoEditingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoEditingViewController.h; sourceTree = "<group>"; };
+		C0CAEDFB1B271187003DEEE0 /* PhotoEditingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoEditingViewController.m; sourceTree = "<group>"; };
+		C0CAEDFD1B271187003DEEE0 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		D0C25702A7A3E1E85871DD5A /* Pods-handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.debug.xcconfig"; path = "../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C705EF1B40DA1E007CE302 /* libJFoundation.a in Frameworks */,
 				8F4A471042F44748C4F46293 /* libPods-handy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -139,6 +194,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0CAEDEF1B271187003DEEE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0CAEDF41B271187003DEEE0 /* PhotosUI.framework in Frameworks */,
+				C0CAEDF61B271187003DEEE0 /* Photos.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -146,6 +210,9 @@
 			isa = PBXGroup;
 			children = (
 				2A9C1FAF7705652DBD5928A6 /* libPods-handy.a */,
+				C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */,
+				C0CAEDF51B271187003DEEE0 /* Photos.framework */,
+				C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -206,6 +273,7 @@
 			children = (
 				C072C6E11AF75E87006490FA /* handy */,
 				C072C6FE1AF75E88006490FA /* handyTests */,
+				C0CAEDF71B271187003DEEE0 /* handyExtension */,
 				C072C6E01AF75E87006490FA /* Products */,
 				E15B0C3617434347489662B9 /* Pods */,
 				5D5860BE93EAAD014ADFED8F /* Frameworks */,
@@ -217,6 +285,7 @@
 			children = (
 				C072C6DF1AF75E87006490FA /* handy.app */,
 				C072C6FB1AF75E88006490FA /* handyTests.xctest */,
+				C0CAEDF21B271187003DEEE0 /* handyExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -224,6 +293,7 @@
 		C072C6E11AF75E87006490FA /* handy */ = {
 			isa = PBXGroup;
 			children = (
+				C0C620351B393D5100FBC471 /* Network */,
 				C0AFD2CF1AF9F8B200CF3405 /* jFoundation */,
 				C00815901AF9EE150037A7DF /* testTraits */,
 				C008158E1AF9E92E0037A7DF /* album */,
@@ -271,15 +341,12 @@
 		C0AFD2CF1AF9F8B200CF3405 /* jFoundation */ = {
 			isa = PBXGroup;
 			children = (
-				C0AE03C11B072DF900886FA8 /* JRuntime.h */,
-				C0AE03C21B072DF900886FA8 /* JRuntime.m */,
 				C0AFD2D01AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.h */,
 				C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */,
 				C0AFAA401AFB185100C65EC4 /* JTabbedView.h */,
 				C0AFAA411AFB185100C65EC4 /* JTabbedView.m */,
 				C0AFFA7F1B049D5C00615291 /* UIViewController+Utils.h */,
 				C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */,
-				C0AE03C51B072F3A00886FA8 /* JRuntime+System.m */,
 				C0AFF4B21B083462004D8BED /* JAlbumView.h */,
 				C0AFF4B31B083462004D8BED /* JAlbumView.m */,
 				C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */,
@@ -293,6 +360,44 @@
 			);
 			name = jFoundation;
 			path = ../../../GitHub/Handy/handy/jFoundation;
+			sourceTree = "<group>";
+		};
+		C0C620351B393D5100FBC471 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C0C6203B1B39519700FBC471 /* Network.h */,
+				C0C6203C1B39519700FBC471 /* Network.mm */,
+			);
+			name = Network;
+			path = ../../../GitHub/Handy/handy/Network;
+			sourceTree = "<group>";
+		};
+		C0C705DE1B40D144007CE302 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C0C705E31B40D145007CE302 /* libJFoundation.a */,
+				C0C705E51B40D145007CE302 /* JFoundationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C0CAEDF71B271187003DEEE0 /* handyExtension */ = {
+			isa = PBXGroup;
+			children = (
+				C0CAEDFA1B271187003DEEE0 /* PhotoEditingViewController.h */,
+				C0CAEDFB1B271187003DEEE0 /* PhotoEditingViewController.m */,
+				C0CAEDFD1B271187003DEEE0 /* MainInterface.storyboard */,
+				C0CAEDF81B271187003DEEE0 /* Supporting Files */,
+			);
+			path = handyExtension;
+			sourceTree = "<group>";
+		};
+		C0CAEDF81B271187003DEEE0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0CAEDF91B271187003DEEE0 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		E15B0C3617434347489662B9 /* Pods */ = {
@@ -316,10 +421,13 @@
 				C072C6DC1AF75E87006490FA /* Frameworks */,
 				C072C6DD1AF75E87006490FA /* Resources */,
 				7A365F6B011D5D6DFCE3AAD7 /* Copy Pods Resources */,
+				C0CAEE051B271187003DEEE0 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C0C705EC1B40D5A7007CE302 /* PBXTargetDependency */,
+				C0CAEE001B271187003DEEE0 /* PBXTargetDependency */,
 			);
 			name = handy;
 			productName = handy;
@@ -344,6 +452,23 @@
 			productReference = C072C6FB1AF75E88006490FA /* handyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C0CAEDF11B271187003DEEE0 /* handyExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0CAEE021B271187003DEEE0 /* Build configuration list for PBXNativeTarget "handyExtension" */;
+			buildPhases = (
+				C0CAEDEE1B271187003DEEE0 /* Sources */,
+				C0CAEDEF1B271187003DEEE0 /* Frameworks */,
+				C0CAEDF01B271187003DEEE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = handyExtension;
+			productName = handyExtension;
+			productReference = C0CAEDF21B271187003DEEE0 /* handyExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -360,6 +485,9 @@
 						CreatedOnToolsVersion = 6.3;
 						TestTargetID = C072C6DE1AF75E87006490FA;
 					};
+					C0CAEDF11B271187003DEEE0 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 				};
 			};
 			buildConfigurationList = C072C6DA1AF75E87006490FA /* Build configuration list for PBXProject "handy" */;
@@ -373,13 +501,37 @@
 			mainGroup = C072C6D61AF75E87006490FA;
 			productRefGroup = C072C6E01AF75E87006490FA /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C0C705DE1B40D144007CE302 /* Products */;
+					ProjectRef = C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				C072C6DE1AF75E87006490FA /* handy */,
 				C072C6FA1AF75E88006490FA /* handyTests */,
+				C0CAEDF11B271187003DEEE0 /* handyExtension */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		C0C705E31B40D145007CE302 /* libJFoundation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libJFoundation.a;
+			remoteRef = C0C705E21B40D145007CE302 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		C0C705E51B40D145007CE302 /* JFoundationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = JFoundationTests.xctest;
+			remoteRef = C0C705E41B40D145007CE302 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		C072C6DD1AF75E87006490FA /* Resources */ = {
@@ -401,6 +553,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0CAEDF01B271187003DEEE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0CAEDFE1B271187003DEEE0 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,18 +618,17 @@
 				C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */,
 				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.h in Sources */,
 				C0B2BC2D1B1A9AFF00CF5109 /* AlbumContentsCollectionViewController.m in Sources */,
-				C0AE03C61B072F3A00886FA8 /* JRuntime+System.m in Sources */,
 				C072C7271AF75F20006490FA /* ImageScrollView.m in Sources */,
 				C0AEF2FD1B156B1D00D85AB4 /* JImageScrollView.m in Sources */,
 				C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */,
 				C072C7261AF75F20006490FA /* HandyRootViewController.m in Sources */,
 				C072C7281AF75F20006490FA /* MyPageViewController.m in Sources */,
 				C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */,
-				C0AE03C31B072DF900886FA8 /* JRuntime.m in Sources */,
 				C072C7251AF75F20006490FA /* HandyMainViewController.m in Sources */,
 				C072C7221AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m in Sources */,
 				C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */,
 				C072C7241AF75F20006490FA /* handy.xcdatamodeld in Sources */,
+				C0C6203D1B39519700FBC471 /* Network.mm in Sources */,
 				C072C6E51AF75E87006490FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +641,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0CAEDEE1B271187003DEEE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0CAEDFC1B271187003DEEE0 /* PhotoEditingViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -489,6 +656,16 @@
 			isa = PBXTargetDependency;
 			target = C072C6DE1AF75E87006490FA /* handy */;
 			targetProxy = C072C6FC1AF75E88006490FA /* PBXContainerItemProxy */;
+		};
+		C0C705EC1B40D5A7007CE302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = JFoundation;
+			targetProxy = C0C705EB1B40D5A7007CE302 /* PBXContainerItemProxy */;
+		};
+		C0CAEE001B271187003DEEE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0CAEDF11B271187003DEEE0 /* handyExtension */;
+			targetProxy = C0CAEDFF1B271187003DEEE0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -601,10 +778,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0C25702A7A3E1E85871DD5A /* Pods-handy.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = handy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/JFoundation/JFoundation";
 			};
 			name = Debug;
 		};
@@ -612,10 +790,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D739F8693CF891612B03575 /* Pods-handy.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = handy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/JFoundation/JFoundation";
 			};
 			name = Release;
 		};
@@ -653,6 +832,34 @@
 			};
 			name = Release;
 		};
+		C0CAEE031B271187003DEEE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = handyExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C0CAEE041B271187003DEEE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = handyExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -679,6 +886,15 @@
 			buildConfigurations = (
 				C072C7091AF75E88006490FA /* Debug */,
 				C072C70A1AF75E88006490FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0CAEE021B271187003DEEE0 /* Build configuration list for PBXNativeTarget "handyExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0CAEE031B271187003DEEE0 /* Debug */,
+				C0CAEE041B271187003DEEE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

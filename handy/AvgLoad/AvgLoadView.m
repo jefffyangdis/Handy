@@ -7,7 +7,7 @@
 //
 
 #import "AvgLoadView.h"
-#import "JRuntime.h"
+#import "JFoundation.h"
 
 @interface AvgLoadView()
 
