@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8F4A471042F44748C4F46293 /* libPods-handy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A9C1FAF7705652DBD5928A6 /* libPods-handy.a */; };
 		C00815881AF9CBAE0037A7DF /* AvgLoadView.m in Sources */ = {isa = PBXBuildFile; fileRef = C00815871AF9CBAE0037A7DF /* AvgLoadView.m */; };
 		C008158C1AF9CC490037A7DF /* AvgLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C008158B1AF9CC490037A7DF /* AvgLoadView.xib */; };
 		C00815921AF9EE2B0037A7DF /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00815911AF9EE2B0037A7DF /* test.storyboard */; };
@@ -29,21 +28,14 @@
 		C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71D1AF75F20006490FA /* PageViewControllerData.m */; };
 		C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C71F1AF75F20006490FA /* PhotoViewController.m */; };
 		C0838BE41AF76025004F636C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0838BE21AF76025004F636C /* Main.storyboard */; };
-		C0AEE26D1B11CBC9004416DD /* JAlbumCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEE26C1B11CBC9004416DD /* JAlbumCollectionViewLayout.m */; };
-		C0AEF2FD1B156B1D00D85AB4 /* JImageScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEF2FC1B156B1D00D85AB4 /* JImageScrollView.m */; };
-		C0AEF3EC1B0DFCF800389F17 /* JAlbumCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */; };
-		C0AEF3ED1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */; };
-		C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFAA411AFB185100C65EC4 /* JTabbedView.m */; };
 		C0AFD2C91AF9EF2600CF3405 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2C81AF9EF2600CF3405 /* TestViewController.m */; };
 		C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */; };
-		C0AFD2D21AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */; };
 		C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */; };
-		C0AFF4B41B083462004D8BED /* JAlbumView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFF4B31B083462004D8BED /* JAlbumView.m */; };
-		C0AFF4B61B0834AA004D8BED /* JAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */; };
-		C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */; };
 		C0B2BC2D1B1A9AFF00CF5109 /* AlbumContentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.m */; };
+		C0C42D471B521BC400238799 /* libJFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C42D3E1B51626700238799 /* libJFoundation.a */; };
+		C0C488991B686D9E003440D0 /* JAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C488971B686D9E003440D0 /* JAlbumCollectionViewCell.xib */; };
+		C0C4889A1B686D9E003440D0 /* JAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C488981B686D9E003440D0 /* JAlbumView.xib */; };
 		C0C6203D1B39519700FBC471 /* Network.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0C6203C1B39519700FBC471 /* Network.mm */; };
-		C0C705EF1B40DA1E007CE302 /* libJFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C705E31B40D145007CE302 /* libJFoundation.a */; };
 		C0CAEDF41B271187003DEEE0 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */; };
 		C0CAEDF61B271187003DEEE0 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CAEDF51B271187003DEEE0 /* Photos.framework */; };
 		C0CAEDFC1B271187003DEEE0 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CAEDFB1B271187003DEEE0 /* PhotoEditingViewController.m */; };
@@ -59,23 +51,23 @@
 			remoteGlobalIDString = C072C6DE1AF75E87006490FA;
 			remoteInfo = handy;
 		};
-		C0C705E21B40D145007CE302 /* PBXContainerItemProxy */ = {
+		C0C42D3D1B51626700238799 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */;
+			containerPortal = C0C42D381B51626700238799 /* JFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C0C705C31B40D144007CE302;
 			remoteInfo = JFoundation;
 		};
-		C0C705E41B40D145007CE302 /* PBXContainerItemProxy */ = {
+		C0C42D3F1B51626700238799 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */;
+			containerPortal = C0C42D381B51626700238799 /* JFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C0C705CE1B40D144007CE302;
 			remoteInfo = JFoundationTests;
 		};
-		C0C705EB1B40D5A7007CE302 /* PBXContainerItemProxy */ = {
+		C0C42D411B51647A00238799 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */;
+			containerPortal = C0C42D381B51626700238799 /* JFoundation.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = C0C705C21B40D144007CE302;
 			remoteInfo = JFoundation;
@@ -142,31 +134,17 @@
 		C072C71E1AF75F20006490FA /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoViewController.h; path = ../../../../Github/Handy/handy/PhotoViewController.h; sourceTree = "<group>"; };
 		C072C71F1AF75F20006490FA /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoViewController.m; path = ../../../../Github/Handy/handy/PhotoViewController.m; sourceTree = "<group>"; };
 		C0838BE31AF76025004F636C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		C0AEE26B1B11CBC9004416DD /* JAlbumCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumCollectionViewLayout.h; sourceTree = "<group>"; };
-		C0AEE26C1B11CBC9004416DD /* JAlbumCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumCollectionViewLayout.m; sourceTree = "<group>"; };
-		C0AEF2FB1B156B1D00D85AB4 /* JImageScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JImageScrollView.h; sourceTree = "<group>"; };
-		C0AEF2FC1B156B1D00D85AB4 /* JImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JImageScrollView.m; sourceTree = "<group>"; };
-		C0AEF3E91B0DFCF800389F17 /* JAlbumCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumCollectionViewCell.h; sourceTree = "<group>"; };
-		C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumCollectionViewCell.m; sourceTree = "<group>"; };
-		C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAlbumCollectionViewCell.xib; sourceTree = "<group>"; };
-		C0AFAA401AFB185100C65EC4 /* JTabbedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTabbedView.h; sourceTree = "<group>"; };
-		C0AFAA411AFB185100C65EC4 /* JTabbedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTabbedView.m; sourceTree = "<group>"; };
 		C0AFD2C71AF9EF2600CF3405 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		C0AFD2C81AF9EF2600CF3405 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		C0AFD2CA1AF9F18700CF3405 /* TestViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewControllerFactory.h; sourceTree = "<group>"; };
 		C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewControllerFactory.m; sourceTree = "<group>"; };
-		C0AFD2D01AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JStoryboardViewControllerFactory.h; sourceTree = "<group>"; };
-		C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JStoryboardViewControllerFactory.m; sourceTree = "<group>"; };
 		C0AFD2D71AFA506200CF3405 /* AlbumViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewControllerFactory.h; sourceTree = "<group>"; };
 		C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewControllerFactory.m; sourceTree = "<group>"; };
-		C0AFF4B21B083462004D8BED /* JAlbumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumView.h; sourceTree = "<group>"; };
-		C0AFF4B31B083462004D8BED /* JAlbumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumView.m; sourceTree = "<group>"; };
-		C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JAlbumView.xib; sourceTree = "<group>"; };
-		C0AFFA7F1B049D5C00615291 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
-		C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
+		C0C42D381B51626700238799 /* JFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JFoundation.xcodeproj; path = /Users/fangyang/pod_GitHub/handy/../../GitHub/Handy/JFoundation/JFoundation.xcodeproj; sourceTree = "<absolute>"; };
+		C0C488971B686D9E003440D0 /* JAlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JAlbumCollectionViewCell.xib; path = ../../GitHub/Handy/JFoundation/JFoundation/JAlbum/JAlbumCollectionViewCell.xib; sourceTree = "<group>"; };
+		C0C488981B686D9E003440D0 /* JAlbumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JAlbumView.xib; path = ../../GitHub/Handy/JFoundation/JFoundation/JAlbum/JAlbumView.xib; sourceTree = "<group>"; };
 		C0C6203B1B39519700FBC471 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
 		C0C6203C1B39519700FBC471 /* Network.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Network.mm; sourceTree = "<group>"; };
-		C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JFoundation.xcodeproj; path = ../../GitHub/Handy/JFoundation/JFoundation.xcodeproj; sourceTree = "<group>"; };
 		C0CAEDF21B271187003DEEE0 /* handyExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = handyExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		C0CAEDF51B271187003DEEE0 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -182,8 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0C705EF1B40DA1E007CE302 /* libJFoundation.a in Frameworks */,
-				8F4A471042F44748C4F46293 /* libPods-handy.a in Frameworks */,
+				C0C42D471B521BC400238799 /* libJFoundation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,10 +186,10 @@
 		5D5860BE93EAAD014ADFED8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0C42D381B51626700238799 /* JFoundation.xcodeproj */,
 				2A9C1FAF7705652DBD5928A6 /* libPods-handy.a */,
 				C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */,
 				C0CAEDF51B271187003DEEE0 /* Photos.framework */,
-				C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -271,6 +248,8 @@
 		C072C6D61AF75E87006490FA = {
 			isa = PBXGroup;
 			children = (
+				C0C488971B686D9E003440D0 /* JAlbumCollectionViewCell.xib */,
+				C0C488981B686D9E003440D0 /* JAlbumView.xib */,
 				C072C6E11AF75E87006490FA /* handy */,
 				C072C6FE1AF75E88006490FA /* handyTests */,
 				C0CAEDF71B271187003DEEE0 /* handyExtension */,
@@ -294,7 +273,6 @@
 			isa = PBXGroup;
 			children = (
 				C0C620351B393D5100FBC471 /* Network */,
-				C0AFD2CF1AF9F8B200CF3405 /* jFoundation */,
 				C00815901AF9EE150037A7DF /* testTraits */,
 				C008158E1AF9E92E0037A7DF /* album */,
 				C008158D1AF9CC980037A7DF /* AvgLoad */,
@@ -338,28 +316,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		C0AFD2CF1AF9F8B200CF3405 /* jFoundation */ = {
+		C0C42D391B51626700238799 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C0AFD2D01AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.h */,
-				C0AFD2D11AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m */,
-				C0AFAA401AFB185100C65EC4 /* JTabbedView.h */,
-				C0AFAA411AFB185100C65EC4 /* JTabbedView.m */,
-				C0AFFA7F1B049D5C00615291 /* UIViewController+Utils.h */,
-				C0AFFA801B049D5C00615291 /* UIViewController+Utils.m */,
-				C0AFF4B21B083462004D8BED /* JAlbumView.h */,
-				C0AFF4B31B083462004D8BED /* JAlbumView.m */,
-				C0AFF4B51B0834AA004D8BED /* JAlbumView.xib */,
-				C0AEF3E91B0DFCF800389F17 /* JAlbumCollectionViewCell.h */,
-				C0AEF3EA1B0DFCF800389F17 /* JAlbumCollectionViewCell.m */,
-				C0AEF3EB1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib */,
-				C0AEE26B1B11CBC9004416DD /* JAlbumCollectionViewLayout.h */,
-				C0AEE26C1B11CBC9004416DD /* JAlbumCollectionViewLayout.m */,
-				C0AEF2FB1B156B1D00D85AB4 /* JImageScrollView.h */,
-				C0AEF2FC1B156B1D00D85AB4 /* JImageScrollView.m */,
+				C0C42D3E1B51626700238799 /* libJFoundation.a */,
+				C0C42D401B51626700238799 /* JFoundationTests.xctest */,
 			);
-			name = jFoundation;
-			path = ../../../GitHub/Handy/handy/jFoundation;
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C0C620351B393D5100FBC471 /* Network */ = {
@@ -370,15 +333,6 @@
 			);
 			name = Network;
 			path = ../../../GitHub/Handy/handy/Network;
-			sourceTree = "<group>";
-		};
-		C0C705DE1B40D144007CE302 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C0C705E31B40D145007CE302 /* libJFoundation.a */,
-				C0C705E51B40D145007CE302 /* JFoundationTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		C0CAEDF71B271187003DEEE0 /* handyExtension */ = {
@@ -426,7 +380,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				C0C705EC1B40D5A7007CE302 /* PBXTargetDependency */,
+				C0C42D421B51647A00238799 /* PBXTargetDependency */,
 				C0CAEE001B271187003DEEE0 /* PBXTargetDependency */,
 			);
 			name = handy;
@@ -503,8 +457,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C0C705DE1B40D144007CE302 /* Products */;
-					ProjectRef = C0C705DD1B40D144007CE302 /* JFoundation.xcodeproj */;
+					ProductGroup = C0C42D391B51626700238799 /* Products */;
+					ProjectRef = C0C42D381B51626700238799 /* JFoundation.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -517,18 +471,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C0C705E31B40D145007CE302 /* libJFoundation.a */ = {
+		C0C42D3E1B51626700238799 /* libJFoundation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libJFoundation.a;
-			remoteRef = C0C705E21B40D145007CE302 /* PBXContainerItemProxy */;
+			remoteRef = C0C42D3D1B51626700238799 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C0C705E51B40D145007CE302 /* JFoundationTests.xctest */ = {
+		C0C42D401B51626700238799 /* JFoundationTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = JFoundationTests.xctest;
-			remoteRef = C0C705E41B40D145007CE302 /* PBXContainerItemProxy */;
+			remoteRef = C0C42D3F1B51626700238799 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -538,11 +492,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C488991B686D9E003440D0 /* JAlbumCollectionViewCell.xib in Resources */,
+				C0C4889A1B686D9E003440D0 /* JAlbumView.xib in Resources */,
 				C072C6F61AF75E87006490FA /* LaunchScreen.xib in Resources */,
 				C072C6F31AF75E87006490FA /* Images.xcassets in Resources */,
-				C0AEF3ED1B0DFCF800389F17 /* JAlbumCollectionViewCell.xib in Resources */,
 				C008158C1AF9CC490037A7DF /* AvgLoadView.xib in Resources */,
-				C0AFF4B61B0834AA004D8BED /* JAlbumView.xib in Resources */,
 				C072C7231AF75F20006490FA /* cameraview.xib in Resources */,
 				C00815921AF9EE2B0037A7DF /* test.storyboard in Resources */,
 				C0838BE41AF76025004F636C /* Main.storyboard in Resources */,
@@ -605,22 +559,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */,
-				C0AFF4B41B083462004D8BED /* JAlbumView.m in Sources */,
 				C00815881AF9CBAE0037A7DF /* AvgLoadView.m in Sources */,
 				C0AFD2C91AF9EF2600CF3405 /* TestViewController.m in Sources */,
-				C0AFD2D21AF9F8DD00CF3405 /* JStoryboardViewControllerFactory.m in Sources */,
 				C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */,
 				C072C7211AF75F20006490FA /* AppDelegate.m in Sources */,
-				C0AEE26D1B11CBC9004416DD /* JAlbumCollectionViewLayout.m in Sources */,
-				C0AEF3EC1B0DFCF800389F17 /* JAlbumCollectionViewCell.m in Sources */,
 				C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */,
 				C0081CFC1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m in Sources */,
-				C0AFAA421AFB185100C65EC4 /* JTabbedView.m in Sources */,
 				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.h in Sources */,
 				C0B2BC2D1B1A9AFF00CF5109 /* AlbumContentsCollectionViewController.m in Sources */,
 				C072C7271AF75F20006490FA /* ImageScrollView.m in Sources */,
-				C0AEF2FD1B156B1D00D85AB4 /* JImageScrollView.m in Sources */,
-				C0AFFA811B049D5C00615291 /* UIViewController+Utils.m in Sources */,
 				C072C7261AF75F20006490FA /* HandyRootViewController.m in Sources */,
 				C072C7281AF75F20006490FA /* MyPageViewController.m in Sources */,
 				C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */,
@@ -657,10 +604,10 @@
 			target = C072C6DE1AF75E87006490FA /* handy */;
 			targetProxy = C072C6FC1AF75E88006490FA /* PBXContainerItemProxy */;
 		};
-		C0C705EC1B40D5A7007CE302 /* PBXTargetDependency */ = {
+		C0C42D421B51647A00238799 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JFoundation;
-			targetProxy = C0C705EB1B40D5A7007CE302 /* PBXContainerItemProxy */;
+			targetProxy = C0C42D411B51647A00238799 /* PBXContainerItemProxy */;
 		};
 		C0CAEE001B271187003DEEE0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -778,11 +725,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0C25702A7A3E1E85871DD5A /* Pods-handy.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = handy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/JFoundation/JFoundation";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/JFoundation/JFoundation/**";
 			};
 			name = Debug;
 		};
@@ -790,11 +743,17 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4D739F8693CF891612B03575 /* Pods-handy.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = handy/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos",
+				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/JFoundation/JFoundation";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/JFoundation/JFoundation/**";
 			};
 			name = Release;
 		};

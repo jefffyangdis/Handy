@@ -1,6 +1,7 @@
 # Uncomment this line to define a global platform for your project
 platform :ios, '7.0'
 
+workspace 'handy'
 xcodeproj '/Users/fangyang/Github/Handy/handy.xcodeproj'
 
 target 'handy' do
@@ -14,5 +15,5 @@ end
 target 'handyTests' do
 
 
-end
 
+end

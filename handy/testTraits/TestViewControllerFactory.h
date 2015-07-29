@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JStoryboardViewControllerFactory.h"
+#import "JStoryboard/JStoryboardViewControllerFactory.h"
 
 @interface TestViewControllerFactory : JStoryboardViewControllerFactory
 

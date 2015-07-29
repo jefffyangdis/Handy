@@ -11,6 +11,8 @@
 #import "MyPageViewController.h"
 #import "AlbumContentsDataSource.h"
 #import "JAlbumView.h"
+#import "JAlbumControllerFactory.h"
+#import "AppDelegate.h"
 
 @interface AlbumContentsCollectionViewController()
 
@@ -49,6 +51,11 @@
     [self.assetsGroup enumerateAssetsUsingBlock:assetsEnumerationBlock];
     [self configureDataSource:assets];
     self.collectionView.dataSource = self.dataSource;
+    
+    UITabBar* bar = [[(AppDelegate*)[[UIApplication sharedApplication] delegate] mainBarController] tabBar];
+    UIColor* color = bar.backgroundColor;
+    UIImage* img = bar.backgroundImage;
+    color = [UIColor blackColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -118,7 +125,7 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     if ( !_viewAlbumPopout ) {
-        _viewAlbumPopout = [[[NSBundle mainBundle] loadNibNamed:@"JAlbumView" owner:self options:nil ] lastObject];
+        _viewAlbumPopout = (JAlbumView*)[[JAlbumControllerFactory sharedFactory] instantiateJAlbumView];
         UITapGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(viewAlbumPopoutDoubleTapped)];
         [_viewAlbumPopout addGestureRecognizer:recognizer];
 //        [PageViewControllerData sharedInstance].photosAssets = _assets;

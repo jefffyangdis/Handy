@@ -26,6 +26,17 @@
     UINavigationController* vcNav = [[UINavigationController alloc] init];
     vcNav.viewControllers = @[controller];
     self.window.rootViewController = vcNav;
+    UITabBarController* rootvvc = [[UITabBarController alloc] init];
+    UIViewController* vc = [[UIViewController alloc] init];
+    UITabBarItem* itemna = [[UITabBarItem alloc] init];
+    itemna.title = @"根";
+    UITabBarItem* itemna1 = [[UITabBarItem alloc] init];
+    itemna1.title = @"根1";
+    vcNav.tabBarItem = itemna;
+    vc.tabBarItem = itemna1;
+    rootvvc.viewControllers = @[vcNav,vc];
+    self.window.rootViewController = rootvvc;
+    self.mainBarController = rootvvc;
     [self.window makeKeyAndVisible];
     
 //    [controller enableAvgLoadView];

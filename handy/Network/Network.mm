@@ -67,22 +67,23 @@ static void callback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address
             Byte* cd = new Byte[len];
             CFDataGetBytes(ab, CFRangeMake(0, len), cd);
             
-            if ( !bGotRspLength ) {
-                NSString* rsp = [NSString stringWithUTF8String:(const char*)cd];
-                NSRange range = [rsp rangeOfString:@"\r\n\r\n"];
-                if ( range.length > 0 ) {
-                    headerlen = range.length + range.location;
-                    NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"Content-Length:\\s*(\\d+)\\s*\r\n" options:NSRegularExpressionCaseInsensitive error:nil];
-                    NSTextCheckingResult* contentrange = [regex firstMatchInString:rsp options:0 range:NSMakeRange(0, rsp.length)];
-                    NSRange lenrange = [contentrange rangeAtIndex:1];
-                    if ( lenrange.length > 0 ) {
-                        NSString* len = [rsp substringWithRange:lenrange];
-                        rsplen = [len longLongValue];
-                        bGotRspLength = YES;
-                    }
+            NSLog(@"%ld",len);//(const char*)cd);
+            if ( bGotRspLength ) {
+                return;
+            }
+            NSString* rsp = [NSString stringWithUTF8String:(const char*)cd];
+            NSRange range = [rsp rangeOfString:@"\r\n\r\n"];
+            if ( range.length > 0 ) {
+                headerlen = range.length + range.location;
+                NSRegularExpression* regex = [NSRegularExpression regularExpressionWithPattern:@"Content-Length:\\s*(\\d+)\\s*\r\n" options:NSRegularExpressionCaseInsensitive error:nil];
+                NSTextCheckingResult* contentrange = [regex firstMatchInString:rsp options:0 range:NSMakeRange(0, rsp.length)];
+                NSRange lenrange = [contentrange rangeAtIndex:1];
+                if ( lenrange.length > 0 ) {
+                    NSString* len = [rsp substringWithRange:lenrange];
+                    rsplen = [len integerValue];
+                    bGotRspLength = YES;
                 }
             }
-            NSLog(@"%ld",len);//(const char*)cd);
             delete [] cd;
         }
             break;
