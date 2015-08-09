@@ -68,7 +68,7 @@ static void callback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address
             CFDataGetBytes(ab, CFRangeMake(0, len), cd);
             
             NSLog(@"%ld",len);//(const char*)cd);
-            if ( bGotRspLength ) {
+            if ( bGotRspLength || len <= 0 ) {
                 return;
             }
             NSString* rsp = [NSString stringWithUTF8String:(const char*)cd];

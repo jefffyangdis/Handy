@@ -56,6 +56,12 @@
     UIColor* color = bar.backgroundColor;
     UIImage* img = bar.backgroundImage;
     color = [UIColor blackColor];
+    
+//    CGRect frame = self.view.frame;
+//    CGRect bounds =  self.view.bounds;
+//    bounds.origin.x = -10;
+//    self.view.bounds = bounds;
+//    frame = self.view.frame;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -115,7 +121,13 @@
     // Pass the selected object to the new view controller.
 }
 */
-#pragma marks swipe action
+#pragma mark - status bar
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
+#pragma mark - swipe action
 - (void)swipeDownRecognized
 {
     [self.navigationController popViewControllerAnimated:YES];

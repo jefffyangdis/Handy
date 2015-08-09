@@ -97,6 +97,12 @@
     [super viewDidDisappear:animated];
 }
 
+#pragma mark - status bar
+- (BOOL)prefersStatusBarHidden
+{
+    return YES;
+}
+
 - (void)enableAvgLoadView
 {
     [AvgLoadView class];

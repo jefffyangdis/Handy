@@ -10,7 +10,6 @@
 #import "JAlbumCollectionViewCell.h"
 #import "JAlbumCollectionViewLayout.h"
 #import "JImageScrollView.h"
-#import <ReactiveViewModel/RVMViewModel.h>
 
 @interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,JAlbumCollectionViewLayoutDelegate>
 

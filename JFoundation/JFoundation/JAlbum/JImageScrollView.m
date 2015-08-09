@@ -62,6 +62,9 @@
 #pragma mark - uiscrollviewdelegate
 - (UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView
 {
+//    CGAffineTransform transform = self.zoomView.transform;
+//    NSLog(@"a:%@,b:%@,c:%@,d:%@,tx:%@,ty:%@",@(transform.a),@(transform.b),@(transform.c),@(transform.d),@(transform.tx),@(transform.ty));
+//    NSLog(@"%@",@(scrollView.zoomScale));
     return self.zoomView;
 }
 
