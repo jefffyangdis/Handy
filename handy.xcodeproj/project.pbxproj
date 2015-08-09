@@ -36,6 +36,7 @@
 		C0C488991B686D9E003440D0 /* JAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C488971B686D9E003440D0 /* JAlbumCollectionViewCell.xib */; };
 		C0C4889A1B686D9E003440D0 /* JAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C488981B686D9E003440D0 /* JAlbumView.xib */; };
 		C0C6203D1B39519700FBC471 /* Network.mm in Sources */ = {isa = PBXBuildFile; fileRef = C0C6203C1B39519700FBC471 /* Network.mm */; };
+		C0C8C7DD1B779CB3003B8275 /* handy.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0C8C7DF1B779CB3003B8275 /* handy.strings */; };
 		C0CAEDF41B271187003DEEE0 /* PhotosUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */; };
 		C0CAEDF61B271187003DEEE0 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0CAEDF51B271187003DEEE0 /* Photos.framework */; };
 		C0CAEDFC1B271187003DEEE0 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CAEDFB1B271187003DEEE0 /* PhotoEditingViewController.m */; };
@@ -145,6 +146,8 @@
 		C0C488981B686D9E003440D0 /* JAlbumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JAlbumView.xib; path = ../../GitHub/Handy/JFoundation/JFoundation/JAlbum/JAlbumView.xib; sourceTree = "<group>"; };
 		C0C6203B1B39519700FBC471 /* Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Network.h; sourceTree = "<group>"; };
 		C0C6203C1B39519700FBC471 /* Network.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Network.mm; sourceTree = "<group>"; };
+		C0C8C7DE1B779CB3003B8275 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/handy.strings; sourceTree = "<group>"; };
+		C0C8C7E11B779FBD003B8275 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/handy.strings"; sourceTree = "<group>"; };
 		C0CAEDF21B271187003DEEE0 /* handyExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = handyExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PhotosUI.framework; path = System/Library/Frameworks/PhotosUI.framework; sourceTree = SDKROOT; };
 		C0CAEDF51B271187003DEEE0 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
@@ -295,6 +298,7 @@
 			children = (
 				C072C6E31AF75E87006490FA /* Info.plist */,
 				C072C6E41AF75E87006490FA /* main.m */,
+				C0C8C7DF1B779CB3003B8275 /* handy.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -451,6 +455,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = C072C6D61AF75E87006490FA;
 			productRefGroup = C072C6E01AF75E87006490FA /* Products */;
@@ -492,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C8C7DD1B779CB3003B8275 /* handy.strings in Resources */,
 				C0C488991B686D9E003440D0 /* JAlbumCollectionViewCell.xib in Resources */,
 				C0C4889A1B686D9E003440D0 /* JAlbumView.xib in Resources */,
 				C072C6F61AF75E87006490FA /* LaunchScreen.xib in Resources */,
@@ -631,6 +637,16 @@
 				C0838BE31AF76025004F636C /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C0C8C7DF1B779CB3003B8275 /* handy.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0C8C7DE1B779CB3003B8275 /* en */,
+				C0C8C7E11B779FBD003B8275 /* zh-Hans */,
+			);
+			name = handy.strings;
+			path = ../../../GitHub/Handy/handy;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

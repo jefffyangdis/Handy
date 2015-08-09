@@ -87,13 +87,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:YES];
     [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:NO];
+    self.title = NSLocalizedStringFromTable(@"album_navbartitle", @"handy", @"album_navbartitle");
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self.navigationController setNavigationBarHidden:NO];
     [super viewDidDisappear:animated];
 }
 

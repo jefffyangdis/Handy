@@ -119,20 +119,23 @@ static void callback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address
 
 - (void)ok
 {
-    CFSocketRef sock = CFSocketCreate(NULL/*默认内存分配器*/, 0/*默认INET协议族*/, SOCK_STREAM, IPPROTO_TCP , kCFSocketDataCallBack|kCFSocketConnectCallBack|kCFSocketWriteCallBack,callback,nil);
-    CFRunLoopSourceRef source = CFSocketCreateRunLoopSource(NULL,sock,1);
-    CFRunLoopAddSource(CFRunLoopGetCurrent(),source,kCFRunLoopDefaultMode);
-    struct sockaddr_in addr;
-    NSUInteger size = sizeof(struct sockaddr_in);
-    memset(&addr, 0, size);
-//    NSLog(@"sockaddr_in len is %@",@(size));
-    addr.sin_family = AF_INET;
-    addr.sin_addr.s_addr = inet_addr("58.63.236.248");
-    addr.sin_port = htons(80);
-    CFDataRef ref = CFDataCreate(NULL, (UInt8*)&addr, size);
-    CFSocketConnectToAddress(sock, ref, 0.2);
-    CFRelease(source);
-    NSLog(@"connecting....");
+    dispatch_async(dispatch_get_main_queue(), ^{
+        
+        CFSocketRef sock = CFSocketCreate(NULL/*默认内存分配器*/, 0/*默认INET协议族*/, SOCK_STREAM, IPPROTO_TCP , kCFSocketDataCallBack|kCFSocketConnectCallBack|kCFSocketWriteCallBack,callback,nil);
+        CFRunLoopSourceRef source = CFSocketCreateRunLoopSource(NULL,sock,1);
+        CFRunLoopAddSource(CFRunLoopGetCurrent(),source,kCFRunLoopDefaultMode);
+        struct sockaddr_in addr;
+        NSUInteger size = sizeof(struct sockaddr_in);
+        memset(&addr, 0, size);
+        //    NSLog(@"sockaddr_in len is %@",@(size));
+        addr.sin_family = AF_INET;
+        addr.sin_addr.s_addr = inet_addr("58.63.236.248");
+        addr.sin_port = htons(80);
+        CFDataRef ref = CFDataCreate(NULL, (UInt8*)&addr, size);
+        CFSocketConnectToAddress(sock, ref, 0.2);
+        CFRelease(source);
+        NSLog(@"connecting....");
+    });
 }
 
 
