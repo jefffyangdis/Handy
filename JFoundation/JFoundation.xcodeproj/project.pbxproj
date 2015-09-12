@@ -36,6 +36,8 @@
 		C0C705EE1B40D823007CE302 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C705ED1B40D823007CE302 /* Foundation.framework */; };
 		C0C797C31B4925420077FE3C /* JRuntime+System.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C797C21B4925420077FE3C /* JRuntime+System.m */; };
 		C0C797C51B4926360077FE3C /* JRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C4F5091B44F72000D81E9F /* JRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0D7673D1B9DC266000A54C2 /* JImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D7673B1B9DC266000A54C2 /* JImage.h */; };
+		C0D7673E1B9DC266000A54C2 /* JImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D7673C1B9DC266000A54C2 /* JImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,8 +80,8 @@
 		C0C42D101B512F2400238799 /* JImageScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JImageScrollView.m; sourceTree = "<group>"; };
 		C0C42D1C1B512F5C00238799 /* UIViewController+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Utils.h"; sourceTree = "<group>"; };
 		C0C42D1D1B512F5C00238799 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
-		C0C42D211B512F8D00238799 /* JStoryboardViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JStoryboardViewControllerFactory.h; sourceTree = "<group>"; };
-		C0C42D221B512F8D00238799 /* JStoryboardViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JStoryboardViewControllerFactory.m; sourceTree = "<group>"; };
+		C0C42D211B512F8D00238799 /* JStoryboardViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JStoryboardViewControllerFactory.h; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JStoryboard/JStoryboardViewControllerFactory.h; sourceTree = "<absolute>"; };
+		C0C42D221B512F8D00238799 /* JStoryboardViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JStoryboardViewControllerFactory.m; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JStoryboard/JStoryboardViewControllerFactory.m; sourceTree = "<absolute>"; };
 		C0C42D4C1B52201000238799 /* libPods-handy-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-handy-ReactiveCocoa.a"; path = "/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos/libPods-handy-ReactiveCocoa.a"; sourceTree = "<absolute>"; };
 		C0C42D4D1B52201000238799 /* libPods-handy-ReactiveViewModel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-handy-ReactiveViewModel.a"; path = "/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos/libPods-handy-ReactiveViewModel.a"; sourceTree = "<absolute>"; };
 		C0C42D501B52207E00238799 /* libPods-handy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-handy.a"; path = "/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos/libPods-handy.a"; sourceTree = "<absolute>"; };
@@ -92,12 +94,14 @@
 		C0C4F5091B44F72000D81E9F /* JRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRuntime.h; sourceTree = "<group>"; };
 		C0C4F50A1B44F72000D81E9F /* JRuntime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRuntime.m; sourceTree = "<group>"; };
 		C0C705C31B40D144007CE302 /* libJFoundation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJFoundation.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0C705C61B40D144007CE302 /* JFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JFoundation.h; sourceTree = "<group>"; };
-		C0C705C81B40D144007CE302 /* JFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JFoundation.m; sourceTree = "<group>"; };
+		C0C705C61B40D144007CE302 /* JFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JFoundation.h; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JFoundation.h; sourceTree = "<absolute>"; };
+		C0C705C81B40D144007CE302 /* JFoundation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JFoundation.m; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JFoundation.m; sourceTree = "<absolute>"; };
 		C0C705CE1B40D144007CE302 /* JFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C705D41B40D144007CE302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0C705ED1B40D823007CE302 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C0C797C21B4925420077FE3C /* JRuntime+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JRuntime+System.m"; sourceTree = "<group>"; };
+		C0D7673B1B9DC266000A54C2 /* JImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JImage.h; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JImage/JImage.h; sourceTree = "<absolute>"; };
+		C0D7673C1B9DC266000A54C2 /* JImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JImage.m; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JImage/JImage.m; sourceTree = "<absolute>"; };
 		CEB8794D8C17E5C63A3EA92F /* Pods-handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.debug.xcconfig"; path = "../../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,8 +166,9 @@
 				C0C42D591B524EC100238799 /* JAlbumControllerFactory.h */,
 				C0C42D5A1B524EC100238799 /* JAlbumControllerFactory.m */,
 			);
-			path = JAlbum;
-			sourceTree = "<group>";
+			name = JAlbum;
+			path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JAlbum;
+			sourceTree = "<absolute>";
 		};
 		C0C42D201B512F7E00238799 /* JStoryboard */ = {
 			isa = PBXGroup;
@@ -182,8 +187,9 @@
 				C0C42D1D1B512F5C00238799 /* UIViewController+Utils.m */,
 				C0C4F5061B44E39500D81E9F /* JControllerCenter.m */,
 			);
-			path = JController;
-			sourceTree = "<group>";
+			name = JController;
+			path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JController;
+			sourceTree = "<absolute>";
 		};
 		C0C705BA1B40D144007CE302 = {
 			isa = PBXGroup;
@@ -209,6 +215,7 @@
 		C0C705C51B40D144007CE302 /* JFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				C0D7673A1B9DC24B000A54C2 /* JImage */,
 				C0C42D201B512F7E00238799 /* JStoryboard */,
 				C0C42D041B512EFE00238799 /* JAlbum */,
 				C0C4F5041B44E37800D81E9F /* JController */,
@@ -242,7 +249,17 @@
 				C0C4F5091B44F72000D81E9F /* JRuntime.h */,
 				C0C4F50A1B44F72000D81E9F /* JRuntime.m */,
 			);
-			path = JRunTime;
+			name = JRunTime;
+			path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JRunTime;
+			sourceTree = "<absolute>";
+		};
+		C0D7673A1B9DC24B000A54C2 /* JImage */ = {
+			isa = PBXGroup;
+			children = (
+				C0D7673B1B9DC266000A54C2 /* JImage.h */,
+				C0D7673C1B9DC266000A54C2 /* JImage.m */,
+			);
+			path = JImage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,6 +272,7 @@
 				C0C42D1E1B512F5C00238799 /* UIViewController+Utils.h in Headers */,
 				C0C42D231B512F8D00238799 /* JStoryboardViewControllerFactory.h in Headers */,
 				C0C705EA1B40D56B007CE302 /* JFoundation.h in Headers */,
+				C0D7673D1B9DC266000A54C2 /* JImage.h in Headers */,
 				C0C42D5B1B524EC100238799 /* JAlbumControllerFactory.h in Headers */,
 				C0C42D171B512F2400238799 /* JAlbumCollectionViewLayout.h in Headers */,
 				C0C42D131B512F2400238799 /* JAlbumView.h in Headers */,
@@ -424,6 +442,7 @@
 				C0C42D161B512F2400238799 /* JAlbumCollectionViewCell.m in Sources */,
 				C0C42D241B512F8D00238799 /* JStoryboardViewControllerFactory.m in Sources */,
 				C0C42D1F1B512F5C00238799 /* UIViewController+Utils.m in Sources */,
+				C0D7673E1B9DC266000A54C2 /* JImage.m in Sources */,
 				C0C42D181B512F2400238799 /* JAlbumCollectionViewLayout.m in Sources */,
 				C0C42D5C1B524EC100238799 /* JAlbumControllerFactory.m in Sources */,
 			);

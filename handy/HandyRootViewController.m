@@ -100,7 +100,7 @@
 #pragma mark - status bar
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return NO;
 }
 
 - (void)enableAvgLoadView

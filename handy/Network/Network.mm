@@ -1,5 +1,5 @@
 //
-//  Network.m
+//  Network.mm
 //  handy
 //
 //  Created by 方阳 on 15/6/23.
@@ -13,6 +13,12 @@
 #import "arpa/inet.h"
 #include <string>
 using namespace std;
+
+@interface Network()
+
+@property (strong) dispatch_queue_t bgqueue;
+
+@end
 
 @implementation Network
 
@@ -117,10 +123,26 @@ static void callback(CFSocketRef s, CFSocketCallBackType type, CFDataRef address
     }
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if ( self ) {
+        self.bgqueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+        self.bgqueue = dispatch_queue_create("net.jefffyangdis.handy", DISPATCH_QUEUE_CONCURRENT);
+//        self.bgqueue = dispatch_get_main_queue();
+    }
+    return self;
+}
+
+- (void)dealloc
+{
+    
+}
+
 - (void)ok
 {
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
+//    dispatch_queue_t 
+    dispatch_async(self.bgqueue, ^{
         CFSocketRef sock = CFSocketCreate(NULL/*默认内存分配器*/, 0/*默认INET协议族*/, SOCK_STREAM, IPPROTO_TCP , kCFSocketDataCallBack|kCFSocketConnectCallBack|kCFSocketWriteCallBack,callback,nil);
         CFRunLoopSourceRef source = CFSocketCreateRunLoopSource(NULL,sock,1);
         CFRunLoopAddSource(CFRunLoopGetCurrent(),source,kCFRunLoopDefaultMode);

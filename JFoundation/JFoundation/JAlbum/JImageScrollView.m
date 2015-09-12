@@ -91,6 +91,11 @@
     [self configureForImgSize:img.size];
 }
 
+- (UIImage*)image
+{
+    return _zoomView.image;
+}
+
 - (void)configureForImgSize:(CGSize)size
 {
     self.sizeImg = size;

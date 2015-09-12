@@ -10,8 +10,8 @@
 #import "PageViewControllerData.h"
 #import "MyPageViewController.h"
 #import "AlbumContentsDataSource.h"
-#import "JAlbumView.h"
-#import "JAlbumControllerFactory.h"
+#import "JAlbum/JAlbumView.h"
+#import "JAlbum/JAlbumControllerFactory.h"
 #import "AppDelegate.h"
 
 @interface AlbumContentsCollectionViewController()
@@ -124,7 +124,7 @@
 #pragma mark - status bar
 - (BOOL)prefersStatusBarHidden
 {
-    return YES;
+    return NO;
 }
 
 #pragma mark - swipe action

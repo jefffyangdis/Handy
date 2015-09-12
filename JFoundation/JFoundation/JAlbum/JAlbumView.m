@@ -10,8 +10,9 @@
 #import "JAlbumCollectionViewCell.h"
 #import "JAlbumCollectionViewLayout.h"
 #import "JImageScrollView.h"
+#import "JImage.h"
 
-@interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,JAlbumCollectionViewLayoutDelegate>
+@interface JAlbumView()<UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,JAlbumCollectionViewLayoutDelegate,UIActionSheetDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *viewNavigationBalls;
 @property (weak, nonatomic) IBOutlet UICollectionView *viewImageCollection;
@@ -45,6 +46,19 @@
     //    [_viewImageCollection addObserver:self forKeyPath:@"contentSize" options:NSKeyValueObservingOptionNew context:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orientationChanged) name:UIDeviceOrientationDidChangeNotification object:nil];
+    
+    UILongPressGestureRecognizer* menuRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPress:)];
+    [self addGestureRecognizer:menuRecognizer];
+}
+
+- (void)longPress:(UILongPressGestureRecognizer*)sender
+{
+    if( sender.state == UIGestureRecognizerStateCancelled )
+    {
+        return;
+    }
+    UIActionSheet* sheet = [[UIActionSheet alloc] initWithTitle:@"操作" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:@"destructive" otherButtonTitles:@"other", nil];
+    [sheet showInView:self];
 }
 
 - (void)dealloc
@@ -117,6 +131,53 @@
     [_viewImageCollection reloadData];
 }
 
+#pragma mrak - UIActionSheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ( buttonIndex == 1 ) {
+        JAlbumCollectionViewCell* cell = [_viewImageCollection cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_iCurrentOffsetIndex inSection:0]];
+        
+        ALAsset *asset = self.assets[_iCurrentOffsetIndex];
+        ALAssetRepresentation* representation = [asset defaultRepresentation];
+        CGFloat f = representation.scale;
+        
+        CIImage* image = [CIImage imageWithCGImage:[cell.scrollViewImg.image CGImage]];//[CIImage imageWithCGImage:[representation fullScreenImage]];
+        EAGLContext* context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
+        CIContext* cContext = [CIContext contextWithEAGLContext:context];
+        CIFilter* filter = [CIFilter filterWithName:@"CIHueAdjust" keysAndValues:kCIInputImageKey,image,kCIInputAngleKey, @1,nil];
+        CIImage* output = [filter valueForKey:kCIOutputImageKey];
+        
+        CIFilter *bumpDistortion = [CIFilter filterWithName:@"CIBumpDistortion"];    // 1
+        
+        [bumpDistortion setDefaults];                                                // 2
+        
+        [bumpDistortion setValue: output forKey: kCIInputImageKey];
+        
+        [bumpDistortion setValue: [CIVector vectorWithX:200 Y:150]
+         
+                          forKey: kCIInputCenterKey];                              // 3
+        
+        [bumpDistortion setValue: @100.0f forKey: kCIInputRadiusKey];                // 4
+        
+        [bumpDistortion setValue: @3.0f forKey: kCIInputScaleKey];                  // 5
+        
+        output = [bumpDistortion valueForKey: kCIOutputImageKey];
+        
+        CGImageRef oImg = [cContext createCGImage:output fromRect:[output extent]];
+        UIImage* rImg = [UIImage imageWithCGImage:oImg];
+        if ( cell ) {
+            [cell.scrollViewImg setImage:rImg];
+        }
+        float rgb[3],hsv[3];
+        rgb[0]= 1;
+        [JImage rgbToHsv:rgb hsv:hsv];
+    }
+}
+
+- (void)actionSheetCancel:(UIActionSheet *)actionSheet
+{
+    
+}
 @end
 
 

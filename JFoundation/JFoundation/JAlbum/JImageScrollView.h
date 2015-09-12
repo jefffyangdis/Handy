@@ -13,4 +13,6 @@
 
 - (void)setImage:(UIImage*)img;
 
+- (UIImage*)image;
+
 @end

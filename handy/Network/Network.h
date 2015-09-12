@@ -10,6 +10,7 @@
 
 @interface Network : NSObject
 
+- (instancetype)init;
 - (void)ok;
 
 @end
