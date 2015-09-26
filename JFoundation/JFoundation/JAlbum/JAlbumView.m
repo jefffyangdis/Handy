@@ -135,7 +135,7 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if ( buttonIndex == 1 ) {
-        JAlbumCollectionViewCell* cell = [_viewImageCollection cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_iCurrentOffsetIndex inSection:0]];
+        JAlbumCollectionViewCell* cell = (JAlbumCollectionViewCell*)[_viewImageCollection cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_iCurrentOffsetIndex inSection:0]];
         
         ALAsset *asset = self.assets[_iCurrentOffsetIndex];
         ALAssetRepresentation* representation = [asset defaultRepresentation];

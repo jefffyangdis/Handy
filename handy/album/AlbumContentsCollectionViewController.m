@@ -54,7 +54,7 @@
     
     UITabBar* bar = [[(AppDelegate*)[[UIApplication sharedApplication] delegate] mainBarController] tabBar];
     UIColor* color = bar.backgroundColor;
-    UIImage* img = bar.backgroundImage;
+//    UIImage* img = bar.backgroundImage;
     color = [UIColor blackColor];
     
 //    CGRect frame = self.view.frame;
