@@ -11,6 +11,9 @@
 		C008158C1AF9CC490037A7DF /* AvgLoadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C008158B1AF9CC490037A7DF /* AvgLoadView.xib */; };
 		C00815921AF9EE2B0037A7DF /* test.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00815911AF9EE2B0037A7DF /* test.storyboard */; };
 		C0081CFC1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = C0081CFB1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m */; };
+		C0664BE71BBB7A35009F6A13 /* HandyCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0664BE61BBB7A35009F6A13 /* HandyCameraController.m */; };
+		C0664BEA1BBB7B1C009F6A13 /* HandyCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0664BE91BBB7B1C009F6A13 /* HandyCameraPreviewView.m */; };
+		C0664BF21BBBDE60009F6A13 /* MainControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0664BF11BBBDE60009F6A13 /* MainControllerFactory.m */; };
 		C072C6E51AF75E87006490FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E41AF75E87006490FA /* main.m */; };
 		C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E91AF75E87006490FA /* handy.xcdatamodeld */; };
 		C072C6F31AF75E87006490FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C072C6F21AF75E87006490FA /* Images.xcassets */; };
@@ -105,6 +108,12 @@
 		C00815911AF9EE2B0037A7DF /* test.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = test.storyboard; sourceTree = "<group>"; };
 		C0081CFA1B1A0FB0009EB1A4 /* AlbumContentsDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumContentsDataSource.h; sourceTree = "<group>"; };
 		C0081CFB1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumContentsDataSource.m; sourceTree = "<group>"; };
+		C0664BE51BBB7A35009F6A13 /* HandyCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandyCameraController.h; sourceTree = "<group>"; };
+		C0664BE61BBB7A35009F6A13 /* HandyCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandyCameraController.m; sourceTree = "<group>"; };
+		C0664BE81BBB7B1C009F6A13 /* HandyCameraPreviewView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HandyCameraPreviewView.h; sourceTree = "<group>"; };
+		C0664BE91BBB7B1C009F6A13 /* HandyCameraPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandyCameraPreviewView.m; sourceTree = "<group>"; };
+		C0664BF01BBBDE60009F6A13 /* MainControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainControllerFactory.h; sourceTree = "<group>"; };
+		C0664BF11BBBDE60009F6A13 /* MainControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainControllerFactory.m; sourceTree = "<group>"; };
 		C072C6DF1AF75E87006490FA /* handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C072C6E31AF75E87006490FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C072C6E41AF75E87006490FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -248,6 +257,36 @@
 			path = ../../../GitHub/Handy/handy/testTraits;
 			sourceTree = "<group>";
 		};
+		C0664BE31BBB79A4009F6A13 /* camera */ = {
+			isa = PBXGroup;
+			children = (
+				C0664BE41BBB79A4009F6A13 /* controller */,
+				C0664BE81BBB7B1C009F6A13 /* HandyCameraPreviewView.h */,
+				C0664BE91BBB7B1C009F6A13 /* HandyCameraPreviewView.m */,
+			);
+			name = camera;
+			path = ../../../GitHub/Handy/handy/camera;
+			sourceTree = "<group>";
+		};
+		C0664BE41BBB79A4009F6A13 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				C0664BE51BBB7A35009F6A13 /* HandyCameraController.h */,
+				C0664BE61BBB7A35009F6A13 /* HandyCameraController.m */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		C0664BEF1BBBDE43009F6A13 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				C0664BF01BBBDE60009F6A13 /* MainControllerFactory.h */,
+				C0664BF11BBBDE60009F6A13 /* MainControllerFactory.m */,
+			);
+			name = main;
+			path = ../../../GitHub/Handy/handy/main;
+			sourceTree = "<group>";
+		};
 		C072C6D61AF75E87006490FA = {
 			isa = PBXGroup;
 			children = (
@@ -275,6 +314,8 @@
 		C072C6E11AF75E87006490FA /* handy */ = {
 			isa = PBXGroup;
 			children = (
+				C0664BEF1BBBDE43009F6A13 /* main */,
+				C0664BE31BBB79A4009F6A13 /* camera */,
 				C0C620351B393D5100FBC471 /* Network */,
 				C00815901AF9EE150037A7DF /* testTraits */,
 				C008158E1AF9E92E0037A7DF /* album */,
@@ -565,6 +606,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0664BE71BBB7A35009F6A13 /* HandyCameraController.m in Sources */,
 				C072C7291AF75F20006490FA /* PageViewControllerData.m in Sources */,
 				C00815881AF9CBAE0037A7DF /* AvgLoadView.m in Sources */,
 				C0AFD2C91AF9EF2600CF3405 /* TestViewController.m in Sources */,
@@ -573,11 +615,13 @@
 				C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */,
 				C0081CFC1B1A0FB0009EB1A4 /* AlbumContentsDataSource.m in Sources */,
 				C072C7201AF75F20006490FA /* AlbumContentsCollectionViewController.h in Sources */,
+				C0664BF21BBBDE60009F6A13 /* MainControllerFactory.m in Sources */,
 				C0B2BC2D1B1A9AFF00CF5109 /* AlbumContentsCollectionViewController.m in Sources */,
 				C072C7271AF75F20006490FA /* ImageScrollView.m in Sources */,
 				C072C7261AF75F20006490FA /* HandyRootViewController.m in Sources */,
 				C072C7281AF75F20006490FA /* MyPageViewController.m in Sources */,
 				C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */,
+				C0664BEA1BBB7B1C009F6A13 /* HandyCameraPreviewView.m in Sources */,
 				C072C7251AF75F20006490FA /* HandyMainViewController.m in Sources */,
 				C072C7221AF75F20006490FA /* AssetsDataIsInaccessibleViewController.m in Sources */,
 				C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */,

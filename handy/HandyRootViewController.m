@@ -156,7 +156,6 @@
     UIImage* posterImage = [UIImage imageWithCGImage:posterImageRef];
     cell.imageView.image = posterImage;
     cell.textLabel.text = [NSString stringWithFormat:@"%@(%@)",[groupForCell valueForProperty:ALAssetsGroupPropertyName],[@(groupForCell.numberOfAssets) stringValue] ];
-    cell.detailTextLabel.text = [@(groupForCell.numberOfAssets) stringValue];
     return cell;
 }
 

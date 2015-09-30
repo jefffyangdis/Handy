@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "JRuntime/JRuntime.h"
+#import "JRunTime/JRunTime.h"
 #import "JStoryboard/JStoryboardViewControllerFactory.h"
 
 #define CHECKVALID(a) do{ if(!(a)) NSLog(@"("#a@") missing");}while(0)

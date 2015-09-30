@@ -10,6 +10,8 @@
 #import "HandyRootViewController.h"
 #import "TestViewControllerFactory.h"
 #import "Network.h"
+#import "JFoundation.h"
+#import "MainControllerFactory.h"
 
 @interface AppDelegate ()
 
@@ -19,23 +21,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    HandyRootViewController* controller = mainStoryboard.instantiateInitialViewController;
+    MainControllerFactory* factory = [[MainControllerFactory alloc] initWithStoryboardName:@"Main"];
+    HandyRootViewController* controller = (HandyRootViewController*)[factory instantiateInitialController];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor clearColor];
     UINavigationController* vcNav = [[UINavigationController alloc] init];
     vcNav.viewControllers = @[controller];
-    self.window.rootViewController = vcNav;
-//    UITabBarController* rootvvc = [[UITabBarController alloc] init];
-//    UIViewController* vc = [[UIViewController alloc] init];
-//    UITabBarItem* itemna = [[UITabBarItem alloc] init];
-//    itemna.title = @"根";
-//    UITabBarItem* itemna1 = [[UITabBarItem alloc] init];
-//    itemna1.title = @"根1";
-//    vcNav.tabBarItem = itemna;
-//    vc.tabBarItem = itemna1;
-//    rootvvc.viewControllers = @[vcNav,vc];
-    self.window.rootViewController = vcNav;
+//    self.window.rootViewController = vcNav;
+    UITabBarController* rootvvc = [[UITabBarController alloc] init];
+    UIViewController* vc = [factory instantiateHandyCameraController];
+    UITabBarItem* itemna = [[UITabBarItem alloc] init];
+    itemna.title = @"根";
+    UITabBarItem* itemna1 = [[UITabBarItem alloc] init];
+    itemna1.title = @"根1";
+    vcNav.tabBarItem = itemna;
+    vc.tabBarItem = itemna1;
+    rootvvc.viewControllers = @[vcNav,vc];
+    self.window.rootViewController = rootvvc;
 //    self.mainBarController = rootvvc;
     [self.window makeKeyAndVisible];
     
