@@ -47,12 +47,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PW6-vd-Txt" userLabel="preview" customClass="HandyCameraPreviewView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PW6-vd-Txt" userLabel="preview" customClass="HandyCameraPreviewView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="PW6-vd-Txt" secondAttribute="trailing" id="4EJ-Bj-ihC"/>
+                            <constraint firstItem="PW6-vd-Txt" firstAttribute="leading" secondItem="Bzd-bQ-mlq" secondAttribute="leading" id="609-5n-YfR"/>
+                            <constraint firstItem="PW6-vd-Txt" firstAttribute="top" secondItem="Bzd-bQ-mlq" secondAttribute="top" id="CXK-li-HPK"/>
+                            <constraint firstItem="yX5-9f-ZCQ" firstAttribute="top" secondItem="PW6-vd-Txt" secondAttribute="bottom" id="F6k-3X-Y19"/>
+                            <constraint firstAttribute="trailing" secondItem="PW6-vd-Txt" secondAttribute="trailing" id="LlI-wr-tDW"/>
+                            <constraint firstItem="yX5-9f-ZCQ" firstAttribute="top" secondItem="PW6-vd-Txt" secondAttribute="bottom" id="SW5-Ay-67x"/>
+                            <constraint firstItem="PW6-vd-Txt" firstAttribute="leading" secondItem="Bzd-bQ-mlq" secondAttribute="leading" id="pQ4-R0-urv"/>
+                            <constraint firstItem="PW6-vd-Txt" firstAttribute="top" secondItem="Bzd-bQ-mlq" secondAttribute="top" id="wJC-Ai-cPb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LlI-wr-tDW"/>
+                                <exclude reference="pQ4-R0-urv"/>
+                                <exclude reference="wJC-Ai-cPb"/>
+                                <exclude reference="SW5-Ay-67x"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>

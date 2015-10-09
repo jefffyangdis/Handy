@@ -56,12 +56,6 @@
     UIColor* color = bar.backgroundColor;
 //    UIImage* img = bar.backgroundImage;
     color = [UIColor blackColor];
-    
-//    CGRect frame = self.view.frame;
-//    CGRect bounds =  self.view.bounds;
-//    bounds.origin.x = -10;
-//    self.view.bounds = bounds;
-//    frame = self.view.frame;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -86,6 +80,7 @@
     UISwipeGestureRecognizer* swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownRecognized)];
     [self.view addGestureRecognizer:swipeRecognizer];
     swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    
 }
 
 - (void)didReceiveMemoryWarning {

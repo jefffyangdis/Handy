@@ -9,6 +9,7 @@
 #import "HandyCameraController.h"
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "JFoundation.h"
 
 #import "HandyCameraPreviewView.h"
 
@@ -141,6 +142,7 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.tabBarController.tabBar.hidden = YES;
     dispatch_async([self sessionQueue], ^{
         [self addObserver:self forKeyPath:@"sessionRunningAndDeviceAuthorized" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:SessionRunningAndDeviceAuthorizedContext];
         [self addObserver:self forKeyPath:@"stillImageOutput.capturingStillImage" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:CapturingStillImageContext];
@@ -486,7 +488,7 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
         {
             //Not granted access to mediaType
             dispatch_async(dispatch_get_main_queue(), ^{
-                [[[UIAlertView alloc] initWithTitle:@"AVCam!"
+                [[[UIAlertView alloc] initWithTitle:localizedstr(@"a",@"b",@"c")
                                             message:@"AVCam doesn't have permission to use Camera, please change privacy settings"
                                            delegate:self
                                   cancelButtonTitle:@"OK"

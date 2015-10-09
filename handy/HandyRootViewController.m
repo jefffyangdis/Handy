@@ -163,6 +163,7 @@
 {
     AlbumContentsCollectionViewController* vcAlbum = (AlbumContentsCollectionViewController*)[[AlbumViewControllerFactory sharedFactory] instantiateAlbumViewController];
     vcAlbum.assetsGroup = self.groups[indexPath.row];
+    vcAlbum.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:vcAlbum animated:YES];
 }
 

@@ -12,6 +12,8 @@
 
 #define CHECKVALID(a) do{ if(!(a)) NSLog(@"("#a@") missing");}while(0)
 
+#define localizedstr(t,c,n) [[NSBundle mainBundle] localizedStringForKey:@"a" value:nil table:@"b"]
+
 @interface JFoundation : NSObject
 
 @end
