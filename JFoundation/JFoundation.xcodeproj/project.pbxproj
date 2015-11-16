@@ -38,6 +38,7 @@
 		C0C797C51B4926360077FE3C /* JRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C4F5091B44F72000D81E9F /* JRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0D7673D1B9DC266000A54C2 /* JImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C0D7673B1B9DC266000A54C2 /* JImage.h */; };
 		C0D7673E1B9DC266000A54C2 /* JImage.m in Sources */ = {isa = PBXBuildFile; fileRef = C0D7673C1B9DC266000A54C2 /* JImage.m */; };
+		C0D93A791BF9D58200748F0A /* libPods-handy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D93A781BF9D58200748F0A /* libPods-handy.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +66,6 @@
 
 /* Begin PBXFileReference section */
 		3369847F3C13DFB8ED58FE5B /* Pods-handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.release.xcconfig"; path = "../../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.release.xcconfig"; sourceTree = "<group>"; };
-		B5BD96FD2DE330423FE63679 /* libPods-handy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-handy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0C42D051B512F2400238799 /* JTabbedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTabbedView.h; sourceTree = "<group>"; };
 		C0C42D061B512F2400238799 /* JTabbedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTabbedView.m; sourceTree = "<group>"; };
 		C0C42D071B512F2400238799 /* JAlbumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumView.h; sourceTree = "<group>"; };
@@ -82,10 +82,6 @@
 		C0C42D1D1B512F5C00238799 /* UIViewController+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Utils.m"; sourceTree = "<group>"; };
 		C0C42D211B512F8D00238799 /* JStoryboardViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JStoryboardViewControllerFactory.h; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JStoryboard/JStoryboardViewControllerFactory.h; sourceTree = "<absolute>"; };
 		C0C42D221B512F8D00238799 /* JStoryboardViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JStoryboardViewControllerFactory.m; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JStoryboard/JStoryboardViewControllerFactory.m; sourceTree = "<absolute>"; };
-		C0C42D4C1B52201000238799 /* libPods-handy-ReactiveCocoa.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-handy-ReactiveCocoa.a"; path = "/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos/libPods-handy-ReactiveCocoa.a"; sourceTree = "<absolute>"; };
-		C0C42D4D1B52201000238799 /* libPods-handy-ReactiveViewModel.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-handy-ReactiveViewModel.a"; path = "/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos/libPods-handy-ReactiveViewModel.a"; sourceTree = "<absolute>"; };
-		C0C42D501B52207E00238799 /* libPods-handy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-handy.a"; path = "/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos/libPods-handy.a"; sourceTree = "<absolute>"; };
-		C0C42D561B522AA700238799 /* libPods-handy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-handy.a"; path = "/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos/libPods-handy.a"; sourceTree = "<absolute>"; };
 		C0C42D591B524EC100238799 /* JAlbumControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumControllerFactory.h; sourceTree = "<group>"; };
 		C0C42D5A1B524EC100238799 /* JAlbumControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlbumControllerFactory.m; sourceTree = "<group>"; };
 		C0C42D5D1B5255FF00238799 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -102,6 +98,7 @@
 		C0C797C21B4925420077FE3C /* JRuntime+System.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JRuntime+System.m"; sourceTree = "<group>"; };
 		C0D7673B1B9DC266000A54C2 /* JImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JImage.h; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JImage/JImage.h; sourceTree = "<absolute>"; };
 		C0D7673C1B9DC266000A54C2 /* JImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JImage.m; path = /Users/fangyang/GitHub/Handy/JFoundation/JFoundation/JImage/JImage.m; sourceTree = "<absolute>"; };
+		C0D93A781BF9D58200748F0A /* libPods-handy.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-handy.a"; path = "/Users/fangyang/pod_GitHub/handy/Pods/../build/Debug-iphoneos/libPods-handy.a"; sourceTree = "<absolute>"; };
 		CEB8794D8C17E5C63A3EA92F /* Pods-handy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.debug.xcconfig"; path = "../../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0D93A791BF9D58200748F0A /* libPods-handy.a in Frameworks */,
 				C0C42D5E1B5255FF00238799 /* UIKit.framework in Frameworks */,
 				C0C705EE1B40D823007CE302 /* Foundation.framework in Frameworks */,
 			);
@@ -129,12 +127,8 @@
 		1EDBECC7F4C1BAA713C639E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C0D93A781BF9D58200748F0A /* libPods-handy.a */,
 				C0C42D5D1B5255FF00238799 /* UIKit.framework */,
-				C0C42D561B522AA700238799 /* libPods-handy.a */,
-				C0C42D501B52207E00238799 /* libPods-handy.a */,
-				C0C42D4C1B52201000238799 /* libPods-handy-ReactiveCocoa.a */,
-				C0C42D4D1B52201000238799 /* libPods-handy-ReactiveViewModel.a */,
-				B5BD96FD2DE330423FE63679 /* libPods-handy.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

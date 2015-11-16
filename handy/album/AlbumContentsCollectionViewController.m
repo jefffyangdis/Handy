@@ -80,7 +80,6 @@
     UISwipeGestureRecognizer* swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeDownRecognized)];
     [self.view addGestureRecognizer:swipeRecognizer];
     swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
-    
 }
 
 - (void)didReceiveMemoryWarning {

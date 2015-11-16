@@ -78,6 +78,9 @@
     //enumerate only photos
     NSUInteger grouptypes = ALAssetsGroupAlbum|ALAssetsGroupEvent|ALAssetsGroupFaces|ALAssetsGroupSavedPhotos;
     [self.assetsLibrary enumerateGroupsWithTypes:grouptypes usingBlock:listGroupBlock failureBlock:failureBlock];
+    
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.translucent = YES;
 }
 
 - (void)initUI

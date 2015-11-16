@@ -137,9 +137,9 @@
     if ( buttonIndex == 1 ) {
         JAlbumCollectionViewCell* cell = (JAlbumCollectionViewCell*)[_viewImageCollection cellForItemAtIndexPath:[NSIndexPath indexPathForRow:_iCurrentOffsetIndex inSection:0]];
         
-        ALAsset *asset = self.assets[_iCurrentOffsetIndex];
-        ALAssetRepresentation* representation = [asset defaultRepresentation];
-        CGFloat f = representation.scale;
+//        ALAsset *asset = self.assets[_iCurrentOffsetIndex];
+//        ALAssetRepresentation* representation = [asset defaultRepresentation];
+//        CGFloat f = representation.scale;
         
         CIImage* image = [CIImage imageWithCGImage:[cell.scrollViewImg.image CGImage]];//[CIImage imageWithCGImage:[representation fullScreenImage]];
         EAGLContext* context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES2];
