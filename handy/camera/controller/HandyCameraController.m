@@ -25,6 +25,8 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 @property (nonatomic, weak) IBOutlet UIButton *cameraButton;
 @property (nonatomic, weak) IBOutlet UIButton *stillButton;
 
+@property (nonatomic, weak) IBOutlet UIView* viewTransition;
+
 // Session management.
 // Communicate with the session and other session objects on this queue.
 @property (nonatomic) dispatch_queue_t sessionQueue;
@@ -40,16 +42,22 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 @property (nonatomic) BOOL lockInterfaceRotation;
 @property (nonatomic) id runtimeErrorHandlingObserver;
 
+- (IBAction)backAction:(id)sender;
 @end
 
 @implementation HandyCameraController
+
+- (IBAction)backAction:(id)sender
+{
+    self.tabBarController.selectedIndex = 0;
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)isSessionRunningAndDeviceAuthorized
+- (BOOL)isSessionRunningAndDeviceAuthorized //有session就有sessionqueue，故也作为判断sessionqueue是否存在的依据
 {
     return [[self session] isRunning] && [self isDeviceAuthorized];
 }
@@ -63,15 +71,47 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 {
     [super viewDidLoad];
     
+    // Check for device authorization
+    [self checkDeviceAuthorizationStatus];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    self.tabBarController.tabBar.hidden = YES;
+    
+    [self startSession];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationActiveStateChanged:) name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationActiveStateChanged:) name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+    [self stopSession];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    self.tabBarController.tabBar.hidden = NO;
+}
+
+- (void)setupVideoDevice
+{
     // Create the AVCaptureSession
     AVCaptureSession *session = [[AVCaptureSession alloc] init];
     [self setSession:session];
     
     // Setup the preview view
     [[self previewView] setSession:session];
-    
-    // Check for device authorization
-    [self checkDeviceAuthorizationStatus];
     
     // In general it is not safe to mutate an AVCaptureSession or any of its inputs, outputs, or connections from multiple threads at the same time.
     // Why not do all of this on the main queue?
@@ -140,9 +180,12 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
     });
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)startSession
 {
-    self.tabBarController.tabBar.hidden = YES;
+    if( !self.isDeviceAuthorized || !self.sessionQueue || self.session.isRunning )
+    {
+        return;
+    }
     dispatch_async([self sessionQueue], ^{
         [self addObserver:self forKeyPath:@"sessionRunningAndDeviceAuthorized" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:SessionRunningAndDeviceAuthorizedContext];
         [self addObserver:self forKeyPath:@"stillImageOutput.capturingStillImage" options:(NSKeyValueObservingOptionOld | NSKeyValueObservingOptionNew) context:CapturingStillImageContext];
@@ -162,8 +205,14 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
     });
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)stopSession
 {
+    if ( !self.isDeviceAuthorized || !self.sessionQueue || !self.session.isRunning  ) {
+        return;
+    }
+    
+    self.viewTransition.alpha = 1;
+    
     dispatch_async([self sessionQueue], ^{
         [[self session] stopRunning];
         
@@ -173,6 +222,7 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
         [self removeObserver:self forKeyPath:@"sessionRunningAndDeviceAuthorized" context:SessionRunningAndDeviceAuthorizedContext];
         [self removeObserver:self forKeyPath:@"stillImageOutput.capturingStillImage" context:CapturingStillImageContext];
         [self removeObserver:self forKeyPath:@"movieFileOutput.recording" context:RecordingContext];
+        
     });
 }
 
@@ -187,7 +237,7 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
     return ![self lockInterfaceRotation];
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
     return UIInterfaceOrientationMaskAll;
 }
@@ -195,6 +245,12 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [[(AVCaptureVideoPreviewLayer *)[[self previewView] layer] connection] setVideoOrientation:(AVCaptureVideoOrientation)toInterfaceOrientation];
+}
+
+#pragma mark notification
+- (void)applicationActiveStateChanged:(NSNotification *)notification
+{
+    [self.viewTransition setAlpha:1];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -474,6 +530,12 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
     });
 }
 
+- (void)dealloc
+{
+    
+    
+}
+
 - (void)checkDeviceAuthorizationStatus
 {
     NSString *mediaType = AVMediaTypeVideo;
@@ -483,13 +545,17 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
         {
             //Granted access to mediaType
             [self setDeviceAuthorized:YES];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self setupVideoDevice];
+                [self startSession];
+            });
         }
         else
         {
             //Not granted access to mediaType
             dispatch_async(dispatch_get_main_queue(), ^{
-                [[[UIAlertView alloc] initWithTitle:localizedstr(@"a",@"b",@"c")
-                                            message:@"AVCam doesn't have permission to use Camera, please change privacy settings"
+                [[[UIAlertView alloc] initWithTitle:localizedstr(@"handy",@"camera",@"name")
+                                            message:localizedstr(@"handy",@"alert",@"nocamera")
                                            delegate:self
                                   cancelButtonTitle:@"OK"
                                   otherButtonTitles:nil] show];

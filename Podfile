@@ -14,6 +14,6 @@ end
 
 target 'handyTests' do
 
-
+pod 'Kiwi'
 
 end

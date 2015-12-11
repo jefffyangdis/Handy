@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cpt-Pm-4qc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cpt-Pm-4qc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--Handy Root View Controller-->
@@ -15,9 +15,10 @@
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="8XC-Pa-fl0">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="49.5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" clipsSubviews="YES" contentMode="center" tableViewCell="8XC-Pa-fl0" id="eni-J3-5Ru">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
@@ -49,7 +50,59 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PW6-vd-Txt" userLabel="preview" customClass="HandyCameraPreviewView">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4e-WW-Zp5" userLabel="transview">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MRh-iO-fLy" userLabel="customnav">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jK9-y3-MIC">
+                                                <rect key="frame" x="0.0" y="12" width="60" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="NUx-7Q-nOb"/>
+                                                </constraints>
+                                                <state key="normal" title="返回"/>
+                                                <connections>
+                                                    <action selector="backAction:" destination="hHl-2X-kYn" eventType="touchUpInside" id="7IN-og-3L7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="jK9-y3-MIC" firstAttribute="top" secondItem="MRh-iO-fLy" secondAttribute="top" constant="12" id="OT9-Yd-p88"/>
+                                            <constraint firstAttribute="bottom" secondItem="jK9-y3-MIC" secondAttribute="bottom" constant="12" id="R2f-wb-yMn"/>
+                                            <constraint firstItem="jK9-y3-MIC" firstAttribute="leading" secondItem="MRh-iO-fLy" secondAttribute="leading" id="Sb1-QO-pwh"/>
+                                            <constraint firstAttribute="height" constant="64" id="fZ8-Ry-7HH"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms5-Gq-a9w">
+                                        <rect key="frame" x="35" y="385" width="45" height="30"/>
+                                        <state key="normal" title="record"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2so-hA-Hs8">
+                                        <rect key="frame" x="145" y="385" width="30" height="30"/>
+                                        <state key="normal" title="still"/>
+                                        <connections>
+                                            <action selector="snapStillImage:" destination="hHl-2X-kYn" eventType="touchUpInside" id="nxY-da-mA8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFj-U5-rSk">
+                                        <rect key="frame" x="249" y="385" width="51" height="30"/>
+                                        <state key="normal" title="camera"/>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="MRh-iO-fLy" firstAttribute="leading" secondItem="PW6-vd-Txt" secondAttribute="leading" id="8hu-Vr-03r"/>
+                                    <constraint firstItem="MRh-iO-fLy" firstAttribute="top" secondItem="PW6-vd-Txt" secondAttribute="top" id="RQO-gY-0lo"/>
+                                    <constraint firstAttribute="trailing" secondItem="MRh-iO-fLy" secondAttribute="trailing" id="Ssx-Wh-nsh"/>
+                                    <constraint firstItem="G4e-WW-Zp5" firstAttribute="leading" secondItem="PW6-vd-Txt" secondAttribute="leading" id="fcU-Xz-UEy"/>
+                                    <constraint firstAttribute="bottom" secondItem="G4e-WW-Zp5" secondAttribute="bottom" id="i2V-TH-0ww"/>
+                                    <constraint firstAttribute="trailing" secondItem="G4e-WW-Zp5" secondAttribute="trailing" id="p93-lw-Dg4"/>
+                                    <constraint firstItem="G4e-WW-Zp5" firstAttribute="top" secondItem="PW6-vd-Txt" secondAttribute="top" id="zPO-Bj-AFs"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,7 +128,10 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="cameraButton" destination="vFj-U5-rSk" id="kyD-2b-S7E"/>
                         <outlet property="previewView" destination="PW6-vd-Txt" id="bjB-oh-ftF"/>
+                        <outlet property="recordButton" destination="Ms5-Gq-a9w" id="5zS-ZT-Lhg"/>
+                        <outlet property="stillButton" destination="2so-hA-Hs8" id="ibD-KW-u8t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiC-c0-Gyd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -194,7 +250,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="photoCell" id="IWS-dr-Ed0">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>

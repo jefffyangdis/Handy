@@ -9,11 +9,16 @@
 #import <Foundation/Foundation.h>
 #import "JRunTime/JRunTime.h"
 #import "JStoryboard/JStoryboardViewControllerFactory.h"
+#import "JAlertView.h"
 
 #define CHECKVALID(a) do{ if(!(a)) NSLog(@"("#a@") missing");}while(0)
 
-#define localizedstr(t,c,n) [[NSBundle mainBundle] localizedStringForKey:@"a" value:nil table:@"b"]
+#define localizedstr(table,category,name) getLocalizedStringFromTableWithFallback((category@"_"name),(table),nil,nil)
+
+NSString *getLocalizedStringFromTableWithFallback(NSString *key, NSString *table, NSString *fallback, __unused NSString *comment);
 
 @interface JFoundation : NSObject
+
++ (UIViewController*)currentViewController;
 
 @end

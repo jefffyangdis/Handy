@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -31,19 +32,30 @@
                         <constraint firstAttribute="height" constant="40" id="rgM-YS-EbG"/>
                     </constraints>
                 </view>
+                <glkView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" drawableDepthFormat="24" drawableStencilFormat="8" drawableMultisample="4X" enableSetNeedsDisplay="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Jt-bt-At6">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="128"/>
+                    <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="jtb-eV-U7f"/>
+                    </constraints>
+                </glkView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="1Jt-bt-At6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8Tt-Lr-MEC"/>
                 <constraint firstAttribute="trailing" secondItem="P9d-5e-Fzo" secondAttribute="trailing" id="8i1-1h-jwU"/>
+                <constraint firstAttribute="trailing" secondItem="1Jt-bt-At6" secondAttribute="trailing" id="Qdo-xY-hnR"/>
                 <constraint firstAttribute="bottom" secondItem="5ym-Ox-7m4" secondAttribute="bottom" id="a0x-dJ-Ync"/>
                 <constraint firstItem="5ym-Ox-7m4" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="cD8-j1-tgs"/>
                 <constraint firstItem="5ym-Ox-7m4" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fpi-hK-lPZ"/>
                 <constraint firstAttribute="trailing" secondItem="5ym-Ox-7m4" secondAttribute="trailing" id="kWY-fj-5L9"/>
                 <constraint firstAttribute="bottom" secondItem="P9d-5e-Fzo" secondAttribute="bottom" constant="28" id="llM-5I-Lwk"/>
+                <constraint firstItem="1Jt-bt-At6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="qrh-GU-qaS"/>
                 <constraint firstItem="P9d-5e-Fzo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="yt0-Z0-0Jr"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="viewGL" destination="1Jt-bt-At6" id="PbF-Sh-34j"/>
                 <outlet property="viewImageCollection" destination="5ym-Ox-7m4" id="LXz-1Z-NPG"/>
                 <outlet property="viewNavigationBalls" destination="P9d-5e-Fzo" id="4i3-Jk-ptU"/>
             </connections>

@@ -27,13 +27,13 @@
     self.window.backgroundColor = [UIColor clearColor];
     UINavigationController* vcNav = [[UINavigationController alloc] init];
     vcNav.viewControllers = @[controller];
-//    self.window.rootViewController = vcNav;
+
     UITabBarController* rootvvc = [[UITabBarController alloc] init];
     UIViewController* vc = [factory instantiateHandyCameraController];
     UITabBarItem* itemna = [[UITabBarItem alloc] init];
-    itemna.title = @"根";
+    itemna.title = localizedstr(@"handy", @"album", @"navbartitle");
     UITabBarItem* itemna1 = [[UITabBarItem alloc] init];
-    itemna1.title = @"根1";
+    itemna1.title = @"相机";
     vcNav.tabBarItem = itemna;
     vc.tabBarItem = itemna1;
     rootvvc.viewControllers = @[vcNav,vc];

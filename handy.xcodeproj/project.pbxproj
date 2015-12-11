@@ -14,6 +14,8 @@
 		C0664BE71BBB7A35009F6A13 /* HandyCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0664BE61BBB7A35009F6A13 /* HandyCameraController.m */; };
 		C0664BEA1BBB7B1C009F6A13 /* HandyCameraPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0664BE91BBB7B1C009F6A13 /* HandyCameraPreviewView.m */; };
 		C0664BF21BBBDE60009F6A13 /* MainControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0664BF11BBBDE60009F6A13 /* MainControllerFactory.m */; };
+		C06B15FD1BFA0A1600523524 /* SimpleStringSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = C06B15FC1BFA0A1600523524 /* SimpleStringSpec.m */; };
+		C06B16051C01807100523524 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C06B16041C01807000523524 /* GLKit.framework */; };
 		C072C6E51AF75E87006490FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E41AF75E87006490FA /* main.m */; };
 		C072C6EB1AF75E87006490FA /* handy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C072C6E91AF75E87006490FA /* handy.xcdatamodeld */; };
 		C072C6F31AF75E87006490FA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C072C6F21AF75E87006490FA /* Images.xcassets */; };
@@ -45,6 +47,7 @@
 		C0CAEDFC1B271187003DEEE0 /* PhotoEditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C0CAEDFB1B271187003DEEE0 /* PhotoEditingViewController.m */; };
 		C0CAEDFE1B271187003DEEE0 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0CAEDFD1B271187003DEEE0 /* MainInterface.storyboard */; };
 		C0CAEE011B271187003DEEE0 /* handyExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C0CAEDF21B271187003DEEE0 /* handyExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C11B14DF5A406DF5362696A2 /* libPods-handyTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D1433FF26334A6779CE9F19 /* libPods-handyTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,7 +103,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A279F14C758AB3F4A335486 /* Pods-handyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handyTests.debug.xcconfig"; path = "../../pod_GitHub/handy/Pods/Target Support Files/Pods-handyTests/Pods-handyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4D739F8693CF891612B03575 /* Pods-handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.release.xcconfig"; path = "../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.release.xcconfig"; sourceTree = "<group>"; };
+		8D1433FF26334A6779CE9F19 /* libPods-handyTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-handyTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C29AAEC6E947181A0E38D25 /* Pods-handyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handyTests.release.xcconfig"; path = "../../pod_GitHub/handy/Pods/Target Support Files/Pods-handyTests/Pods-handyTests.release.xcconfig"; sourceTree = "<group>"; };
 		C00815801AF9CB290037A7DF /* AvgLoadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AvgLoadView.h; path = ../../GitHub/Handy/handy/AvgLoad/AvgLoadView.h; sourceTree = SOURCE_ROOT; };
 		C00815871AF9CBAE0037A7DF /* AvgLoadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AvgLoadView.m; path = ../../GitHub/Handy/handy/AvgLoad/AvgLoadView.m; sourceTree = SOURCE_ROOT; };
 		C008158B1AF9CC490037A7DF /* AvgLoadView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AvgLoadView.xib; path = ../../GitHub/Handy/handy/AvgLoad/AvgLoadView.xib; sourceTree = SOURCE_ROOT; };
@@ -113,6 +119,8 @@
 		C0664BE91BBB7B1C009F6A13 /* HandyCameraPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HandyCameraPreviewView.m; sourceTree = "<group>"; };
 		C0664BF01BBBDE60009F6A13 /* MainControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainControllerFactory.h; sourceTree = "<group>"; };
 		C0664BF11BBBDE60009F6A13 /* MainControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainControllerFactory.m; sourceTree = "<group>"; };
+		C06B15FC1BFA0A1600523524 /* SimpleStringSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleStringSpec.m; path = ../../../GitHub/Handy/handyTests/SimpleStringSpec.m; sourceTree = "<group>"; };
+		C06B16041C01807000523524 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		C072C6DF1AF75E87006490FA /* handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C072C6E31AF75E87006490FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C072C6E41AF75E87006490FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -171,6 +179,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C06B16051C01807100523524 /* GLKit.framework in Frameworks */,
 				C0C42D471B521BC400238799 /* libJFoundation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,6 +188,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C11B14DF5A406DF5362696A2 /* libPods-handyTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,9 +207,11 @@
 		5D5860BE93EAAD014ADFED8F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C06B16041C01807000523524 /* GLKit.framework */,
 				C0C42D381B51626700238799 /* JFoundation.xcodeproj */,
 				C0CAEDF31B271187003DEEE0 /* PhotosUI.framework */,
 				C0CAEDF51B271187003DEEE0 /* Photos.framework */,
+				8D1433FF26334A6779CE9F19 /* libPods-handyTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -347,6 +359,7 @@
 			children = (
 				C072C7011AF75E88006490FA /* handyTests.m */,
 				C072C6FF1AF75E88006490FA /* Supporting Files */,
+				C06B15FC1BFA0A1600523524 /* SimpleStringSpec.m */,
 			);
 			path = handyTests;
 			sourceTree = "<group>";
@@ -402,6 +415,8 @@
 			children = (
 				D0C25702A7A3E1E85871DD5A /* Pods-handy.debug.xcconfig */,
 				4D739F8693CF891612B03575 /* Pods-handy.release.xcconfig */,
+				0A279F14C758AB3F4A335486 /* Pods-handyTests.debug.xcconfig */,
+				9C29AAEC6E947181A0E38D25 /* Pods-handyTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -435,9 +450,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C072C7081AF75E88006490FA /* Build configuration list for PBXNativeTarget "handyTests" */;
 			buildPhases = (
+				43D7A291A53AE72C7E369FB0 /* Check Pods Manifest.lock */,
 				C072C6F71AF75E88006490FA /* Sources */,
 				C072C6F81AF75E88006490FA /* Frameworks */,
 				C072C6F91AF75E88006490FA /* Resources */,
+				2D5EAADC29DC54A0DF578E76 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -567,6 +584,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2D5EAADC29DC54A0DF578E76 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../../pod_GitHub/handy/Pods/Target Support Files/Pods-handyTests/Pods-handyTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		43D7A291A53AE72C7E369FB0 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		7A365F6B011D5D6DFCE3AAD7 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -634,6 +681,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C072C7021AF75E88006490FA /* handyTests.m in Sources */,
+				C06B15FD1BFA0A1600523524 /* SimpleStringSpec.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -826,6 +874,7 @@
 		};
 		C072C7091AF75E88006490FA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A279F14C758AB3F4A335486 /* Pods-handyTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				ENABLE_TESTABILITY = YES;
@@ -839,6 +888,13 @@
 				);
 				INFOPLIST_FILE = handyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Kiwi\"",
+					"-framework",
+					"\"XCTest\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/handy.app/handy";
 			};
@@ -846,6 +902,7 @@
 		};
 		C072C70A1AF75E88006490FA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9C29AAEC6E947181A0E38D25 /* Pods-handyTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				ENABLE_TESTABILITY = NO;
@@ -855,6 +912,13 @@
 				);
 				INFOPLIST_FILE = handyTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Kiwi\"",
+					"-framework",
+					"\"XCTest\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/handy.app/handy";
 			};

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C050DC471C169AE400F7D129 /* JAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = C050DC451C169AE400F7D129 /* JAlertView.h */; };
+		C050DC481C169AE400F7D129 /* JAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C050DC461C169AE400F7D129 /* JAlertView.m */; };
 		C0C42D111B512F2400238799 /* JTabbedView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C42D051B512F2400238799 /* JTabbedView.h */; };
 		C0C42D121B512F2400238799 /* JTabbedView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0C42D061B512F2400238799 /* JTabbedView.m */; };
 		C0C42D131B512F2400238799 /* JAlbumView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C42D071B512F2400238799 /* JAlbumView.h */; };
@@ -66,6 +68,8 @@
 
 /* Begin PBXFileReference section */
 		3369847F3C13DFB8ED58FE5B /* Pods-handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.release.xcconfig"; path = "../../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.release.xcconfig"; sourceTree = "<group>"; };
+		C050DC451C169AE400F7D129 /* JAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlertView.h; sourceTree = "<group>"; };
+		C050DC461C169AE400F7D129 /* JAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlertView.m; sourceTree = "<group>"; };
 		C0C42D051B512F2400238799 /* JTabbedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTabbedView.h; sourceTree = "<group>"; };
 		C0C42D061B512F2400238799 /* JTabbedView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTabbedView.m; sourceTree = "<group>"; };
 		C0C42D071B512F2400238799 /* JAlbumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlbumView.h; sourceTree = "<group>"; };
@@ -216,6 +220,8 @@
 				C0C705F51B410988007CE302 /* JRunTime */,
 				C0C705C61B40D144007CE302 /* JFoundation.h */,
 				C0C705C81B40D144007CE302 /* JFoundation.m */,
+				C050DC451C169AE400F7D129 /* JAlertView.h */,
+				C050DC461C169AE400F7D129 /* JAlertView.m */,
 			);
 			path = JFoundation;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				C0C42D111B512F2400238799 /* JTabbedView.h in Headers */,
 				C0C42D151B512F2400238799 /* JAlbumCollectionViewCell.h in Headers */,
 				C0C4F50F1B44F8C800D81E9F /* JControllerCenter.h in Headers */,
+				C050DC471C169AE400F7D129 /* JAlertView.h in Headers */,
 				C0C42D191B512F2400238799 /* JImageScrollView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +435,7 @@
 			files = (
 				C0C42D1A1B512F2400238799 /* JImageScrollView.m in Sources */,
 				C0C4F50C1B44F72000D81E9F /* JRuntime.m in Sources */,
+				C050DC481C169AE400F7D129 /* JAlertView.m in Sources */,
 				C0C42D121B512F2400238799 /* JTabbedView.m in Sources */,
 				C0C705C91B40D144007CE302 /* JFoundation.m in Sources */,
 				C0C797C31B4925420077FE3C /* JRuntime+System.m in Sources */,
