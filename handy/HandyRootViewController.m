@@ -12,6 +12,10 @@
 #import "AlbumViewControllerFactory.h"
 #import "AvgLoadView.h"
 #import "Network.h"
+#import "JFoundation.h"
+#import <OpenGLES/ES2/gl.h>
+#import <OpenGLES/ES2/glext.h>
+#import <objc/runtime.h>
 
 @interface HandyRootViewController ()
 
@@ -28,6 +32,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _network = [Network new];
     [_network ok];
     
     // Do any additional setup after loading the view.
@@ -78,8 +83,18 @@
     NSUInteger grouptypes = ALAssetsGroupAlbum|ALAssetsGroupEvent|ALAssetsGroupFaces|ALAssetsGroupSavedPhotos;
     [self.assetsLibrary enumerateGroupsWithTypes:grouptypes usingBlock:listGroupBlock failureBlock:failureBlock];
     
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     self.navigationController.navigationBar.translucent = YES;
+//    self.navigationController.navigationBar.barTintColor = [[UIColor blackColor] colorWithAlphaComponent:0.1];
+    [self createGLProgram];
+}
+
+- (void)createGLProgram
+{
+    GLuint program = glCreateProgram();
     glAttachShader(program, 0);
+    glAttachShader(program, 0);
+    glUseProgram(program);
 }
 
 - (void)initUI
@@ -91,7 +106,7 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController setNavigationBarHidden:NO];
-    self.title = NSLocalizedStringFromTable(@"album_navbartitle", @"handy", @"album_navbartitle");
+    self.title = localizedstr(@"handy", @"album", @"navbartitle");
 }
 
 - (void)viewWillDisappear:(BOOL)animated
