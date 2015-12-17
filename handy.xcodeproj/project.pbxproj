@@ -37,6 +37,7 @@
 		C0AFD2CC1AF9F18700CF3405 /* TestViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */; };
 		C0AFD2D91AFA506200CF3405 /* AlbumViewControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */; };
 		C0B2BC2D1B1A9AFF00CF5109 /* AlbumContentsCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C072C70B1AF75F20006490FA /* AlbumContentsCollectionViewController.m */; };
+		C0BD14311C22EFA40074E823 /* CoreTextArcView.m in Sources */ = {isa = PBXBuildFile; fileRef = C0BD14301C22EFA40074E823 /* CoreTextArcView.m */; };
 		C0C42D471B521BC400238799 /* libJFoundation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0C42D3E1B51626700238799 /* libJFoundation.a */; };
 		C0C488991B686D9E003440D0 /* JAlbumCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C488971B686D9E003440D0 /* JAlbumCollectionViewCell.xib */; };
 		C0C4889A1B686D9E003440D0 /* JAlbumView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C488981B686D9E003440D0 /* JAlbumView.xib */; };
@@ -157,6 +158,8 @@
 		C0AFD2CB1AF9F18700CF3405 /* TestViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewControllerFactory.m; sourceTree = "<group>"; };
 		C0AFD2D71AFA506200CF3405 /* AlbumViewControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumViewControllerFactory.h; sourceTree = "<group>"; };
 		C0AFD2D81AFA506200CF3405 /* AlbumViewControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumViewControllerFactory.m; sourceTree = "<group>"; };
+		C0BD142F1C22EFA40074E823 /* CoreTextArcView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTextArcView.h; sourceTree = "<group>"; };
+		C0BD14301C22EFA40074E823 /* CoreTextArcView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreTextArcView.m; sourceTree = "<group>"; };
 		C0C42D381B51626700238799 /* JFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JFoundation.xcodeproj; path = /Users/fangyang/pod_GitHub/handy/../../GitHub/Handy/JFoundation/JFoundation.xcodeproj; sourceTree = "<absolute>"; };
 		C0C488971B686D9E003440D0 /* JAlbumCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JAlbumCollectionViewCell.xib; path = ../../GitHub/Handy/JFoundation/JFoundation/JAlbum/JAlbumCollectionViewCell.xib; sourceTree = "<group>"; };
 		C0C488981B686D9E003440D0 /* JAlbumView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = JAlbumView.xib; path = ../../GitHub/Handy/JFoundation/JFoundation/JAlbum/JAlbumView.xib; sourceTree = "<group>"; };
@@ -283,6 +286,8 @@
 			children = (
 				C0664BE51BBB7A35009F6A13 /* HandyCameraController.h */,
 				C0664BE61BBB7A35009F6A13 /* HandyCameraController.m */,
+				C0BD142F1C22EFA40074E823 /* CoreTextArcView.h */,
+				C0BD14301C22EFA40074E823 /* CoreTextArcView.m */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -672,6 +677,7 @@
 				C072C72A1AF75F20006490FA /* PhotoViewController.m in Sources */,
 				C072C7241AF75F20006490FA /* handy.xcdatamodeld in Sources */,
 				C0C6203D1B39519700FBC471 /* Network.mm in Sources */,
+				C0BD14311C22EFA40074E823 /* CoreTextArcView.m in Sources */,
 				C072C6E51AF75E87006490FA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -43,6 +43,7 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 @property (nonatomic) id runtimeErrorHandlingObserver;
 
 - (IBAction)backAction:(id)sender;
+
 @end
 
 @implementation HandyCameraController
