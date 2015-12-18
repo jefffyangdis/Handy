@@ -10,6 +10,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "JFoundation.h"
+#import "CoreTextArcView.h"
 
 #import "HandyCameraPreviewView.h"
 
@@ -24,6 +25,7 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 @property (nonatomic, weak) IBOutlet UIButton *recordButton;
 @property (nonatomic, weak) IBOutlet UIButton *cameraButton;
 @property (nonatomic, weak) IBOutlet UIButton *stillButton;
+@property (weak, nonatomic) IBOutlet CoreTextArcView *ctTxtView;
 
 @property (nonatomic, weak) IBOutlet UIView* viewTransition;
 
@@ -167,7 +169,10 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
             [session addOutput:movieFileOutput];
             AVCaptureConnection *connection = [movieFileOutput connectionWithMediaType:AVMediaTypeVideo];
             if ([connection isVideoStabilizationSupported])
-                [connection setEnablesVideoStabilizationWhenAvailable:YES];
+            {
+                switchIfPreIOS8([connection setEnablesVideoStabilizationWhenAvailable:YES],
+                                [connection setPreferredVideoStabilizationMode:AVCaptureVideoStabilizationModeStandard]);
+            }
             [self setMovieFileOutput:movieFileOutput];
         }
         

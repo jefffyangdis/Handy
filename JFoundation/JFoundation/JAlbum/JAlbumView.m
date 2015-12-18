@@ -80,7 +80,7 @@ BOOL CheckForExtension(NSString *searchName)
 
 - (void)createGLProgram
 {
-    GLuint program = glCreateProgram(),vertShader;
+/*    GLuint program = glCreateProgram(),vertShader;
     
 //    glUniform1f(glGetUniformLocation(program, "CoolestTemp"), 0.0f);
     
@@ -108,17 +108,19 @@ BOOL CheckForExtension(NSString *searchName)
     }
     
     glAttachShader(program, vertShader);
-    glUseProgram(program);
+    glUseProgram(program);*/
 }
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect
 {
+    /*
 //    [self createGLProgram];
     glClearColor(0.0, 0.3, 0.5, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     GLfloat vertex[]={{10,20},{10,30},{20,25}};
 //    glEnableVertexAttribArray(<#GLuint index#>)
 //    glDrawArrays(GL_LINES, 0, <#GLsizei count#>)
+     */
 }
 
 - (void)longPress:(UILongPressGestureRecognizer*)sender

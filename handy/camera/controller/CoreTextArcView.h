@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CoreTextArcView : NSObject
+@interface CoreTextArcView : UIView
 
-@property (nonatomic) NSFont *font;
+@property (nonatomic) UIFont *font;
 @property (nonatomic) NSString *string;
 @property (readonly, nonatomic) NSAttributedString *attributedString;
 @property (nonatomic) CGFloat radius;

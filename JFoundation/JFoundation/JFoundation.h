@@ -12,6 +12,7 @@
 #import "JAlertView.h"
 
 #define CHECKVALID(a) do{ if(!(a)) NSLog(@"("#a@") missing");}while(0)
+#define switchIfPreIOS8(directivesPre8,directivePro8) do{if([[JRuntime systemVersion] floatValue] < 8.0 ) {directivesPre8;}else{directivePro8;}}while(0)
 
 #define localizedstr(table,category,name) getLocalizedStringFromTableWithFallback((category@"_"name),(table),nil,nil)
 

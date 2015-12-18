@@ -104,8 +104,8 @@
                                     <constraint firstItem="G4e-WW-Zp5" firstAttribute="top" secondItem="PW6-vd-Txt" secondAttribute="top" id="zPO-Bj-AFs"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYq-fP-x27" userLabel="arctextview">
-                                <rect key="frame" x="40" y="156" width="240" height="192"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYq-fP-x27" userLabel="arctextview" customClass="CoreTextArcView">
+                                <rect key="frame" x="0.0" y="156" width="320" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -133,6 +133,7 @@
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
                         <outlet property="cameraButton" destination="vFj-U5-rSk" id="kyD-2b-S7E"/>
+                        <outlet property="ctTxtView" destination="cYq-fP-x27" id="TYu-Wd-p1z"/>
                         <outlet property="previewView" destination="PW6-vd-Txt" id="bjB-oh-ftF"/>
                         <outlet property="recordButton" destination="Ms5-Gq-a9w" id="5zS-ZT-Lhg"/>
                         <outlet property="stillButton" destination="2so-hA-Hs8" id="ibD-KW-u8t"/>
