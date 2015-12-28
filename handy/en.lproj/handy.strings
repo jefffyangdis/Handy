@@ -8,3 +8,5 @@
 "album_navbartitle"="Album";
 "camera_name" = "AVCam!";
 "alert_nocamera" = "AVCam doesn't have permission to use Camera, please change privacy settings";
+"camera_record" = "record";
+"camera_stop" = "stop";

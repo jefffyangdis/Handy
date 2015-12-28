@@ -78,8 +78,12 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ms5-Gq-a9w">
-                                        <rect key="frame" x="35" y="385" width="45" height="30"/>
+                                        <rect key="frame" x="24" y="385" width="59" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <state key="normal" title="record"/>
+                                        <connections>
+                                            <action selector="toggleMovieRecording:" destination="hHl-2X-kYn" eventType="touchUpInside" id="SNq-gS-heW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2so-hA-Hs8">
                                         <rect key="frame" x="145" y="385" width="30" height="30"/>
@@ -91,6 +95,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vFj-U5-rSk">
                                         <rect key="frame" x="249" y="385" width="51" height="30"/>
                                         <state key="normal" title="camera"/>
+                                        <connections>
+                                            <action selector="changeCamera:" destination="hHl-2X-kYn" eventType="touchUpInside" id="6wX-38-g1M"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -104,10 +111,16 @@
                                     <constraint firstItem="G4e-WW-Zp5" firstAttribute="top" secondItem="PW6-vd-Txt" secondAttribute="top" id="zPO-Bj-AFs"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cYq-fP-x27" userLabel="arctextview" customClass="CoreTextArcView">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cYq-fP-x27" userLabel="arctextview" customClass="CoreTextArcView">
                                 <rect key="frame" x="0.0" y="156" width="320" height="300"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="4Qm-wd-DER"/>
+                                </constraints>
                             </view>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uge-lU-2e7">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -117,6 +130,9 @@
                             <constraint firstItem="yX5-9f-ZCQ" firstAttribute="top" secondItem="PW6-vd-Txt" secondAttribute="bottom" id="F6k-3X-Y19"/>
                             <constraint firstAttribute="trailing" secondItem="PW6-vd-Txt" secondAttribute="trailing" id="LlI-wr-tDW"/>
                             <constraint firstItem="yX5-9f-ZCQ" firstAttribute="top" secondItem="PW6-vd-Txt" secondAttribute="bottom" id="SW5-Ay-67x"/>
+                            <constraint firstAttribute="trailing" secondItem="cYq-fP-x27" secondAttribute="trailing" id="bVc-C9-j7x"/>
+                            <constraint firstItem="cYq-fP-x27" firstAttribute="top" secondItem="3HD-fF-sCk" secondAttribute="bottom" constant="136" id="hWq-jO-M44"/>
+                            <constraint firstItem="cYq-fP-x27" firstAttribute="leading" secondItem="Bzd-bQ-mlq" secondAttribute="leading" id="hvf-k9-nef"/>
                             <constraint firstItem="PW6-vd-Txt" firstAttribute="leading" secondItem="Bzd-bQ-mlq" secondAttribute="leading" id="pQ4-R0-urv"/>
                             <constraint firstItem="PW6-vd-Txt" firstAttribute="top" secondItem="Bzd-bQ-mlq" secondAttribute="top" id="wJC-Ai-cPb"/>
                         </constraints>
@@ -137,6 +153,8 @@
                         <outlet property="previewView" destination="PW6-vd-Txt" id="bjB-oh-ftF"/>
                         <outlet property="recordButton" destination="Ms5-Gq-a9w" id="5zS-ZT-Lhg"/>
                         <outlet property="stillButton" destination="2so-hA-Hs8" id="ibD-KW-u8t"/>
+                        <outlet property="videoview" destination="Uge-lU-2e7" id="jnA-4v-Zp1"/>
+                        <outlet property="viewTransition" destination="G4e-WW-Zp5" id="Pga-Tt-ego"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DiC-c0-Gyd" userLabel="First Responder" sceneMemberID="firstResponder"/>

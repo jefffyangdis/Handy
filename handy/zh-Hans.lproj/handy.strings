@@ -8,3 +8,5 @@
 "album_navbartitle"="相册";
 "camera_name" = "handy相机";
 "alert_nocamera" = "没有打开相机权限，到设置中开启一下吧";
+"camera_record" = "录像";
+"camera_stop" = "停止录像";

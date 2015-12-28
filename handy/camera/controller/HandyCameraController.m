@@ -11,6 +11,7 @@
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "JFoundation.h"
 #import "CoreTextArcView.h"
+#import "UIView+Sceenshot.h"
 
 #import "HandyCameraPreviewView.h"
 
@@ -26,8 +27,8 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 @property (nonatomic, weak) IBOutlet UIButton *cameraButton;
 @property (nonatomic, weak) IBOutlet UIButton *stillButton;
 @property (weak, nonatomic) IBOutlet CoreTextArcView *ctTxtView;
-
-@property (nonatomic, weak) IBOutlet UIView* viewTransition;
+@property (weak, nonatomic) IBOutlet UIView *viewTransition;//镜头置黑view
+@property (weak, nonatomic) IBOutlet UIImageView *videoview;
 
 // Session management.
 // Communicate with the session and other session objects on this queue.
@@ -84,10 +85,15 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
     
     self.tabBarController.tabBar.hidden = YES;
     
+    [UIView animateWithDuration:2 animations:^{
+        self.viewTransition.alpha = 0;
+        [self.viewTransition layoutIfNeeded];
+    }];
+    
     [self startSession];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationActiveStateChanged:) name:UIApplicationWillResignActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationActiveStateChanged:) name:UIApplicationDidBecomeActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationActiveStateChanged:) name:UIApplicationDidEnterBackgroundNotification object:nil];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -96,7 +102,7 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
     
     [self stopSession];
     
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationWillResignActiveNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidEnterBackgroundNotification object:nil];
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
@@ -204,7 +210,7 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
             dispatch_async([strongSelf sessionQueue], ^{
                 // Manually restarting the session since it must have been stopped due to an error.
                 [[strongSelf session] startRunning];
-                [[strongSelf recordButton] setTitle:NSLocalizedString(@"Record", @"Recording button record title") forState:UIControlStateNormal];
+                [[strongSelf recordButton] setTitle:localizedstr(@"handy",@"camera",@"record") forState:UIControlStateNormal];
             });
         }]];
         [[self session] startRunning];
@@ -256,7 +262,20 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
 #pragma mark notification
 - (void)applicationActiveStateChanged:(NSNotification *)notification
 {
-    [self.viewTransition setAlpha:1];
+    if( notification.name == UIApplicationDidBecomeActiveNotification )
+    {
+        if ( self.viewTransition.alpha == 1 ) {
+            [UIView animateWithDuration:2 animations:^{
+                self.viewTransition.alpha = 0;
+                [self.viewTransition layoutIfNeeded];
+            }];
+        }
+//        self.videoview.image = [self.view convertViewToImage];
+    }
+    else if( notification.name == UIApplicationDidEnterBackgroundNotification )
+    {
+        [self.viewTransition setAlpha:1];
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -278,13 +297,13 @@ static void* SessionRunningAndDeviceAuthorizedContext = &SessionRunningAndDevice
             if (isRecording)
             {
                 [[self cameraButton] setEnabled:NO];
-                [[self recordButton] setTitle:NSLocalizedString(@"Stop", @"Recording button stop title") forState:UIControlStateNormal];
+                [[self recordButton] setTitle:localizedstr(@"handy",@"camera",@"stop") forState:UIControlStateNormal];
                 [[self recordButton] setEnabled:YES];
             }
             else
             {
                 [[self cameraButton] setEnabled:YES];
-                [[self recordButton] setTitle:NSLocalizedString(@"Record", @"Recording button record title") forState:UIControlStateNormal];
+                [[self recordButton] setTitle:localizedstr(@"handy",@"camera",@"record") forState:UIControlStateNormal];
                 [[self recordButton] setEnabled:YES];
             }
         });

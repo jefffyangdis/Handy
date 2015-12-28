@@ -144,6 +144,9 @@ BOOL CheckForExtension(NSString *searchName)
 
 - (void)sizeWillChange
 {
+    if ( self.bIsRotateDisabled ) {
+        return;
+    }
     [_viewImageCollection.collectionViewLayout invalidateLayout];
     [_viewImageCollection reloadData];
 }

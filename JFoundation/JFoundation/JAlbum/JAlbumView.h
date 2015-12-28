@@ -11,6 +11,7 @@
 
 @interface JAlbumView : UIView
 
+@property (nonatomic,assign) BOOL bIsRotateDisabled;
 @property (nonatomic,strong) NSMutableArray* assets;
 @property (nonatomic,assign) NSInteger iCurrentOffsetIndex;
 

@@ -58,7 +58,7 @@ static void PrepareGlyphArcInfo(CTLineRef line, CFIndex glyphCount, GlyphArcInfo
 {
     [super awakeFromNib];
     _font = [UIFont fontWithName:ARCVIEW_DEFAULT_FONT_NAME size:ARCVIEW_DEFAULT_FONT_SIZE];
-    _string = @"Curvaceous Type";
+    _string = @"Merry Chrismas";
     _radius = ARCVIEW_DEFAULT_RADIUS;
     _showsGlyphBounds = NO;
     _showsLineMetrics = NO;
@@ -69,7 +69,7 @@ static void PrepareGlyphArcInfo(CTLineRef line, CFIndex glyphCount, GlyphArcInfo
     self = [super initWithFrame:frame];
     if (self) {
         _font = [UIFont fontWithName:ARCVIEW_DEFAULT_FONT_NAME size:ARCVIEW_DEFAULT_FONT_SIZE];
-        _string = @"Curvaceous Type";
+        _string = @"Merry Chrismas";
         _radius = ARCVIEW_DEFAULT_RADIUS;
         _showsGlyphBounds = NO;
         _showsLineMetrics = NO;
@@ -86,7 +86,6 @@ static void PrepareGlyphArcInfo(CTLineRef line, CFIndex glyphCount, GlyphArcInfo
     // Initialize the text matrix to a known value
 
     CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextSetTextMatrix(context,CGAffineTransformMake(1, 0, 0, -1, 0, 0));
     
     // Draw a white background
     [[UIColor whiteColor] set];
@@ -101,23 +100,31 @@ static void PrepareGlyphArcInfo(CTLineRef line, CFIndex glyphCount, GlyphArcInfo
         return;
     }
     
+//    CGContextSetTextPosition(context, 0, self.radius/2);
 //    CTRunRef frun = (CTRunRef)CFArrayGetValueAtIndex(CTLineGetGlyphRuns(line), 0);
 //    CTRunDraw(frun, context, CFRangeMake(0, 2));
     
     GlyphArcInfo *  glyphArcInfo = (GlyphArcInfo*)calloc(glyphCount, sizeof(GlyphArcInfo));
     PrepareGlyphArcInfo(line, glyphCount, glyphArcInfo);
     
+    CTRunRef frun = (CTRunRef)CFArrayGetValueAtIndex(CTLineGetGlyphRuns(line), 0);
+    CGPoint p = CGContextGetTextPosition(context);
+    
+    CTRunDraw(frun, context, CFRangeMake(0, 2));
+    
     // Move the origin from the lower left of the view nearer to its center.
     CGContextSaveGState(context);
     
     CGContextTranslateCTM(context, CGRectGetMidX(rect), CGRectGetMidY(rect) );
+//    CGContextSetTextMatrix(context, CGAffineTransformMake(1, 0, -1, -1, CGRectGetMidX(rect), CGRectGetMidY(rect)));
+    
     
     // Stroke the arc in red for verification.
     CGContextBeginPath(context);
-    CGContextAddArc(context, 0.0, 0.0, self.radius, 0, M_PI, 0);
+    CGContextAddArc(context, 0.0, 0.0, self.radius, 0, M_PI*2, 0);
     CGContextSetRGBStrokeColor(context, 1.0, 0.0, 0.0, 1.0);
     CGContextStrokePath(context);
-    
+    CTRunDraw(frun, context, CFRangeMake(0, 2));
     // Rotate the context 90 degrees clockwise.
 //    CGContextRotateCTM(context, M_PI_2);
     
@@ -125,7 +132,9 @@ static void PrepareGlyphArcInfo(CTLineRef line, CFIndex glyphCount, GlyphArcInfo
      Now for the actual drawing. The angle offset for each glyph relative to the previous glyph has already been calculated; with that information in hand, draw those glyphs overstruck and centered over one another, making sure to rotate the context after each glyph so the glyphs are spread along a semicircular path.
      */
     CGPoint textPosition = CGPointMake(0.0, self.radius);
-    CGContextSetTextPosition(context, textPosition.x, textPosition.y - self.radius);
+//    CGContextSetTextPosition(context, 0,  0);
+//        CTRunRef frun = (CTRunRef)CFArrayGetValueAtIndex(CTLineGetGlyphRuns(line), 0);
+//        CTRunDraw(frun, context, CFRangeMake(2, 2));
     
     CFArrayRef runArray = CTLineGetGlyphRuns(line);
     CFIndex runCount = CFArrayGetCount(runArray);
@@ -153,15 +162,15 @@ static void PrepareGlyphArcInfo(CTLineRef line, CFIndex glyphCount, GlyphArcInfo
             // Center this glyph by moving left by half its width.
             CGFloat glyphWidth = glyphArcInfo[runGlyphIndex + glyphOffset].width;
             CGFloat halfGlyphWidth = glyphWidth / 2.0;
-            CGPoint positionForThisGlyph = CGPointMake(textPosition.x - halfGlyphWidth, textPosition.y);
+            CGPoint positionForThisGlyph = CGPointMake(textPosition.x - halfGlyphWidth, textPosition.y );
 //            CGPoint positionForThisGlyph = CGPointMake(textPosition.x, textPosition.y);
             // Glyphs are positioned relative to the text position for the line, so offset text position leftwards by this glyph's width in preparation for the next glyph.
             textPosition.x -= glyphWidth;
             
+            p = CGContextGetTextPosition(context);
             CGAffineTransform textMatrix = CTRunGetTextMatrix(run);
             textMatrix.tx = positionForThisGlyph.x;
             textMatrix.ty = positionForThisGlyph.y;
-            textMatrix.c = -textMatrix.c;
             textMatrix.d = -textMatrix.d;
             CGContextSetTextMatrix(context, textMatrix);
             

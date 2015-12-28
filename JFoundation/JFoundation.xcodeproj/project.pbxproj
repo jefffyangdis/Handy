@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0447AEA1C2E6F18003FE387 /* UIView+Sceenshot.h in Headers */ = {isa = PBXBuildFile; fileRef = C0447AE81C2E6F18003FE387 /* UIView+Sceenshot.h */; };
+		C0447AEB1C2E6F18003FE387 /* UIView+Sceenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = C0447AE91C2E6F18003FE387 /* UIView+Sceenshot.m */; };
 		C050DC471C169AE400F7D129 /* JAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = C050DC451C169AE400F7D129 /* JAlertView.h */; };
 		C050DC481C169AE400F7D129 /* JAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C050DC461C169AE400F7D129 /* JAlertView.m */; };
 		C0C42D111B512F2400238799 /* JTabbedView.h in Headers */ = {isa = PBXBuildFile; fileRef = C0C42D051B512F2400238799 /* JTabbedView.h */; };
@@ -68,6 +70,8 @@
 
 /* Begin PBXFileReference section */
 		3369847F3C13DFB8ED58FE5B /* Pods-handy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-handy.release.xcconfig"; path = "../../../pod_GitHub/handy/Pods/Target Support Files/Pods-handy/Pods-handy.release.xcconfig"; sourceTree = "<group>"; };
+		C0447AE81C2E6F18003FE387 /* UIView+Sceenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Sceenshot.h"; sourceTree = "<group>"; };
+		C0447AE91C2E6F18003FE387 /* UIView+Sceenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Sceenshot.m"; sourceTree = "<group>"; };
 		C050DC451C169AE400F7D129 /* JAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAlertView.h; sourceTree = "<group>"; };
 		C050DC461C169AE400F7D129 /* JAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAlertView.m; sourceTree = "<group>"; };
 		C0C42D051B512F2400238799 /* JTabbedView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTabbedView.h; sourceTree = "<group>"; };
@@ -258,6 +262,8 @@
 			children = (
 				C0D7673B1B9DC266000A54C2 /* JImage.h */,
 				C0D7673C1B9DC266000A54C2 /* JImage.m */,
+				C0447AE81C2E6F18003FE387 /* UIView+Sceenshot.h */,
+				C0447AE91C2E6F18003FE387 /* UIView+Sceenshot.m */,
 			);
 			path = JImage;
 			sourceTree = "<group>";
@@ -269,6 +275,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0447AEA1C2E6F18003FE387 /* UIView+Sceenshot.h in Headers */,
 				C0C42D1E1B512F5C00238799 /* UIViewController+Utils.h in Headers */,
 				C0C42D231B512F8D00238799 /* JStoryboardViewControllerFactory.h in Headers */,
 				C0C705EA1B40D56B007CE302 /* JFoundation.h in Headers */,
@@ -335,7 +342,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0630;
-				ORGANIZATIONNAME = dw_fangyang;
+				ORGANIZATIONNAME = jefffyang;
 				TargetAttributes = {
 					C0C705C21B40D144007CE302 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -435,6 +442,7 @@
 			files = (
 				C0C42D1A1B512F2400238799 /* JImageScrollView.m in Sources */,
 				C0C4F50C1B44F72000D81E9F /* JRuntime.m in Sources */,
+				C0447AEB1C2E6F18003FE387 /* UIView+Sceenshot.m in Sources */,
 				C050DC481C169AE400F7D129 /* JAlertView.m in Sources */,
 				C0C42D121B512F2400238799 /* JTabbedView.m in Sources */,
 				C0C705C91B40D144007CE302 /* JFoundation.m in Sources */,
